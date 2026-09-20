@@ -1,1 +1,1 @@
-# Scam-or-Legit-----AI-Threat-Intelligence-Fraud-Detector
+# Scam or Legit ? --> AI Threat Intelligence Fraud Detector
