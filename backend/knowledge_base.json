@@ -1,0 +1,163 @@
+[
+  {
+    "id": "scam_001",
+    "category": "Phishing & Account Takeover",
+    "title": "Urgent Bank Account Suspension",
+    "pattern_text": "Security Alert: Your Chase Bank online access has been temporarily restricted due to unauthorized login attempts. Verify your identity immediately within 24 hours at http://chase-security-verify-auth.com or your account will be permanently locked.",
+    "tactics": ["Artificial Urgency", "Spoofed Link", "Account Lock Threat", "Credential Harvesting"],
+    "risk_indicators": [
+      "Sensational urgency ('within 24 hours')",
+      "Link domain 'chase-security-verify-auth.com' is not official chase.com",
+      "Generic greeting or no account identifier"
+    ],
+    "recommendation": "Do not click the link. Open your bank app directly or call the official phone number printed on your bank card."
+  },
+  {
+    "id": "scam_002",
+    "category": "Remote Job & Wire Scam",
+    "title": "Data Entry Specialist Cheque Deposit Scam",
+    "pattern_text": "Congratulations! You have been selected for the Data Entry Remote position at Apex Global Solutions. We will send you a cashier's cheque of $3,500 to purchase home office equipment from our approved vendor. You will deposit the cheque, keep $500 as your sign-on bonus, and Zelle/Venmo the remaining $3,000 to our equipment supplier.",
+    "tactics": ["Fake Job Offer", "Overpayment Cheque Scam", "Urgent Wire Request", "Unsolicited Hiring"],
+    "risk_indicators": [
+      "Job offered without formal video/in-person interview",
+      "Request to deposit a check and send funds back via Zelle/Venmo/Wire",
+      "Equipment supplier requires peer-to-peer non-refundable payment"
+    ],
+    "recommendation": "Never deposit a check from an employer with instructions to wire or transfer any portion of the money back. The check will bounce after a few days."
+  },
+  {
+    "id": "scam_003",
+    "category": "Package Delivery Smishing",
+    "title": "USPS / FedEx Failed Delivery Fee",
+    "pattern_text": "USPS Notification: Package #US954201888 cannot be delivered due to an incomplete street address. A redelivery fee of $1.50 is required. Please update your details now at http://usps-redeliver-parcel.top/update",
+    "tactics": ["Smishing SMS", "Micro Payment Trap", "Incomplete Address Prompt", "Credit Card Capture"],
+    "risk_indicators": [
+      "Sent via SMS from a random 10-digit number or international code",
+      "URL uses top-level domain '.top' or suspicious domain instead of usps.com",
+      "Requests small payment to steal credit card details"
+    ],
+    "recommendation": "Official postal services do not require credit card payments via SMS link for redelivery. Track packages directly on usps.com."
+  },
+  {
+    "id": "scam_004",
+    "category": "Crypto & High Yield Investment Fraud",
+    "title": "Guaranteed Telegram Crypto Trading Bot",
+    "pattern_text": "Turn $200 into $5,000 in 24 hours guaranteed! Join our VIP Telegram Signal group. Our AI algorithmic trading bot guarantees zero loss. Send USDT (TRC-20) to wallet address T9xZ... to activate your high-yield automated portfolio now!",
+    "tactics": ["Guaranteed High Returns", "No-Risk Promise", "Unraceable Crypto Payment", "Telegram VIP Channel"],
+    "risk_indicators": [
+      "Claims of 'guaranteed returns' or 'zero risk'",
+      "Payment requested exclusively via cryptocurrency transfer (USDT, BTC)",
+      "Communication restricted to Telegram or WhatsApp admins"
+    ],
+    "recommendation": "All investments carry risk. No genuine platform can guarantee 20x returns overnight. Once crypto is transferred, it cannot be recovered."
+  },
+  {
+    "id": "scam_005",
+    "category": "Tech Support & Invoice Fraud",
+    "title": "Geek Squad / Refund Auto-Renewal Invoice",
+    "pattern_text": "Geek Squad Invoice #GS-88491: Thank you for your auto-renewal subscription of $499.99 charged to your Visa card. If you did not authorize this payment or wish to cancel and request a full refund, call our billing department immediately at +1 (888) 555-0199.",
+    "tactics": ["Fake Invoice", "Unwanted Renewal Panic", "Fake Call Center Toll-Free Number", "Remote Desktop Hijack"],
+    "risk_indicators": [
+      "No customer name or actual account billing history",
+      "Forces customer to call a phone number rather than managing subscription online",
+      "Call center agent will ask to install AnyDesk/TeamViewer to process 'refund'"
+    ],
+    "recommendation": "Do not call the number. Check your actual credit card statement online to confirm no charge was made."
+  },
+  {
+    "id": "scam_006",
+    "category": "Gift Card & Executive Impersonation",
+    "title": "Urgent Request from CEO / Supervisor",
+    "pattern_text": "Hi, I am in a confidential board meeting right now and cannot take calls. I need you to purchase 5 Apple Gift Cards ($100 each) for client appreciation gifts immediately. Send me photos of the card codes on the back as soon as you scratch them. I will reimburse you today.",
+    "tactics": ["CEO Impersonation", "Gift Card Payment", "Urgent Confidentiality", "Bypass Purchasing Protocols"],
+    "risk_indicators": [
+      "Request sent from unfamiliar external email address or mobile number",
+      "Demands scratch-off codes from physical gift cards",
+      "Claims to be in a meeting or unavailable for phone verification"
+    ],
+    "recommendation": "Verify by calling your supervisor through official company communication channels (Teams, Slack, or direct company phone)."
+  },
+  {
+    "id": "scam_007",
+    "category": "Romance & Emergency Fund Fraud",
+    "title": "Military Officer Overseas Emergency",
+    "pattern_text": "My dearest love, my deployed unit in Syria encountered unexpected customs fees for my medical discharge documents. I need $1,200 transferred to my diplomat agent via Western Union or Bitcoin today so I can fly home to be with you forever.",
+    "tactics": ["Emotional Grooming", "Emergency Money Request", "Wire / Crypto Demand", "Refusal to Video Call"],
+    "risk_indicators": [
+      "Online acquaintance who avoids live video chats",
+      "Escalates romantic intimacy rapidly without meeting in person",
+      "Sudden financial crisis requiring immediate money transfer"
+    ],
+    "recommendation": "Never send money, wire transfers, or crypto to someone you have only met online."
+  },
+  {
+    "id": "scam_008",
+    "category": "Fake Internship & Education Scam",
+    "title": "Virtual Internship Training Fee & Stipend Deposit Scam",
+    "pattern_text": "Congratulations Student! You have been selected for a 3-Month Remote AI & Web Development Virtual Internship at FutureTech Innovations! Offer Letter is attached. To reserve your candidate slot and issue your employee ID, pay a refundable training & stipend security deposit of $150 via Zelle / UPI / Wire within 6 hours. Registration closes today.",
+    "tactics": ["Fake Internship Offer", "Pay-to-Work Scam", "Refundable Deposit Illusion", "Targeting Students", "Short Deadline Pressure"],
+    "risk_indicators": [
+      "Legitimate employers NEVER ask candidates or interns to pay training, registration, or security deposit fees.",
+      "Offered job/internship without any technical assessment or interview.",
+      "Uses artificial deadline ('pay within 6 hours') to panic students."
+    ],
+    "recommendation": "Never pay money to get an internship or job. Authentic internships pay you for your work, not the other way around. Verify company registration on LinkedIn or official corporate site."
+  },
+  {
+    "id": "scam_009",
+    "category": "Fake Internship & Education Scam",
+    "title": "Mandatory LMS Course & Certificate Purchase Scam",
+    "pattern_text": "Dear Applicant, Your application for Software Engineer Intern at Global Tech Systems has been provisionally accepted. However, to complete your onboarding, you must purchase the mandatory Industry Cyber Certificate ($89) from our partner learning portal http://globaltech-lms-certify.net before your start date.",
+    "tactics": ["Mandatory Certificate Trap", "Third-Party Course Purchasing", "Unverified LMS Domain", "Student Exploitation"],
+    "risk_indicators": [
+      "Requires applicant to purchase courses or certificates from an unverified third-party website.",
+      "The hiring company and LMS portal are run by the same scammers to collect payment details.",
+      "Offer letter is generic and missing specific manager contact information."
+    ],
+    "recommendation": "Legitimate corporate internships provide internal onboarding training for free. Do not purchase third-party courses or certificates required by unverified recruiters."
+  },
+  {
+    "id": "scam_010",
+    "category": "Fake Internship & Education Scam",
+    "title": "Unsolicited Telegram/WhatsApp Task & Stipend Activation Scam",
+    "pattern_text": "Dear Candidate, We noticed your profile on LinkedIn for a Student AI & Data Analyst Remote Intern position at Apex Digital! Earn $300/week by completing daily online rating tasks. No experience needed! Pay a 1-time candidate account activation fee of $50 in crypto/UPI to unlock your stipend dashboard and work portal.",
+    "tactics": ["Task-Based Internship Trap", "Telegram Candidate Group", "Upfront Account Activation Fee", "Unsolicited Recruiter Outreach"],
+    "risk_indicators": [
+      "Recruiter approaches via WhatsApp or Telegram rather than official corporate email domain.",
+      "Requires paying an 'account activation fee' or 'stipend security deposit' to unlock work tasks.",
+      "Promises unrealistically high weekly stipends for simple rating tasks."
+    ],
+    "recommendation": "Never pay activation fees to receive work assignments or stipends. Real companies onboard interns through official HR software and NEVER request fees for account setup."
+  },
+  {
+    "id": "scam_011",
+    "category": "Fake Internship & Education Scam",
+    "title": "Fake Academic Research Internship & Paper Publication Fee Scam",
+    "pattern_text": "Respected Student, Your research proposal for the International Summer AI & Machine Learning Research Internship has been accepted! To confirm your research slot and publish your co-authored paper in our indexed IEEE/Scopus journal partner, submit a paper processing fee of $200 within 48 hours to http://academic-research-portal-fee.org/pay.",
+    "tactics": ["Academic Research Exploitation", "Journal Processing Fee Trap", "Artificial Academic Urgency", "Fake Co-Authorship Offer"],
+    "risk_indicators": [
+      "Legitimate research internships provide stipends or academic credits; they do not sell paper publication slots.",
+      "Requires immediate payment via external suspicious link within tight 48-hour deadline.",
+      "Unverified journal domain mimicking prestigious academic indexing services."
+    ],
+    "recommendation": "Check with your university professor or department head before paying any journal or paper publishing fees associated with an internship."
+  },
+  {
+    "id": "legit_001",
+    "category": "Legitimate Communication",
+    "title": "Standard Amazon Order Confirmation",
+    "pattern_text": "Amazon.com: Your order #114-9842104-5829104 has shipped. You can track your package or view order details anytime in your Amazon account dashboard. Thank you for shopping with us.",
+    "tactics": ["Official Informational Notice"],
+    "risk_indicators": [],
+    "recommendation": "Safe message. Links direct to official amazon.com domain."
+  },
+  {
+    "id": "legit_002",
+    "category": "Legitimate Communication",
+    "title": "Two-Factor Security Code (2FA)",
+    "pattern_text": "Your Google verification code is 482910. Do not share this code with anyone. Google will never call or message you to ask for this code.",
+    "tactics": ["Standard 2FA Authentication"],
+    "risk_indicators": [],
+    "recommendation": "Legitimate verification code. Keep it private and never share with callers."
+  }
+]

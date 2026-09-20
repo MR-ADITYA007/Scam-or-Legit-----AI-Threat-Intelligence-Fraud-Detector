@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scam or Legit? — AI Threat Intelligence & Fraud Detector</title>
+    <meta name="description" content="Instantly analyze suspicious SMS, emails, job offers, and screenshots using Vector RAG and Gemini AI.">
+    <!-- Google Fonts: Inter & Outfit & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
+    <!-- Critical CSS Guard & Fallback Reset -->
+    <style>
+        .hidden, [hidden] { display: none !important; }
+        html, body {
+            margin: 0;
+            padding: 0;
+            background-color: #06070a;
+            color: #f8fafc;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            min-height: 100vh;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-canvas">
+    <!-- Ambient Radial Illumination -->
+    <div class="ambient-glow glow-top"></div>
+    <div class="ambient-glow glow-bottom"></div>
+
+    <div class="app-shell">
+        <!-- Floating Header Bar -->
+        <header class="top-nav">
+            <div class="brand">
+                <div class="brand-badge">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div class="brand-title">
+                    <span class="brand-name">Scam<span class="brand-glow">OrLegit</span></span>
+                    <span class="brand-tag">AI Threat Scanner</span>
+                </div>
+            </div>
+            
+            <div class="nav-status">
+                <div class="live-pill" id="statusPill">
+                    <span class="pulse-dot"></span>
+                    <span id="statusText">Vector RAG Engine Ready</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Compact Hero Header -->
+        <section class="hero-header">
+            <div class="hero-chip">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                REAL-TIME PHISHING DETECTOR
+            </div>
+            <h1 class="hero-title">Detect online scams <span class="gradient-text">before you click.</span></h1>
+            <p class="hero-desc">Paste an SMS, email, job offer, or screenshot. Our AI vector engine analyzes warning signals instantly.</p>
+        </section>
+
+        <!-- Main Interactive Split Workspace -->
+        <main class="main-grid">
+            <!-- Left Panel: Scanner Input -->
+            <div class="scanner-card">
+                <!-- Preset Quick Buttons -->
+                <div class="preset-section">
+                    <span class="preset-title">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>
+                        Try Sample:
+                    </span>
+                    <div class="preset-chips-row" id="presetsContainer">
+                        <button class="preset-chip loading-skeleton">Loading samples...</button>
+                        <button class="preset-chip loading-skeleton">Loading samples...</button>
+                    </div>
+                </div>
+
+                <!-- Input Type Tab Segment -->
+                <div class="input-box-wrapper">
+                    <div class="input-box-header">
+                        <div class="segmented-tabs">
+                            <button class="seg-btn active" id="tabTextBtn" onclick="switchInputTab('text')">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg>
+                                Text Input
+                            </button>
+                            <button class="seg-btn" id="tabImageBtn" onclick="switchInputTab('image')">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                                Screenshot Upload
+                            </button>
+                        </div>
+                        <button class="reset-action-btn" onclick="clearInput()" title="Reset workspace">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6"/><path d="M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                            Reset
+                        </button>
+                    </div>
+
+                    <!-- Text Area Input -->
+                    <div class="tab-pane active" id="tabTextContent">
+                        <div class="editor-area">
+                            <textarea id="messageInput" placeholder="Paste suspicious SMS body, email, job offer details, wire transfer request, or suspicious link here..." rows="7"></textarea>
+                            <div class="editor-footer">
+                                <span class="char-badge" id="charCount">0 characters</span>
+                                <button class="paste-action-btn" onclick="pasteClipboard()">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+                                    Paste
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Image Screenshot Upload -->
+                    <div class="tab-pane hidden" id="tabImageContent" style="display: none;">
+                        <div class="drop-zone" id="dropzone" onclick="triggerFileInput()">
+                            <input type="file" id="imageInput" accept="image/*" onchange="handleFileSelect(event)" hidden>
+                            <div class="drop-prompt" id="dropzonePrompt">
+                                <div class="drop-icon-box">
+                                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                                </div>
+                                <h4>Drop Screenshot Here</h4>
+                                <p>PNG, JPG, or WEBP screenshots of SMS, WhatsApp, or Emails</p>
+                                <span class="select-file-btn">Browse File</span>
+                            </div>
+                            <div class="image-preview-box hidden" id="previewContainer" style="display: none;">
+                                <img id="imagePreview" src="" alt="Screenshot">
+                                <button class="remove-preview-btn" onclick="removeImage(event)">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                                    Remove
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Analyze Action -->
+                    <button class="scan-submit-btn" id="analyzeBtn" onclick="runAnalysis()">
+                        <span id="btnIcon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>
+                        </span>
+                        <span id="btnText">ANALYZE RISK NOW</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Panel: Results Dashboard -->
+            <div class="dashboard-card" id="resultsCard">
+                <!-- Idle Standby Visual -->
+                <div class="standby-view" id="emptyState">
+                    <div class="scanner-orb-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                        <div class="scanner-wave"></div>
+                    </div>
+                    <h3>Ready for AI Threat Scan</h3>
+                    <p>Select a sample preset or paste suspicious text on the left to generate an instant AI security audit report.</p>
+                </div>
+
+                <!-- Active Report View -->
+                <div class="report-view hidden" id="activeResults" style="display: none;">
+                    <!-- Threat Meter Header -->
+                    <div class="threat-meter-card" id="riskBanner">
+                        <div class="meter-radial">
+                            <svg class="meter-svg" viewBox="0 0 160 160">
+                                <path class="meter-bg" d="M 20 120 A 70 70 0 1 1 140 120" fill="none" stroke-width="12" />
+                                <path class="meter-fill" id="gaugeArc" d="M 20 120 A 70 70 0 1 1 140 120" fill="none" stroke-width="12" stroke-dasharray="330" stroke-dashoffset="330" />
+                            </svg>
+                            <div class="meter-val-wrap">
+                                <span class="meter-val" id="gaugeValue">0</span>
+                                <span class="meter-lbl">RISK SCORE</span>
+                            </div>
+                        </div>
+
+                        <div class="threat-summary-box">
+                            <div class="threat-header-line">
+                                <span class="threat-level-badge" id="riskLevelBadge">ANALYZING...</span>
+                                <span class="category-pill" id="scamCategoryTag">Category</span>
+                            </div>
+                            <p class="summary-text" id="riskSummaryText">Executive summary will appear here.</p>
+                            <div class="meta-row">
+                                <span><i class="fa-solid fa-bolt color-cyan"></i> Mode: <strong>Vector RAG</strong></span>
+                                <span><i class="fa-solid fa-database color-purple"></i> Store: <strong id="engineName">Chroma DB</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Red Flags List -->
+                    <div class="report-block">
+                        <div class="block-title">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                            <h4>Detected Red Flags</h4>
+                        </div>
+                        <div class="flags-list" id="redFlagsGrid">
+                            <!-- Cards populated dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- RAG Matches & Psychological Cues Grid -->
+                    <div class="report-grid-2">
+                        <div class="report-block">
+                            <div class="block-title">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                                <h4>Vector DB Matches</h4>
+                            </div>
+                            <div class="evidence-box" id="evidenceList">
+                                <!-- Evidence items populated dynamically -->
+                            </div>
+                        </div>
+
+                        <div class="report-block">
+                            <div class="block-title">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/></svg>
+                                <h4>Pattern Triggers</h4>
+                            </div>
+                            <div class="cues-box" id="linguisticCuesTags">
+                                <!-- Tags populated dynamically -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recommended Actions -->
+                    <div class="report-block">
+                        <div class="block-title">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                            <h4>Safety Guidance</h4>
+                        </div>
+                        <ul class="actions-list" id="actionsList">
+                            <!-- Action list populated dynamically -->
+                        </ul>
+                    </div>
+
+                    <!-- Action Bar Footer -->
+                    <div class="report-footer">
+                        <button class="copy-report-btn" onclick="copyReport()">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                            Copy Security Audit Report
+                        </button>
+                        <span class="report-time" id="reportTime">Analyzed just now</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Minimalist Footer -->
+        <footer class="app-footer">
+            <p>🛡️ <strong>ScamOrLegit AI</strong> • Vector RAG Threat Intelligence & Gemini 2.0 Flash Stack</p>
+        </footer>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast-popup hidden" id="toast" style="display: none;">Copied report to clipboard!</div>
+
+    <script src="app.js"></script>
+</body>
+</html>

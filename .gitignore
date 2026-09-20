@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# Environment Variables
+.env
+
+# Vector DB & Local Stores
+backend/chroma_db/
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
