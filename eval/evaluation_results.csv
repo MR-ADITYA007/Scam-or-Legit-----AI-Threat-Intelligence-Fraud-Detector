@@ -1,0 +1,101 @@
+id,category,true_label,predicted_label,score,risk_level,status,rag_latency_ms,risk_engine_latency_ms,total_latency_ms,text
+eval_scam_01,Banking Phishing,scam,scam,90,Critical Threat,TP,321.98,0.28,322.26,Chase Alert: Your card was blocked. Click http://chase-unblock.net to verify identity now.
+eval_scam_02,Banking Phishing,scam,scam,74,High Scam Risk,TP,301.22,0.1,301.32,Bank of America Alert: Unusual sign-in from TX. Update 2FA password immediately at http://bofa-login-auth.com
+eval_scam_03,Banking Phishing,scam,scam,95,Critical Threat,TP,255.08,0.1,255.18,Wells Fargo Security: Account suspended. Restore access within 12 hours at http://wellsfargo-verify.info
+eval_scam_04,Banking Phishing,scam,scam,75,High Scam Risk,TP,253.12,0.09,253.2,"CitiBank: Unauthorized $890 purchase detected. If not you, verify account at http://citi-refund-portal.net"
+eval_scam_05,OTP Theft,scam,legitimate,45,Caution,FN,309.28,0.05,309.33,Your OTP code is 984120. Call support officer now at +1-888-555-0199 and state code to prevent locked account.
+eval_scam_06,OTP Theft,scam,scam,61,High Scam Risk,TP,255.01,0.06,255.07,Bank representative asking: Reply with the 6-digit verification code sent to your phone to confirm transaction.
+eval_scam_07,UPI Scam,scam,scam,62,High Scam Risk,TP,257.84,0.06,257.89,I am paying $300 for your camera listing. Scan this QR code and enter your UPI PIN to claim money.
+eval_scam_08,UPI Scam,scam,legitimate,58,Caution,FN,253.53,0.06,253.58,"To receive $150 cashback reward in your UPI account, open link and enter your 4-digit UPI PIN."
+eval_scam_09,Fake Job,scam,legitimate,23,Low Risk,FN,249.73,0.06,249.79,"Hired for Remote Data Specialist at $50/hr! We will mail $3,000 cashier check. Wire $2,500 back for equipment."
+eval_scam_10,Fake Job,scam,legitimate,49,Caution,FN,279.28,0.06,279.34,"You are selected for Virtual Assistant at $40/hr. Deposit check, keep $400, Zelle remaining $2,600 to vendor."
+eval_scam_11,Fake Internship,scam,scam,100,Critical Threat,TP,252.48,0.06,252.54,Selected for Remote AI Internship! Pay refundable training deposit of $150 via Zelle within 6 hours to reserve slot.
+eval_scam_12,Fake Internship,scam,legitimate,40,Caution,FN,253.94,0.09,254.03,Student Offer: Software Intern at Global Tech. Purchase mandatory cyber certificate ($89) from http://lms-certify.net
+eval_scam_13,Fake Internship,scam,legitimate,48,Caution,FN,253.6,0.06,253.66,Selected for Data Analyst Intern! Pay $50 activation fee in crypto/UPI to unlock stipend dashboard.
+eval_scam_14,Fake Internship,scam,scam,95,Critical Threat,TP,252.29,0.09,252.38,Research paper accepted! Pay $200 journal processing fee within 48 hours to http://academic-fee-portal.org
+eval_scam_15,Advance-Fee,scam,scam,88,Critical Threat,TP,264.82,0.06,264.87,"You won $1,000,000 in International Grant Lottery! Pay $350 clearance fee via Western Union to claim."
+eval_scam_16,Advance-Fee,scam,legitimate,53,Caution,FN,260.9,0.05,260.96,Inheritance release notice: Transfer $500 attorney clearance fee to receive $4.2M fund transfer.
+eval_scam_17,Crypto Scam,scam,scam,97,Critical Threat,TP,245.72,0.06,245.77,"Turn $200 into $5,000 in 24 hours guaranteed! Telegram VIP bot zero loss history. Send USDT TRC-20 now."
+eval_scam_18,Crypto Scam,scam,scam,75,High Scam Risk,TP,251.85,0.05,251.9,Elon Musk Crypto Giveaway! Send 0.1 BTC to wallet address below and receive 0.2 BTC back instantly!
+eval_scam_19,Gift Card,scam,scam,98,Critical Threat,TP,271.11,0.06,271.17,CEO Request: I am in a meeting. Buy 5 Apple Gift Cards ($100 each) and text me scratch PIN codes now.
+eval_scam_20,Gift Card,scam,scam,83,High Scam Risk,TP,283.06,0.06,283.11,Urgent from Supervisor: Purchase 4 Steam gift cards for client gifts and send photos of back codes immediately.
+eval_scam_21,Impersonation,scam,scam,77,High Scam Risk,TP,251.09,0.06,251.15,"CEO Urgent: Wire $35,000 to law firm escrow account for confidential acquisition today. Do not tell accounting."
+eval_scam_22,Delivery Scam,scam,scam,60,High Scam Risk,TP,257.12,0.09,257.2,USPS: Package cannot be delivered due to address error. Pay $1.50 redelivery fee at http://usps-redeliver.top
+eval_scam_23,Delivery Scam,scam,legitimate,54,Caution,FN,261.68,0.08,261.76,FedEx Notice: Parcel held at customs. Update home address and pay $2.10 fee at http://fedex-parcel-update.site
+eval_scam_24,Tech Support,scam,scam,79,High Scam Risk,TP,253.04,0.06,253.1,"Geek Squad Invoice #9841: $499 auto-renewed. If unauthorized, call billing department at +1-888-555-0199 immediately."
+eval_scam_25,Tech Support,scam,legitimate,5,Low Risk,FN,251.38,0.05,251.43,Microsoft Security: Virus detected on your computer! Call technical helpline 1-800-555-0122 to prevent lock.
+eval_scam_26,Loan Fraud,scam,scam,87,Critical Threat,TP,251.89,0.05,251.95,"Approved for $20,000 personal loan! Pay $200 processing fee via Zelle to disburse funds into your account."
+eval_scam_27,Romance Fraud,scam,legitimate,51,Caution,FN,249.32,0.06,249.38,"Deployed officer needs $1,500 via Western Union for medical emergency clearance to come home to be with you."
+eval_scam_28,Malware Distribution,scam,scam,64,High Scam Risk,TP,249.2,0.05,249.25,HR Notice: Open attached file Payroll_Update_2024.exe and run as administrator to confirm tax form.
+eval_scam_29,Banking Phishing,scam,scam,100,Critical Threat,TP,251.49,0.09,251.58,Urgent: Debit card deactivated due to fraud alert. Reactivate now at http://debit-card-verify.com
+eval_scam_30,Fake Job,scam,scam,90,Critical Threat,TP,256.27,0.06,256.33,"Data Entry remote job. We send $4,000 check for equipment. Keep $500, wire $3,500 to supplier via Venmo."
+eval_scam_31,UPI Scam,scam,legitimate,45,Caution,FN,253.59,0.05,253.64,Buyer sent $200 on PhonePe. Click link and input your secret PIN to deposit money into wallet.
+eval_scam_32,Fake Internship,scam,scam,60,High Scam Risk,TP,269.61,0.05,269.66,Congratulations! Offer letter for Web Intern ready. Pay $99 paper processing fee within 2 hours to confirm.
+eval_scam_33,Crypto Scam,scam,scam,75,High Scam Risk,TP,255.05,0.05,255.1,Guaranteed 300% profit in 3 days! Automated AI trading algorithm. Deposit Bitcoin to wallet 1A1zP1eP5...
+eval_scam_34,Delivery Scam,scam,legitimate,40,Caution,FN,256.15,0.08,256.23,DHL Alert: Shipment #94821 delayed. Click http://dhl-track-package.top to reschedule delivery.
+eval_scam_35,Tech Support,scam,legitimate,53,Caution,FN,257.23,0.05,257.28,Norton Security Auto-Renewal $399. Call refund agent at 1-888-555-0144 to cancel charge.
+eval_scam_36,Impersonation,scam,scam,60,High Scam Risk,TP,254.93,0.08,255.01,"This is VP Operations. Wire $12,000 immediately to vendor account for urgent server contract."
+eval_scam_37,Gift Card,scam,scam,79,High Scam Risk,TP,265.2,0.05,265.25,Need 3 Google Play gift cards ($50 each) for office event. Scratch codes and send photos immediately.
+eval_scam_38,Loan Fraud,scam,scam,84,High Scam Risk,TP,293.31,0.05,293.36,"No credit check loan $10,000 approved! Transfer $150 collateral insurance fee via CashApp."
+eval_scam_39,Malware Distribution,scam,legitimate,50,Caution,FN,251.16,0.05,251.21,Invoice attached Security_Patch.scr. Execute file on your computer to update system settings.
+eval_scam_40,Banking Phishing,scam,legitimate,40,Caution,FN,245.51,0.11,245.62,Security Warning: Suspicious activity on Capital One account. Verify at http://capitalone-auth-check.net
+eval_scam_41,Advance-Fee,scam,legitimate,53,Caution,FN,250.72,0.06,250.77,"You are beneficiary of $850,000 fund. Pay $250 transfer stamp fee to release check."
+eval_scam_42,Fake Job,scam,legitimate,51,Caution,FN,251.04,0.05,251.09,"Remote Typist $45/hr. Deposit $2,500 check, send $2,000 via Zelle to our software vendor."
+eval_scam_43,OTP Theft,scam,legitimate,45,Caution,FN,271.6,0.05,271.65,Your Google verification code is 394821. Provide this code to our customer care executive to restore access.
+eval_scam_44,Fake Internship,scam,legitimate,55,Caution,FN,255.52,0.05,255.57,Accepted for Summer AI Internship! Pay $120 registration deposit via UPI within 4 hours.
+eval_scam_45,Crypto Scam,scam,scam,89,Critical Threat,TP,245.59,0.05,245.65,"High yield investment bot! Turn $100 into $2,500 guaranteed in 12 hours. Send USDT now."
+eval_scam_46,Delivery Scam,scam,legitimate,56,Caution,FN,249.04,0.09,249.13,UPS: Delivery failed due to incomplete address. Update at http://ups-redelivery-notice.info
+eval_scam_47,Tech Support,scam,legitimate,40,Caution,FN,248.45,0.05,248.49,McAfee Antivirus $299 subscription renewed. Call +1-888-555-0188 to claim full refund.
+eval_scam_48,Impersonation,scam,scam,94,Critical Threat,TP,271.96,0.06,272.02,From Director: Purchase 4 Target gift cards for team reward. Email codes directly to me.
+eval_scam_49,Romance Fraud,scam,legitimate,35,Caution,FN,255.35,0.05,255.41,"Customs official holding my gold trunk in London. Send $2,000 Bitcoin to release diplomat agent."
+eval_scam_50,Loan Fraud,scam,scam,85,Critical Threat,TP,252.47,0.05,252.53,"Guaranteed $15,000 business loan approved. Send $300 activation fee via Zelle to disburse."
+eval_legit_01,Genuine Bank Notification,legitimate,legitimate,2,Low Risk,TN,248.47,0.06,248.53,"Chase Alert: A sign-in to your online account occurred from a new browser on Sep 24. If this was you, no action needed."
+eval_legit_02,Genuine Bank Notification,legitimate,legitimate,5,Low Risk,TN,250.86,0.04,250.9,Bank of America: Your monthly statement is ready to view inside your online banking app.
+eval_legit_03,Genuine Bank Notification,legitimate,legitimate,5,Low Risk,TN,237.59,0.04,237.63,"Wells Fargo: Your direct deposit of $2,450.00 has posted to your account."
+eval_legit_04,Genuine Bank Notification,legitimate,legitimate,5,Low Risk,TN,247.33,0.04,247.37,Citi Alert: Your credit card balance of $142.50 is due on Oct 12. Manage payment on citi.com
+eval_legit_05,Genuine 2FA,legitimate,legitimate,2,Low Risk,TN,242.55,0.05,242.6,Your Google verification code is 482910. Do not share this code with anyone.
+eval_legit_06,Genuine 2FA,legitimate,legitimate,5,Low Risk,TN,249.87,0.04,249.91,"394812 is your Microsoft security code. If you didn't request this code, check account activity."
+eval_legit_07,Legitimate Receipt,legitimate,legitimate,2,Low Risk,TN,251.65,0.05,251.7,Amazon.com: Your order #114-9842104-5829104 has shipped via UPS. Track package in Amazon app.
+eval_legit_08,Legitimate Receipt,legitimate,legitimate,5,Low Risk,TN,244.39,0.04,244.43,PayPal: You paid $24.99 USD to Netflix. View transaction details in your PayPal account dashboard.
+eval_legit_09,Legitimate Job Offer,legitimate,legitimate,2,Low Risk,TN,252.99,0.08,253.07,"Microsoft Careers: Following your team interviews, your formal offer letter is posted on https://careers.microsoft.com"
+eval_legit_10,Legitimate Job Offer,legitimate,legitimate,5,Low Risk,TN,237.22,0.05,237.27,Google Recruiting: Thank you for interviewing for Software Engineer role. We would like to schedule a team fit call.
+eval_legit_11,Genuine Internship,legitimate,legitimate,5,Low Risk,TN,246.67,0.05,246.72,IBM Internship Program: Congratulations on completing your technical assessment. Your manager interview is scheduled for Tuesday on Webex.
+eval_legit_12,Genuine Internship,legitimate,legitimate,5,Low Risk,TN,240.07,0.05,240.12,Intel HR: Your summer internship onboarding documents are ready in the official employee portal.
+eval_legit_13,Legitimate Delivery,legitimate,legitimate,2,Low Risk,TN,241.66,0.08,241.74,UPS Update: Package 1Z9999999999999999 will be delivered today between 1:00 PM - 5:00 PM. Track status at https://www.ups.com/track
+eval_legit_14,Legitimate Delivery,legitimate,legitimate,5,Low Risk,TN,241.34,0.05,241.39,FedEx: Your package from Apple Inc. is out for delivery today. Signature required upon arrival.
+eval_legit_15,Legitimate Delivery,legitimate,legitimate,5,Low Risk,TN,242.87,0.06,242.93,USPS Informed Delivery: You have 2 mail pieces arriving today. View images in your usps.com account.
+eval_legit_16,Normal Payment Request,legitimate,legitimate,35,Caution,TN,245.11,0.05,245.16,Venmo: Alex requested $15.00 for dinner yesterday. Accept or decline inside your Venmo app.
+eval_legit_17,Normal Payment Request,legitimate,legitimate,35,Caution,TN,255.07,0.05,255.12,Zelle: Sarah sent you $40.00 for grocery share. Funds are available in your bank app.
+eval_legit_18,Legitimate Marketing,legitimate,legitimate,5,Low Risk,TN,239.8,0.04,239.84,Spotify: Enjoy 3 months of Premium for $9.99. Offer valid until end of month at spotify.com
+eval_legit_19,Legitimate Marketing,legitimate,legitimate,5,Low Risk,TN,240.13,0.04,240.17,Uber: 20% off your next ride this weekend! Apply code WEEKEND20 in the Uber mobile app.
+eval_legit_20,Legitimate Marketing,legitimate,legitimate,5,Low Risk,TN,248.98,0.05,249.02,LinkedIn: 3 people viewed your profile this week. See who viewed your profile on linkedin.com
+eval_legit_21,Genuine Bank Notification,legitimate,legitimate,5,Low Risk,TN,254.63,0.04,254.68,Capital One: A balance transfer of $500.00 was completed successfully.
+eval_legit_22,Genuine 2FA,legitimate,legitimate,45,Caution,TN,242.72,0.05,242.77,Your Apple ID Verification Code is: 849201. Don't give this code to anyone.
+eval_legit_23,Genuine 2FA,legitimate,legitimate,5,Low Risk,TN,241.21,0.04,241.25,748192 is your Uber verification code. Never share this code.
+eval_legit_24,Legitimate Receipt,legitimate,legitimate,5,Low Risk,TN,241.41,0.04,241.46,Apple Store: Your order receipt for iCloud+ 200GB storage ($2.99) is ready in your account.
+eval_legit_25,Legitimate Receipt,legitimate,legitimate,5,Low Risk,TN,246.15,0.04,246.19,Steam: Thank you for your purchase of Cyberpunk 2077. Transaction receipt emailed to your address.
+eval_legit_26,Legitimate Job Offer,legitimate,legitimate,5,Low Risk,TN,240.78,0.05,240.83,Meta Careers: Your application for Data Engineer has been reviewed. Please submit your availability for technical round.
+eval_legit_27,Legitimate Job Offer,legitimate,legitimate,5,Low Risk,TN,237.16,0.04,237.2,Amazon HR: Thank you for applying for AWS Solutions Architect. Log into amazon.jobs to check application status.
+eval_legit_28,Genuine Internship,legitimate,legitimate,5,Low Risk,TN,244.61,0.04,244.65,Cisco University Relations: Welcome to Cisco Summer Intern Class of 2024! Please complete badge photo upload.
+eval_legit_29,Legitimate Delivery,legitimate,legitimate,5,Low Risk,TN,252.42,0.04,252.46,USPS: Your package #9400111202555 was delivered at 2:15 PM at your front door.
+eval_legit_30,Legitimate Delivery,legitimate,legitimate,5,Low Risk,TN,241.06,0.04,241.11,DHL Express: Waybill 84920148 has passed customs clearance in Cincinnati.
+eval_legit_31,Normal Payment Request,legitimate,legitimate,5,Low Risk,TN,241.28,0.04,241.32,PayPal: Invoice #1049 from John's Landscaping for $60.00 is ready for review in your account.
+eval_legit_32,Legitimate Marketing,legitimate,legitimate,5,Low Risk,TN,237.12,0.04,237.16,GitHub: GitHub Universe conference early bird tickets are now available on github.com
+eval_legit_33,Legitimate Marketing,legitimate,legitimate,5,Low Risk,TN,241.86,0.04,241.9,Duolingo: Don't lose your 45-day streak! Practice Spanish today in the Duolingo app.
+eval_legit_34,Genuine Bank Notification,legitimate,legitimate,5,Low Risk,TN,320.47,0.04,320.51,Chase Alert: Automatic payment of $85.00 to Electric Utility was successful.
+eval_legit_35,Genuine Bank Notification,legitimate,legitimate,5,Low Risk,TN,243.54,0.05,243.58,Bank of America: Low balance alert: your checking account balance is below $100.
+eval_legit_36,Genuine 2FA,legitimate,legitimate,5,Low Risk,TN,237.72,0.05,237.77,Use code 940182 to log into your GitHub account.
+eval_legit_37,Genuine 2FA,legitimate,legitimate,5,Low Risk,TN,246.57,0.04,246.61,Slack security code: 492018. Enter code on slack.com to authenticate device.
+eval_legit_38,Legitimate Receipt,legitimate,legitimate,5,Low Risk,TN,238.08,0.04,238.12,Target e-Receipt: Your order #948120 for store pickup is ready at downtown location.
+eval_legit_39,Legitimate Receipt,legitimate,legitimate,5,Low Risk,TN,239.55,0.04,239.59,DoorDash: Order confirmed from Luigi's Pizza. Estimated delivery 35-45 mins.
+eval_legit_40,Legitimate Job Offer,legitimate,legitimate,5,Low Risk,TN,249.77,0.04,249.81,Adobe Talent Acquisition: We enjoyed meeting you! Form offer letter has been sent via DocuSign to your email.
+eval_legit_41,Genuine Internship,legitimate,legitimate,5,Low Risk,TN,242.05,0.04,242.09,NVIDIA HR: Your intern hardware equipment shipping address has been confirmed.
+eval_legit_42,Legitimate Delivery,legitimate,legitimate,5,Low Risk,TN,244.63,0.04,244.67,UPS: Driver will attempt package delivery today before 7:00 PM.
+eval_legit_43,Legitimate Delivery,legitimate,legitimate,5,Low Risk,TN,247.94,0.04,247.98,FedEx: Shipment #78491024 delivered to parcel locker.
+eval_legit_44,Normal Payment Request,legitimate,legitimate,5,Low Risk,TN,246.0,0.04,246.04,Square Receipt: $4.50 payment to Blue Bottle Coffee via Visa ending in 4012.
+eval_legit_45,Legitimate Marketing,legitimate,legitimate,5,Low Risk,TN,242.29,0.04,242.33,Zoom: New AI Companion features are now enabled on your free Zoom account.
+eval_legit_46,Legitimate Marketing,legitimate,legitimate,5,Low Risk,TN,264.59,0.04,264.63,Coursera: New Machine Learning Specialization course available from Stanford University.
+eval_legit_47,Genuine Bank Notification,legitimate,legitimate,5,Low Risk,TN,244.01,0.04,244.06,Discover Card: Your cash back bonus of $18.40 has been credited to your statement.
+eval_legit_48,Genuine 2FA,legitimate,legitimate,5,Low Risk,TN,237.36,0.04,237.4,Your Dropbox verification code is 194820.
+eval_legit_49,Legitimate Receipt,legitimate,legitimate,5,Low Risk,TN,247.92,0.04,247.96,Lyft Receipt: $18.50 for trip to Airport. Receipt saved to your Lyft account.
+eval_legit_50,Legitimate Job Offer,legitimate,legitimate,5,Low Risk,TN,242.41,0.04,242.46,Salesforce Careers: Thank you for applying for Senior Engineer. Your candidate status is active.

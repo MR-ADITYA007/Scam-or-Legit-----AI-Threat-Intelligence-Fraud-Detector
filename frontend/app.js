@@ -1,4 +1,4 @@
-// Scam or Legit? — Client Application Logic
+// Scam or Legit? — Client Application Logic (Version 2.0.0)
 
 const API_BASE = window.location.origin;
 
@@ -37,13 +37,13 @@ async function fetchHealthStatus() {
         const data = await response.json();
         
         if (data.status === 'online') {
-            let engineDesc = data.llm_gemini_active ? "Gemini 2.0 Flash + Chroma RAG" : "Vector RAG Threat Engine";
+            let engineDesc = data.gemini_analyzer.active ? "Gemini 2.0 Flash + Chroma RAG" : "Vector RAG Threat Engine";
             statusText.innerText = engineDesc;
-            statusPill.classList.remove('offline');
+            if (statusPill) statusPill.classList.remove('offline');
         }
     } catch (err) {
         console.warn("Backend API offline or standalone local mode.", err);
-        statusText.innerText = "Vector RAG Local Engine";
+        if (statusText) statusText.innerText = "Vector RAG Local Engine";
     }
 }
 
@@ -53,9 +53,9 @@ async function fetchPresets() {
     const defaultPresets = [
         {
             id: "preset_bank_sms",
-            name: "🚨 Bank Account Lock SMS",
+            name: "🚨 Bank Account Lock Phishing SMS",
             type: "Phishing SMS",
-            content: "SECURITY ALERT: Your Chase online access is locked due to unusual activity. Verify identity within 24 hours at http://chase-security-verify-auth.com or account will be closed."
+            content: "SECURITY ALERT: Your Chase online banking access has been locked due to suspicious login attempts. Verify identity within 24 hours at http://chase-security-verify-auth.com or account will be closed."
         },
         {
             id: "preset_fake_internship",
@@ -71,13 +71,13 @@ async function fetchPresets() {
         },
         {
             id: "preset_crypto_vip",
-            name: "📈 Guaranteed Crypto Bot",
+            name: "📈 Guaranteed Crypto Bot Scam",
             type: "Crypto Fraud",
             content: "Turn $200 into $5,000 in 24 hours guaranteed! Join our VIP Telegram Signal group. Our AI trading bot has zero loss history. Send USDT (TRC-20) to T9xZ8842... now!"
         },
         {
             id: "preset_legit_amazon",
-            name: "✅ Official Amazon Receipt",
+            name: "✅ Official Amazon Shipping Receipt",
             type: "Legitimate",
             content: "Amazon.com: Your order #114-9842104-5829104 has shipped via UPS. You can track package status anytime inside your official Amazon account app."
         }
@@ -92,24 +92,26 @@ async function fetchPresets() {
         currentPresetData = defaultPresets;
     }
 
-    presetsContainer.innerHTML = '';
-    currentPresetData.forEach(preset => {
-        const btn = document.createElement('button');
-        btn.className = 'preset-chip';
-        btn.innerHTML = preset.name;
-        btn.onclick = () => loadPreset(preset);
-        presetsContainer.appendChild(btn);
-    });
+    if (presetsContainer) {
+        presetsContainer.innerHTML = '';
+        currentPresetData.forEach(preset => {
+            const btn = document.createElement('button');
+            btn.className = 'preset-chip';
+            btn.innerHTML = escapeHtml(preset.name);
+            btn.onclick = () => loadPreset(preset);
+            presetsContainer.appendChild(btn);
+        });
+    }
 }
 
 // Load Preset into Text Area and Trigger Analysis
 function loadPreset(preset) {
     switchInputTab('text');
     const textarea = document.getElementById('messageInput');
-    textarea.value = preset.content;
-    updateCharCounter();
-    
-    // Auto trigger analysis
+    if (textarea) {
+        textarea.value = preset.content;
+        updateCharCounter();
+    }
     runAnalysis();
 }
 
@@ -157,8 +159,11 @@ async function pasteClipboard() {
     try {
         const text = await navigator.clipboard.readText();
         if (text) {
-            document.getElementById('messageInput').value = text;
-            updateCharCounter();
+            const input = document.getElementById('messageInput');
+            if (input) {
+                input.value = text;
+                updateCharCounter();
+            }
         }
     } catch (err) {
         alert("Clipboard access permission denied. Please paste manually into the text field.");
@@ -174,6 +179,7 @@ function clearInput() {
     
     setElementVisible(document.getElementById('emptyState'), true, 'flex');
     setElementVisible(document.getElementById('activeResults'), false);
+    lastAnalysisResult = null;
 }
 
 // Dropzone Events for Image Screenshot Upload
@@ -206,7 +212,8 @@ function setupDropzoneEvents() {
 
 function triggerFileInput() {
     if (!selectedFile) {
-        document.getElementById('imageInput').click();
+        const fileInput = document.getElementById('imageInput');
+        if (fileInput) fileInput.click();
     }
 }
 
@@ -220,6 +227,10 @@ function handleFileSelect(e) {
 function handleFile(file) {
     if (!file.type.startsWith('image/')) {
         alert("Please upload a valid image screenshot file (PNG, JPG, WEBP).");
+        return;
+    }
+    if (file.size > 5 * 1024 * 1024) {
+        alert("File size exceeds 5MB limit. Please upload a smaller screenshot.");
         return;
     }
     
@@ -265,7 +276,7 @@ async function runAnalysis() {
     // Set Loading State
     if (analyzeBtn) analyzeBtn.disabled = true;
     if (btnIcon) btnIcon.innerHTML = `<svg class="spin-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/></svg>`;
-    if (btnText) btnText.innerText = "Analyzing Risk...";
+    if (btnText) btnText.innerText = "Analyzing Threat Intelligence...";
 
     try {
         let result;
@@ -302,7 +313,7 @@ async function runAnalysis() {
         renderResults(result);
 
     } catch (err) {
-        console.warn("Backend API error or standalone mode, generating instant client evaluation:", err);
+        console.warn("Backend API error, fallback client evaluation active:", err);
         const fallbackResult = generateClientFallbackAnalysis(textInput);
         lastAnalysisResult = fallbackResult;
         renderResults(fallbackResult);
@@ -313,71 +324,106 @@ async function runAnalysis() {
     }
 }
 
-// Local Fallback Heuristic Analysis Engine
+// Client Fallback Heuristic Analysis (Strict Threshold Compliance)
+// Authoritative Thresholds:
+// 0–24: Low Risk
+// 25–59: Caution
+// 60–84: High Scam Risk
+// 85–100: Critical Threat
 function generateClientFallbackAnalysis(input) {
     const text = (input || "").toLowerCase();
-    let score = 15;
+    let score = 10;
     let category = "Suspicious Communication";
     let flags = [];
     let cues = [];
     let actions = [];
 
     if (text.includes("chase") || text.includes("bank") || text.includes("locked") || text.includes("verify identity")) {
-        score = 92;
+        score = 78; // High Scam Risk boundary test
         category = "Phishing / Account Takeover SMS";
-        flags.push({ category: "Suspicious Domain Link", severity: "High", description: "Unverified third-party domain mimicking official bank authentication." });
-        flags.push({ category: "Artificial Urgency", severity: "High", description: "Claims account will be locked within 24 hours to force fast reaction." });
-        cues = ["Urgency Bias", "Authority Impersonation", "Panicked Call to Action"];
-        actions = ["Do NOT click the link provided in the message.", "Log into your bank through their official app or website directly.", "Report SMS to carrier by forwarding to 7726."];
+        flags.push({ category: "Brand & Identity Spoofing", severity: "High", description: "Unverified link mimicking official banking login portal.", matched_phrase: "http://chase-security-verify-auth.com" });
+        flags.push({ category: "Artificial Urgency & Threat Tactics", severity: "High", description: "Imposes 24-hour ultimatum to force hasty reaction.", matched_phrase: "within 24 hours" });
+        cues = ["Artificial Urgency & Threat Tactics", "Credential Harvesting / OTP Theft"];
+        actions = ["Do NOT click the provided link.", "Log into your bank through their official app or website directly.", "Report SMS phishing to carrier."];
     } else if (text.includes("check") || text.includes("hired") || text.includes("zelle") || text.includes("equipment vendor")) {
-        score = 88;
+        score = 88; // Critical Threat boundary test
         category = "Fake Remote Job / Overpayment Fraud";
-        flags.push({ category: "Advance Fee Cheque Trap", severity: "High", description: "Asks victim to deposit cashier's check and wire portion back to fake vendor." });
-        flags.push({ category: "High Pay / Low Skill", severity: "Medium", description: "Unrealistic hourly compensation offered without formal interview process." });
-        cues = ["Financial Incentive", "Overpayment Scheme", "Non-reversible Payment (Zelle)"];
-        actions = ["Cease communication with hiring representative immediately.", "Never send money via Zelle/Wire to purchase company work equipment.", "Verify company domain on LinkedIn and official careers portal."];
+        flags.push({ category: "Untraceable / Peer-to-Peer Payment Demand", severity: "Critical", description: "Instructs victim to deposit check and wire funds to vendor via Zelle.", matched_phrase: "wire $3,000 via Zelle" });
+        flags.push({ category: "Upfront Fee / Registration Deposit Trap", severity: "High", description: "Offered position without formal live interview process.", matched_phrase: "Hired at $45/hr" });
+        cues = ["Untraceable / Peer-to-Peer Payment Demand", "Upfront Fee / Registration Deposit Trap"];
+        actions = ["Cease communication with representative immediately.", "Never wire money back from a deposited cashier check.", "Verify employer on official website."];
     } else if (text.includes("crypto") || text.includes("guaranteed") || text.includes("telegram") || text.includes("usdt")) {
-        score = 95;
+        score = 95; // Critical Threat
         category = "Investment & Crypto Fraud";
-        flags.push({ category: "Guaranteed Return Claim", severity: "High", description: "Promises 100%+ guaranteed profit with zero risk." });
-        flags.push({ category: "Unregulated Crypto Transfer", severity: "High", description: "Requires non-refundable cryptocurrency transfer (TRC-20)." });
-        cues = ["Greed Trigger", "Zero-Loss Guarantee", "Private Channel Redirection"];
-        actions = ["Never transfer cryptocurrency to unverified wallet addresses.", "Be aware that legitimate trading platforms do not guarantee fixed returns.", "Block and report the channel/account on Telegram."];
-    } else if (text.includes("internship") || text.includes("stipend") || text.includes("training fee") || text.includes("refundable deposit") || text.includes("lms") || text.includes("student offer")) {
-        score = 92;
-        category = "Fake Virtual Internship / Pay-to-Work Scam";
-        flags.push({ category: "Pay-to-Work Deposit Trap", severity: "Critical", description: "Demands upfront payment (training fee/security deposit) from students to issue offer letters or reserve slots." });
-        flags.push({ category: "Unsolicited Hiring / No Technical Interview", severity: "High", description: "Offers internship role immediately without standard technical assessment or live video interview." });
-        cues = ["Student Exploitation", "Upfront Deposit Trap", "Artificial Deadline Pressure"];
-        actions = ["Never pay a fee to secure an internship. Legitimate companies pay interns for their work.", "Verify company registration on LinkedIn or official corporate website.", "Do not purchase third-party LMS courses or certificates required by unverified recruiters."];
+        flags.push({ category: "Guaranteed Profit / High-Yield Claim", severity: "Critical", description: "Promises zero loss and guaranteed overnight returns.", matched_phrase: "Turn $200 into $5,000 guaranteed" });
+        cues = ["Guaranteed Profit / High-Yield Claim", "Untraceable / Peer-to-Peer Payment Demand"];
+        actions = ["Never transfer crypto to unverified wallets.", "Be aware that legitimate trading platforms do not guarantee profits."];
+    } else if (text.includes("internship") || text.includes("stipend") || text.includes("training fee") || text.includes("refundable deposit")) {
+        score = 75; // High Scam Risk
+        category = "Fake Virtual Internship Scam";
+        flags.push({ category: "Upfront Fee / Registration Deposit Trap", severity: "Critical", description: "Demands upfront training deposit to issue offer letter or candidate slot.", matched_phrase: "pay refundable deposit of $150" });
+        cues = ["Upfront Fee / Registration Deposit Trap", "Artificial Urgency & Threat Tactics"];
+        actions = ["Never pay a deposit to secure an internship.", "Legitimate companies pay interns for work, not vice versa."];
     } else if (text.includes("amazon") || text.includes("order #") || text.includes("shipped")) {
-        score = 5;
-        category = "Legitimate Shipping Notification";
-        flags.push({ category: "No Suspicious Link", severity: "Low", description: "Message advises checking order status inside official app." });
-        cues = ["Informational Only", "Official Reference Format"];
-        actions = ["Message appears safe.", "Check your official Amazon mobile app to confirm order status."];
+        score = 5; // Low Risk
+        category = "Genuine Delivery Notification";
+        flags = [];
+        cues = [];
+        actions = ["Message appears clean.", "Verify order status inside your official mobile app."];
     } else {
-        score = 65;
-        category = "Unverified Link / Potential Scam";
-        flags.push({ category: "Unrecognized Sender", severity: "Medium", description: "Message contains patterns typical of unsolicited spam." });
-        cues = ["Unsolicited Contact", "Unverified Request"];
-        actions = ["Avoid clicking external links.", "Verify sender identity independently."];
+        score = 35; // Caution
+        category = "Unverified Contact";
+        flags.push({ category: "Deceptive or Unverified Link", severity: "Medium", description: "Contains unverified contact link.", matched_phrase: "" });
+        cues = ["Deceptive or Unverified Link"];
+        actions = ["Avoid clicking links from unknown senders.", "Verify sender identity independently."];
     }
 
     let level = "Low Risk";
-    if (score >= 80) level = "Critical Threat";
-    else if (score >= 45) level = "High Scam Risk";
-    else if (score >= 20) level = "Caution Needed";
+    let color = "#10b981";
+    let bgStyle = "rgba(16, 185, 129, 0.16)";
+
+    if (score >= 85) {
+        level = "Critical Threat";
+        color = "#f43f5e";
+        bgStyle = "rgba(244, 63, 94, 0.16)";
+    } else if (score >= 60) {
+        level = "High Scam Risk";
+        color = "#f97316";
+        bgStyle = "rgba(249, 115, 22, 0.16)";
+    } else if (score >= 25) {
+        level = "Caution";
+        color = "#f59e0b";
+        bgStyle = "rgba(245, 158, 11, 0.16)";
+    }
 
     return {
         risk_score: score,
         risk_level: level,
+        color: color,
+        bg_style: bgStyle,
+        disclaimer: "Heuristic risk score based on pattern matching and indicator analysis.",
         scam_category: category,
-        summary: `Analysis identified ${flags.length} risk indicators with an estimated threat rating of ${score}/100.`,
+        summary: `Analysis identified ${flags.length} risk indicator(s) with an estimated heuristic threat rating of ${score}/100.`,
+        uncertainty: "Moderate Uncertainty — Fallback local mode.",
         red_flags: flags,
-        retrieved_evidence: ["Matched Vector Pattern #8492 — Fake Auth URL Pattern", "ChromaDB Similarity Score: 0.91"],
-        linguistic_cues: cues,
-        recommended_actions: actions
+        pattern_triggers: cues,
+        rag_matches: [
+            {
+                id: "local_pattern_ref",
+                title: "Local Pattern Match Baseline",
+                category: category,
+                label: "scam",
+                similarity_score: 0.85,
+                source_name: "Local Offline Rule",
+                source_url: "",
+                example_type: "offline_fallback"
+            }
+        ],
+        score_breakdown: [
+            { category: "Extracted Indicators", contribution: `+${score}`, reason: "Matched suspicious keywords" }
+        ],
+        safety_steps: actions,
+        analysis_metadata: { engine: "Local Offline Heuristic", gemini_active: false, rag_count: 1 }
     };
 }
 
@@ -389,23 +435,26 @@ function renderResults(data) {
     setElementVisible(emptyState, false);
     setElementVisible(activeResults, true, 'block');
 
-    const score = data.risk_score || 0;
-    const level = data.risk_level || 'Unknown';
+    const score = typeof data.risk_score === 'number' ? data.risk_score : 0;
+    const level = data.risk_level || 'Low Risk';
     const category = data.scam_category || 'General Threat Analysis';
 
-    // Update Score Count Up
+    // Animate Gauge Score
     animateGaugeScore(score);
 
     // Update SVG Arc & Color Theme
-    updateGaugeColorAndArc(score, level);
+    updateGaugeColorAndArc(score, level, data.color, data.bg_style);
 
     // Update Category & Summary
     const tagEl = document.getElementById('scamCategoryTag');
     const sumEl = document.getElementById('riskSummaryText');
+    const uncertaintyEl = document.getElementById('uncertaintyTag');
+
     if (tagEl) tagEl.innerText = category;
     if (sumEl) sumEl.innerText = data.summary || "Analysis complete.";
+    if (uncertaintyEl) uncertaintyEl.innerText = data.uncertainty || "";
 
-    // Render Red Flags Grid
+    // Render Red Flags Grid (Deduplicated)
     const redFlagsGrid = document.getElementById('redFlagsGrid');
     if (redFlagsGrid) {
         redFlagsGrid.innerHTML = '';
@@ -413,47 +462,64 @@ function renderResults(data) {
             data.red_flags.forEach(flag => {
                 const card = document.createElement('div');
                 card.className = `flag-item severity-${flag.severity || 'Medium'}`;
+                const matchedPhraseSnippet = flag.matched_phrase ? `<div class="flag-evidence"><strong>Evidence:</strong> "${escapeHtml(flag.matched_phrase)}"</div>` : '';
                 card.innerHTML = `
                     <div class="flag-header">
                         <span class="flag-title">${escapeHtml(flag.category)}</span>
                         <span class="flag-tag ${flag.severity || 'Medium'}">${flag.severity || 'Medium'}</span>
                     </div>
                     <p class="flag-body">${escapeHtml(flag.description)}</p>
+                    ${matchedPhraseSnippet}
                 `;
                 redFlagsGrid.appendChild(card);
             });
         } else {
-            redFlagsGrid.innerHTML = `<div class="flag-item safe"><div class="flag-header"><span class="flag-title">No Red Flags Detected</span></div><p class="flag-body">No malicious links or deceptive threat patterns were triggered.</p></div>`;
+            redFlagsGrid.innerHTML = `<div class="flag-item safe"><div class="flag-header"><span class="flag-title">No Red Flags Detected</span></div><p class="flag-body">No malicious links, untraceable payment demands, or deceptive threat patterns were triggered.</p></div>`;
         }
     }
 
-    // Render RAG Vector Evidence
+    // Render Similar Patterns in Knowledge Base
     const evidenceList = document.getElementById('evidenceList');
     if (evidenceList) {
         evidenceList.innerHTML = '';
-        if (data.retrieved_evidence && data.retrieved_evidence.length > 0) {
-            data.retrieved_evidence.forEach(item => {
+        if (data.rag_matches && data.rag_matches.length > 0) {
+            data.rag_matches.forEach(item => {
                 const div = document.createElement('div');
-                div.className = 'evidence-chip';
-                div.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> ${escapeHtml(item)}`;
+                const isLegit = item.label === 'legitimate' || item.label === 'legit';
+                div.className = `evidence-chip ${isLegit ? 'legit-chip' : 'scam-chip'}`;
+                const iconColor = isLegit ? '#10b981' : '#f97316';
+                const labelText = isLegit ? 'Legitimate Reference' : 'Documented Scam Pattern';
+                div.innerHTML = `
+                    <div class="evidence-header">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="${iconColor}" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        <strong>${escapeHtml(item.title)}</strong>
+                    </div>
+                    <div class="evidence-meta">
+                        <span class="badge-${item.label}">${labelText}</span>
+                        <span>Similarity Score: ${item.similarity_score}</span>
+                        <span>Source: ${escapeHtml(item.source_name || 'KB')}</span>
+                    </div>
+                `;
                 evidenceList.appendChild(div);
             });
         } else {
-            evidenceList.innerHTML = `<div class="evidence-chip">Vector RAG Baseline Context Active</div>`;
+            evidenceList.innerHTML = `<div class="evidence-chip">No similar patterns retrieved from local knowledge base. Analysis evaluated via direct text engine.</div>`;
         }
     }
 
-    // Render Linguistic Cues
+    // Render Pattern Triggers (Unique Canonical Tags)
     const cuesTags = document.getElementById('linguisticCuesTags');
     if (cuesTags) {
         cuesTags.innerHTML = '';
-        if (data.linguistic_cues && data.linguistic_cues.length > 0) {
-            data.linguistic_cues.forEach(cue => {
+        if (data.pattern_triggers && data.pattern_triggers.length > 0) {
+            data.pattern_triggers.forEach(trigger => {
                 const span = document.createElement('span');
                 span.className = 'cue-pill';
-                span.innerText = cue;
+                span.innerText = trigger;
                 cuesTags.appendChild(span);
             });
+        } else {
+            cuesTags.innerHTML = `<span class="cue-pill clean">Standard Clean Content</span>`;
         }
     }
 
@@ -461,8 +527,8 @@ function renderResults(data) {
     const actionsList = document.getElementById('actionsList');
     if (actionsList) {
         actionsList.innerHTML = '';
-        if (data.recommended_actions && data.recommended_actions.length > 0) {
-            data.recommended_actions.forEach(action => {
+        if (data.safety_steps && data.safety_steps.length > 0) {
+            data.safety_steps.forEach(action => {
                 const li = document.createElement('li');
                 li.innerHTML = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <span>${escapeHtml(action)}</span>`;
                 actionsList.appendChild(li);
@@ -480,7 +546,7 @@ function animateGaugeScore(targetScore) {
     const gaugeValue = document.getElementById('gaugeValue');
     if (!gaugeValue) return;
     let start = 0;
-    const duration = 800;
+    const duration = 600;
     const stepTime = 20;
     const steps = duration / stepTime;
     const increment = targetScore / steps;
@@ -496,35 +562,43 @@ function animateGaugeScore(targetScore) {
     }, stepTime);
 }
 
-// Update SVG Arc & Cyber Color Themes
-function updateGaugeColorAndArc(score, level) {
+// Authoritative Color & Gauge Mapping:
+// 0–24: Low Risk (green)
+// 25–59: Caution (yellow/amber)
+// 60–84: High Scam Risk (orange/crimson)
+// 85–100: Critical Threat (red/crimson)
+function updateGaugeColorAndArc(score, level, customColor, customBgStyle) {
     const gaugeArc = document.getElementById('gaugeArc');
     const badge = document.getElementById('riskLevelBadge');
     if (!gaugeArc || !badge) return;
 
     const maxOffset = 330;
-    const offset = maxOffset - (maxOffset * (score / 100));
+    const clampedScore = Math.max(0, Math.min(100, score));
+    const offset = maxOffset - (maxOffset * (clampedScore / 100));
     gaugeArc.style.strokeDashoffset = offset;
 
-    let strokeColor, bgStyle;
+    let strokeColor = customColor;
+    let bgStyle = customBgStyle;
 
-    if (score >= 75) {
-        strokeColor = '#f43f5e';
-        bgStyle = 'background: rgba(244, 63, 94, 0.16); color: #fecdd3; border: 1px solid rgba(244, 63, 94, 0.5); box-shadow: 0 0 20px rgba(244, 63, 94, 0.3);';
-    } else if (score >= 45) {
-        strokeColor = '#f97316';
-        bgStyle = 'background: rgba(249, 115, 22, 0.16); color: #ffedd5; border: 1px solid rgba(249, 115, 22, 0.5); box-shadow: 0 0 20px rgba(249, 115, 22, 0.3);';
-    } else if (score >= 20) {
-        strokeColor = '#f59e0b';
-        bgStyle = 'background: rgba(245, 158, 11, 0.16); color: #fef3c7; border: 1px solid rgba(245, 158, 11, 0.5); box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);';
-    } else {
-        strokeColor = '#10b981';
-        bgStyle = 'background: rgba(16, 185, 129, 0.16); color: #d1fae5; border: 1px solid rgba(16, 185, 129, 0.5); box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);';
+    if (!strokeColor) {
+        if (clampedScore >= 85) {
+            strokeColor = '#f43f5e';
+            bgStyle = 'background: rgba(244, 63, 94, 0.16); color: #fecdd3; border: 1px solid rgba(244, 63, 94, 0.5); box-shadow: 0 0 20px rgba(244, 63, 94, 0.3);';
+        } else if (clampedScore >= 60) {
+            strokeColor = '#f97316';
+            bgStyle = 'background: rgba(249, 115, 22, 0.16); color: #ffedd5; border: 1px solid rgba(249, 115, 22, 0.5); box-shadow: 0 0 20px rgba(249, 115, 22, 0.3);';
+        } else if (clampedScore >= 25) {
+            strokeColor = '#f59e0b';
+            bgStyle = 'background: rgba(245, 158, 11, 0.16); color: #fef3c7; border: 1px solid rgba(245, 158, 11, 0.5); box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);';
+        } else {
+            strokeColor = '#10b981';
+            bgStyle = 'background: rgba(16, 185, 129, 0.16); color: #d1fae5; border: 1px solid rgba(16, 185, 129, 0.5); box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);';
+        }
     }
 
     gaugeArc.style.stroke = strokeColor;
-    badge.setAttribute('style', bgStyle);
-    badge.innerText = level.toUpperCase();
+    badge.setAttribute('style', bgStyle || '');
+    badge.innerText = (level || 'LOW RISK').toUpperCase();
 }
 
 // Copy Full Report
@@ -537,14 +611,19 @@ function copyReport() {
 Risk Score: ${r.risk_score}/100 (${r.risk_level})
 Category: ${r.scam_category}
 Summary: ${r.summary}
+Uncertainty: ${r.uncertainty || 'N/A'}
 
-RED FLAGS:
+DETECTED RED FLAGS:
 ${(r.red_flags || []).map(f => `• [${f.severity}] ${f.category}: ${f.description}`).join('\n')}
 
-SAFETY RECOMMENDATIONS:
-${(r.recommended_actions || []).map(a => `✔ ${a}`).join('\n')}
+KNOWLEDGE BASE SIMILAR PATTERNS:
+${(r.rag_matches || []).map(m => `• [${m.label}] ${m.title} (Similarity: ${m.similarity_score})`).join('\n')}
 
-Analyzed via Scam or Legit? AI Threat Scanner.
+SAFETY RECOMMENDATIONS:
+${(r.safety_steps || []).map(a => `✔ ${a}`).join('\n')}
+
+Disclaimers: Heuristic risk score based on pattern matching and indicator analysis.
+Analyzed via ScamOrLegit AI Threat Scanner.
 `;
 
     if (navigator.clipboard && navigator.clipboard.writeText) {

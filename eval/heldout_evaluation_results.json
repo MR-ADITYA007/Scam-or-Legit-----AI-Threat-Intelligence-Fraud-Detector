@@ -1,0 +1,1417 @@
+{
+  "evaluation_type": "Independent Held-Out Validation Evaluation",
+  "dataset_name": "heldout_dataset.json",
+  "dataset_provenance": "Independently authored synthetic test cases specifically designed to evaluate Indian banking, UPI PIN traps, OTP harvesting, job/internship fee traps, delivery smishing, and romance wire requests without tuning.",
+  "dataset_limitations": "Synthetic benchmark cases created for algorithmic boundary testing. Does not represent real-world statistical distribution of global internet traffic.",
+  "dataset_size": 60,
+  "scam_samples": 30,
+  "legitimate_samples": 30,
+  "confusion_matrix": {
+    "tp": 14,
+    "fp": 0,
+    "tn": 30,
+    "fn": 16
+  },
+  "metrics": {
+    "accuracy": 0.7333,
+    "accuracy_formula": "(14 + 30) / 60",
+    "precision": 1.0,
+    "precision_formula": "14 / (14 + 0)",
+    "recall": 0.4667,
+    "recall_formula": "14 / (14 + 16)",
+    "f1_score": 0.6364,
+    "specificity": 1.0,
+    "specificity_formula": "30 / (30 + 0)",
+    "false_positive_rate": 0.0,
+    "fpr_formula": "0 / (0 + 30)"
+  },
+  "legitimate_score_distribution": {
+    "mean_score": 6.63,
+    "max_score": 40,
+    "min_score": 5,
+    "comment": "All 30 held-out legitimate messages remained safely below the 60 scam threshold."
+  },
+  "timing_breakdown": {
+    "mean_total_latency_ms": 199.65,
+    "p50_latency_ms": 198.51,
+    "p95_latency_ms": 219.42,
+    "mean_rag_retrieval_ms": 199.58,
+    "mean_risk_engine_ms": 0.06,
+    "includes_gemini_api_call": false,
+    "includes_ocr_processing": false
+  },
+  "category_breakdown": {
+    "Banking Phishing": {
+      "total": 4,
+      "tp": 2,
+      "fp": 0,
+      "tn": 0,
+      "fn": 2
+    },
+    "OTP Theft": {
+      "total": 4,
+      "tp": 1,
+      "fp": 0,
+      "tn": 0,
+      "fn": 3
+    },
+    "UPI Scam": {
+      "total": 4,
+      "tp": 2,
+      "fp": 0,
+      "tn": 0,
+      "fn": 2
+    },
+    "Fake Job": {
+      "total": 4,
+      "tp": 3,
+      "fp": 0,
+      "tn": 0,
+      "fn": 1
+    },
+    "Fake Internship": {
+      "total": 3,
+      "tp": 1,
+      "fp": 0,
+      "tn": 0,
+      "fn": 2
+    },
+    "Delivery Scam": {
+      "total": 3,
+      "tp": 0,
+      "fp": 0,
+      "tn": 0,
+      "fn": 3
+    },
+    "Romance Fraud": {
+      "total": 2,
+      "tp": 1,
+      "fp": 0,
+      "tn": 0,
+      "fn": 1
+    },
+    "Advance-Fee": {
+      "total": 2,
+      "tp": 1,
+      "fp": 0,
+      "tn": 0,
+      "fn": 1
+    },
+    "Tech Support": {
+      "total": 2,
+      "tp": 1,
+      "fp": 0,
+      "tn": 0,
+      "fn": 1
+    },
+    "Malware Distribution": {
+      "total": 2,
+      "tp": 2,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    },
+    "Genuine Bank Notification": {
+      "total": 4,
+      "tp": 0,
+      "fp": 0,
+      "tn": 4,
+      "fn": 0
+    },
+    "Genuine 2FA": {
+      "total": 4,
+      "tp": 0,
+      "fp": 0,
+      "tn": 4,
+      "fn": 0
+    },
+    "Legitimate Receipt": {
+      "total": 4,
+      "tp": 0,
+      "fp": 0,
+      "tn": 4,
+      "fn": 0
+    },
+    "Legitimate Job Offer": {
+      "total": 4,
+      "tp": 0,
+      "fp": 0,
+      "tn": 4,
+      "fn": 0
+    },
+    "Genuine Internship": {
+      "total": 4,
+      "tp": 0,
+      "fp": 0,
+      "tn": 4,
+      "fn": 0
+    },
+    "Legitimate Delivery": {
+      "total": 4,
+      "tp": 0,
+      "fp": 0,
+      "tn": 4,
+      "fn": 0
+    },
+    "Normal Payment Request": {
+      "total": 3,
+      "tp": 0,
+      "fp": 0,
+      "tn": 3,
+      "fn": 0
+    },
+    "Legitimate Marketing": {
+      "total": 3,
+      "tp": 0,
+      "fp": 0,
+      "tn": 3,
+      "fn": 0
+    }
+  },
+  "false_positives": [],
+  "false_negatives": [
+    {
+      "id": "heldout_scam_01",
+      "category": "Banking Phishing",
+      "text": "HDFC Bank Alert: Your netbanking account has been suspended due to pending PAN card re-verification. Complete KYC now at http://hdfc-kyc-update-portal.com or debit card will be blocked.",
+      "score": 40,
+      "risk_level": "Caution",
+      "explanation": "Scam message scored below 60 threshold (Caution bucket).",
+      "extracted_indicators": [
+        {
+          "canonical_category": "suspicious_link",
+          "severity": "High",
+          "description": "Contains unverified web domain (hdfc-kyc-update-portal.com) outside official brand channels.",
+          "matched_evidence": "Unverified URL: http://hdfc-kyc-update-portal.com",
+          "weight": 35
+        }
+      ],
+      "score_breakdown": [
+        {
+          "category": "Deceptive or Unverified Link",
+          "contribution": "+35",
+          "reason": "Contains unverified web domain (hdfc-kyc-update-portal.com) outside official brand channels."
+        }
+      ],
+      "rag_matches": [
+        "Urgent Bank Account Lock & Identity Verification",
+        "Bank Executive Demanding 2FA / OTP Code",
+        "Geek Squad Auto-Renewal Invoice Call Center Scam",
+        "Standard Chase Bank Security Alert (Informational)"
+      ]
+    },
+    {
+      "id": "heldout_scam_03",
+      "category": "OTP Theft",
+      "text": "Axis Bank: Your 6-digit OTP for transaction Rs 12,500 is 748192. Our customer support agent is calling you right now\u2014please state this code to verify your transaction.",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "explanation": "Scam message scored below 60 threshold (Caution bucket).",
+      "extracted_indicators": [],
+      "score_breakdown": [],
+      "rag_matches": [
+        "Bank Executive Demanding 2FA / OTP Code",
+        "Scan QR / Pay UPI Pin to Receive Money Scam",
+        "Geek Squad Auto-Renewal Invoice Call Center Scam",
+        "Google Standard 2FA Verification Code"
+      ]
+    },
+    {
+      "id": "heldout_scam_04",
+      "category": "OTP Theft",
+      "text": "PAYTM Security: To prevent unauthorized wallet access, read out your one-time verification password to the support executive on line.",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "explanation": "Scam message scored below 60 threshold (Caution bucket).",
+      "extracted_indicators": [],
+      "score_breakdown": [],
+      "rag_matches": [
+        "Urgent Bank Account Lock & Identity Verification",
+        "Bank Executive Demanding 2FA / OTP Code",
+        "Remote Data Entry Cheque Overpayment Scam",
+        "Standard Chase Bank Security Alert (Informational)"
+      ]
+    },
+    {
+      "id": "heldout_scam_06",
+      "category": "UPI Scam",
+      "text": "PhonePe Notice: Rs 1,500 sent by buyer for your OLX sofa. Open link http://phonepe-claim-cash.net and enter your UPI PIN to accept money into wallet.",
+      "score": 54,
+      "risk_level": "Caution",
+      "explanation": "Scam message scored below 60 threshold (Caution bucket).",
+      "extracted_indicators": [
+        {
+          "canonical_category": "suspicious_link",
+          "severity": "High",
+          "description": "Contains unverified web domain (phonepe-claim-cash.net) outside official brand channels.",
+          "matched_evidence": "Unverified URL: http://phonepe-claim-cash.net",
+          "weight": 35
+        }
+      ],
+      "score_breakdown": [
+        {
+          "category": "Deceptive or Unverified Link",
+          "contribution": "+35",
+          "reason": "Contains unverified web domain (phonepe-claim-cash.net) outside official brand channels."
+        },
+        {
+          "category": "RAG Pattern Resemblance",
+          "contribution": "+14",
+          "reason": "Matches database pattern 'Scan QR / Pay UPI Pin to Receive Money Scam' (Similarity: 0.581)"
+        }
+      ],
+      "rag_matches": [
+        "Scan QR / Pay UPI Pin to Receive Money Scam",
+        "Bank Executive Demanding 2FA / OTP Code",
+        "Virtual Internship Stipend Security Deposit Scam",
+        "Formal Corporate Job Offer (No Upfront Deposit)"
+      ]
+    },
+    {
+      "id": "heldout_scam_08",
+      "category": "Fake Job",
+      "text": "Part-Time YouTube Video Liking Job! Earn Rs 3,000 daily working 1 hour. Pay 1-time account activation fee of Rs 1,200 via UPI to receive task link.",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "explanation": "Scam message scored below 60 threshold (Caution bucket).",
+      "extracted_indicators": [],
+      "score_breakdown": [],
+      "rag_matches": [
+        "Virtual Internship Stipend Security Deposit Scam",
+        "Guaranteed Telegram Crypto AI Trading Bot",
+        "Instant Guaranteed Personal Loan Advance Processing Fee"
+      ]
+    },
+    {
+      "id": "heldout_scam_09",
+      "category": "Fake Internship",
+      "text": "TechCorp Summer Virtual Internship Offer: Pay refundable seat reservation fee of Rs 2,500 via GPay within 3 hours to confirm candidate slot.",
+      "score": 19,
+      "risk_level": "Low Risk",
+      "explanation": "Scam message scored below 60 threshold (Caution bucket).",
+      "extracted_indicators": [],
+      "score_breakdown": [
+        {
+          "category": "RAG Pattern Resemblance",
+          "contribution": "+14",
+          "reason": "Matches database pattern 'Virtual Internship Stipend Security Deposit Scam' (Similarity: 0.583)"
+        }
+      ],
+      "rag_matches": [
+        "Virtual Internship Stipend Security Deposit Scam",
+        "Geek Squad Auto-Renewal Invoice Call Center Scam",
+        "Inheritance / Lottery Clearance Processing Fee",
+        "Formal Corporate Job Offer (No Upfront Deposit)"
+      ]
+    },
+    {
+      "id": "heldout_scam_11",
+      "category": "Delivery Scam",
+      "text": "India Post Alert: Package #IN948210 cannot be delivered due to incorrect house number. Pay Rs 25 redelivery charge at http://indiapost-redeliver.top/pay",
+      "score": 54,
+      "risk_level": "Caution",
+      "explanation": "Scam message scored below 60 threshold (Caution bucket).",
+      "extracted_indicators": [
+        {
+          "canonical_category": "suspicious_link",
+          "severity": "High",
+          "description": "Contains unverified web domain (indiapost-redeliver.top) outside official brand channels.",
+          "matched_evidence": "Unverified URL: http://indiapost-redeliver.top/pay",
+          "weight": 35
+        }
+      ],
+      "score_breakdown": [
+        {
+          "category": "Deceptive or Unverified Link",
+          "contribution": "+35",
+          "reason": "Contains unverified web domain (indiapost-redeliver.top) outside official brand channels."
+        },
+        {
+          "category": "RAG Pattern Resemblance",
+          "contribution": "+14",
+          "reason": "Matches database pattern 'USPS / FedEx Failed Address Delivery Fee' (Similarity: 0.566)"
+        }
+      ],
+      "rag_matches": [
+        "USPS / FedEx Failed Address Delivery Fee",
+        "Geek Squad Auto-Renewal Invoice Call Center Scam",
+        "Urgent Bank Account Lock & Identity Verification",
+        "Official Amazon Shipping Confirmation"
+      ]
+    },
+    {
+      "id": "heldout_scam_12",
+      "category": "Delivery Scam",
+      "text": "BlueDart Express: Parcel held at Mumbai customs hub. Update shipping address and pay customs fee of Rs 140 at http://bluedart-customs-clearance.site",
+      "score": 40,
+      "risk_level": "Caution",
+      "explanation": "Scam message scored below 60 threshold (Caution bucket).",
+      "extracted_indicators": [
+        {
+          "canonical_category": "suspicious_link",
+          "severity": "High",
+          "description": "Contains unverified web domain (bluedart-customs-clearance.site) outside official brand channels.",
+          "matched_evidence": "Unverified URL: http://bluedart-customs-clearance.site",
+          "weight": 35
+        }
+      ],
+      "score_breakdown": [
+        {
+          "category": "Deceptive or Unverified Link",
+          "contribution": "+35",
+          "reason": "Contains unverified web domain (bluedart-customs-clearance.site) outside official brand channels."
+        }
+      ],
+      "rag_matches": [
+        "USPS / FedEx Failed Address Delivery Fee",
+        "Virtual Internship Stipend Security Deposit Scam",
+        "Inheritance / Lottery Clearance Processing Fee",
+        "Official Amazon Shipping Confirmation"
+      ]
+    },
+    {
+      "id": "heldout_scam_15",
+      "category": "Tech Support",
+      "text": "Windows Security Notice: Critical Trojan virus detected on your system! Call toll-free computer technical support +1-888-555-0177 immediately to stop data deletion.",
+      "score": 25,
+      "risk_level": "Caution",
+      "explanation": "Scam message scored below 60 threshold (Caution bucket).",
+      "extracted_indicators": [
+        {
+          "canonical_category": "urgency_or_coercion",
+          "severity": "High",
+          "description": "Uses artificial time pressure or ultimatum to force fast compliance.",
+          "matched_evidence": "Urgency trigger: 'immediately'",
+          "weight": 20
+        }
+      ],
+      "score_breakdown": [
+        {
+          "category": "Artificial Urgency & Threat Tactics",
+          "contribution": "+20",
+          "reason": "Uses artificial time pressure or ultimatum to force fast compliance."
+        }
+      ],
+      "rag_matches": [
+        "Malicious PDF Document / Security Patch Executable Attachment",
+        "Urgent Bank Account Lock & Identity Verification",
+        "Geek Squad Auto-Renewal Invoice Call Center Scam",
+        "Standard Chase Bank Security Alert (Informational)"
+      ]
+    },
+    {
+      "id": "heldout_scam_18",
+      "category": "OTP Theft",
+      "text": "WhatsApp Security: Someone tried to register your number on a new phone. Provide the 6-digit SMS verification code to our technical helpline agent to secure account.",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "explanation": "Scam message scored below 60 threshold (Caution bucket).",
+      "extracted_indicators": [],
+      "score_breakdown": [],
+      "rag_matches": [
+        "Urgent Bank Account Lock & Identity Verification",
+        "Bank Executive Demanding 2FA / OTP Code",
+        "Scan QR / Pay UPI Pin to Receive Money Scam",
+        "Google Standard 2FA Verification Code"
+      ]
+    },
+    {
+      "id": "heldout_scam_19",
+      "category": "UPI Scam",
+      "text": "Electricity Bill Alert: Your power will be disconnected tonight at 9:30 PM due to unpaid bill. Call officer or scan UPI QR code and enter PIN to pay bill immediately.",
+      "score": 25,
+      "risk_level": "Caution",
+      "explanation": "Scam message scored below 60 threshold (Caution bucket).",
+      "extracted_indicators": [
+        {
+          "canonical_category": "urgency_or_coercion",
+          "severity": "High",
+          "description": "Uses artificial time pressure or ultimatum to force fast compliance.",
+          "matched_evidence": "Urgency trigger: 'immediately'",
+          "weight": 20
+        }
+      ],
+      "score_breakdown": [
+        {
+          "category": "Artificial Urgency & Threat Tactics",
+          "contribution": "+20",
+          "reason": "Uses artificial time pressure or ultimatum to force fast compliance."
+        }
+      ],
+      "rag_matches": [
+        "Urgent Bank Account Lock & Identity Verification",
+        "Bank Executive Demanding 2FA / OTP Code",
+        "Scan QR / Pay UPI Pin to Receive Money Scam",
+        "Standard Chase Bank Security Alert (Informational)"
+      ]
+    },
+    {
+      "id": "heldout_scam_21",
+      "category": "Fake Internship",
+      "text": "Congratulations Student! Selected for Winter Web Dev Internship! Pay refundable security deposit of Rs 1,500 via PhonePe within 2 hours to confirm slot.",
+      "score": 40,
+      "risk_level": "Caution",
+      "explanation": "Scam message scored below 60 threshold (Caution bucket).",
+      "extracted_indicators": [
+        {
+          "canonical_category": "urgency_or_coercion",
+          "severity": "High",
+          "description": "Uses artificial time pressure or ultimatum to force fast compliance.",
+          "matched_evidence": "Urgency trigger: 'within 2 hours'",
+          "weight": 20
+        }
+      ],
+      "score_breakdown": [
+        {
+          "category": "Artificial Urgency & Threat Tactics",
+          "contribution": "+20",
+          "reason": "Uses artificial time pressure or ultimatum to force fast compliance."
+        },
+        {
+          "category": "RAG Pattern Resemblance",
+          "contribution": "+15",
+          "reason": "Matches database pattern 'Virtual Internship Stipend Security Deposit Scam' (Similarity: 0.615)"
+        }
+      ],
+      "rag_matches": [
+        "Virtual Internship Stipend Security Deposit Scam",
+        "Remote Data Entry Cheque Overpayment Scam",
+        "Inheritance / Lottery Clearance Processing Fee"
+      ]
+    },
+    {
+      "id": "heldout_scam_22",
+      "category": "Delivery Scam",
+      "text": "DTDC Courier: Shipment address unverified. Update details and pay Rs 18 fee at http://dtdc-express-tracking.info",
+      "score": 40,
+      "risk_level": "Caution",
+      "explanation": "Scam message scored below 60 threshold (Caution bucket).",
+      "extracted_indicators": [
+        {
+          "canonical_category": "suspicious_link",
+          "severity": "High",
+          "description": "Contains unverified web domain (dtdc-express-tracking.info) outside official brand channels.",
+          "matched_evidence": "Unverified URL: http://dtdc-express-tracking.info",
+          "weight": 35
+        }
+      ],
+      "score_breakdown": [
+        {
+          "category": "Deceptive or Unverified Link",
+          "contribution": "+35",
+          "reason": "Contains unverified web domain (dtdc-express-tracking.info) outside official brand channels."
+        }
+      ],
+      "rag_matches": [
+        "USPS / FedEx Failed Address Delivery Fee",
+        "Virtual Internship Stipend Security Deposit Scam",
+        "Urgent Bank Account Lock & Identity Verification",
+        "Official UPS Package Delivery Update"
+      ]
+    },
+    {
+      "id": "heldout_scam_23",
+      "category": "Romance Fraud",
+      "text": "My dearest, I am stuck in London immigration with medical clearance fees. Transfer $1,000 Bitcoin to my agent's wallet to help me fly to India.",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "explanation": "Scam message scored below 60 threshold (Caution bucket).",
+      "extracted_indicators": [],
+      "score_breakdown": [],
+      "rag_matches": [
+        "Overseas Military Officer Emergency Wire Request",
+        "Inheritance / Lottery Clearance Processing Fee",
+        "USPS / FedEx Failed Address Delivery Fee",
+        "Formal Corporate Job Offer (No Upfront Deposit)"
+      ]
+    },
+    {
+      "id": "heldout_scam_24",
+      "category": "Advance-Fee",
+      "text": "You won Rs 25,00,000 in KBC Lucky Draw! Transfer Rs 3,200 GST clearance fee via UPI to release prize check.",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "explanation": "Scam message scored below 60 threshold (Caution bucket).",
+      "extracted_indicators": [],
+      "score_breakdown": [],
+      "rag_matches": [
+        "Inheritance / Lottery Clearance Processing Fee",
+        "Remote Data Entry Cheque Overpayment Scam",
+        "Guaranteed Telegram Crypto AI Trading Bot",
+        "Standard Chase Bank Security Alert (Informational)"
+      ]
+    },
+    {
+      "id": "heldout_scam_27",
+      "category": "Banking Phishing",
+      "text": "Kotak Bank: Your debit card is blocked due to international transaction alert. Reactivate now at http://kotak-card-verify.net",
+      "score": 40,
+      "risk_level": "Caution",
+      "explanation": "Scam message scored below 60 threshold (Caution bucket).",
+      "extracted_indicators": [
+        {
+          "canonical_category": "suspicious_link",
+          "severity": "High",
+          "description": "Contains unverified web domain (kotak-card-verify.net) outside official brand channels.",
+          "matched_evidence": "Unverified URL: http://kotak-card-verify.net",
+          "weight": 35
+        }
+      ],
+      "score_breakdown": [
+        {
+          "category": "Deceptive or Unverified Link",
+          "contribution": "+35",
+          "reason": "Contains unverified web domain (kotak-card-verify.net) outside official brand channels."
+        }
+      ],
+      "rag_matches": [
+        "Urgent Bank Account Lock & Identity Verification",
+        "Bank Executive Demanding 2FA / OTP Code",
+        "Scan QR / Pay UPI Pin to Receive Money Scam",
+        "Standard Chase Bank Security Alert (Informational)"
+      ]
+    }
+  ],
+  "per_sample_predictions": [
+    {
+      "id": "heldout_scam_01",
+      "category": "Banking Phishing",
+      "true_label": "scam",
+      "predicted_label": "legitimate",
+      "score": 40,
+      "risk_level": "Caution",
+      "status": "FN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 231.93,
+      "risk_engine_latency_ms": 0.39,
+      "total_latency_ms": 232.32,
+      "text": "HDFC Bank Alert: Your netbanking account has been suspended due to pending PAN card re-verification. Complete KYC now at http://hdfc-kyc-update-portal.com or debit card will be blocked."
+    },
+    {
+      "id": "heldout_scam_02",
+      "category": "Banking Phishing",
+      "true_label": "scam",
+      "predicted_label": "scam",
+      "score": 60,
+      "risk_level": "High Scam Risk",
+      "status": "TP",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 201.55,
+      "risk_engine_latency_ms": 0.1,
+      "total_latency_ms": 201.66,
+      "text": "ICICI Bank Warning: An unverified transfer of Rs. 45,000 was initiated. If you did not authorize this, block account immediately at http://icici-security-shield.net/block"
+    },
+    {
+      "id": "heldout_scam_03",
+      "category": "OTP Theft",
+      "true_label": "scam",
+      "predicted_label": "legitimate",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "status": "FN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 219.36,
+      "risk_engine_latency_ms": 0.07,
+      "total_latency_ms": 219.42,
+      "text": "Axis Bank: Your 6-digit OTP for transaction Rs 12,500 is 748192. Our customer support agent is calling you right now\u2014please state this code to verify your transaction."
+    },
+    {
+      "id": "heldout_scam_04",
+      "category": "OTP Theft",
+      "true_label": "scam",
+      "predicted_label": "legitimate",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "status": "FN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 199.13,
+      "risk_engine_latency_ms": 0.05,
+      "total_latency_ms": 199.18,
+      "text": "PAYTM Security: To prevent unauthorized wallet access, read out your one-time verification password to the support executive on line."
+    },
+    {
+      "id": "heldout_scam_05",
+      "category": "UPI Scam",
+      "true_label": "scam",
+      "predicted_label": "scam",
+      "score": 78,
+      "risk_level": "High Scam Risk",
+      "status": "TP",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 197.45,
+      "risk_engine_latency_ms": 0.07,
+      "total_latency_ms": 197.52,
+      "text": "GooglePay Reward Alert: You have won a scratch card reward of Rs. 850! Scan this QR code and input your 6-digit UPI PIN to claim reward into your bank account."
+    },
+    {
+      "id": "heldout_scam_06",
+      "category": "UPI Scam",
+      "true_label": "scam",
+      "predicted_label": "legitimate",
+      "score": 54,
+      "risk_level": "Caution",
+      "status": "FN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 241.83,
+      "risk_engine_latency_ms": 0.09,
+      "total_latency_ms": 241.93,
+      "text": "PhonePe Notice: Rs 1,500 sent by buyer for your OLX sofa. Open link http://phonepe-claim-cash.net and enter your UPI PIN to accept money into wallet."
+    },
+    {
+      "id": "heldout_scam_07",
+      "category": "Fake Job",
+      "true_label": "scam",
+      "predicted_label": "scam",
+      "score": 65,
+      "risk_level": "High Scam Risk",
+      "status": "TP",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 218.63,
+      "risk_engine_latency_ms": 0.07,
+      "total_latency_ms": 218.7,
+      "text": "Congratulations! Selected for Remote Quality Analyst at Rs 65,000/month. We will send a cashier cheque of Rs 1,50,000 for laptop setup. Deposit check and NEFT Rs 1,00,000 back to our IT vendor."
+    },
+    {
+      "id": "heldout_scam_08",
+      "category": "Fake Job",
+      "true_label": "scam",
+      "predicted_label": "legitimate",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "status": "FN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 217.68,
+      "risk_engine_latency_ms": 0.05,
+      "total_latency_ms": 217.73,
+      "text": "Part-Time YouTube Video Liking Job! Earn Rs 3,000 daily working 1 hour. Pay 1-time account activation fee of Rs 1,200 via UPI to receive task link."
+    },
+    {
+      "id": "heldout_scam_09",
+      "category": "Fake Internship",
+      "true_label": "scam",
+      "predicted_label": "legitimate",
+      "score": 19,
+      "risk_level": "Low Risk",
+      "status": "FN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 205.37,
+      "risk_engine_latency_ms": 0.07,
+      "total_latency_ms": 205.44,
+      "text": "TechCorp Summer Virtual Internship Offer: Pay refundable seat reservation fee of Rs 2,500 via GPay within 3 hours to confirm candidate slot."
+    },
+    {
+      "id": "heldout_scam_10",
+      "category": "Fake Internship",
+      "true_label": "scam",
+      "predicted_label": "scam",
+      "score": 65,
+      "risk_level": "High Scam Risk",
+      "status": "TP",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 203.97,
+      "risk_engine_latency_ms": 0.09,
+      "total_latency_ms": 204.06,
+      "text": "Student Internship Selected! To complete onboarding, purchase mandatory Industry Python Certificate (Rs 1,899) from http://tech-lms-portal.org"
+    },
+    {
+      "id": "heldout_scam_11",
+      "category": "Delivery Scam",
+      "true_label": "scam",
+      "predicted_label": "legitimate",
+      "score": 54,
+      "risk_level": "Caution",
+      "status": "FN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 210.96,
+      "risk_engine_latency_ms": 0.1,
+      "total_latency_ms": 211.06,
+      "text": "India Post Alert: Package #IN948210 cannot be delivered due to incorrect house number. Pay Rs 25 redelivery charge at http://indiapost-redeliver.top/pay"
+    },
+    {
+      "id": "heldout_scam_12",
+      "category": "Delivery Scam",
+      "true_label": "scam",
+      "predicted_label": "legitimate",
+      "score": 40,
+      "risk_level": "Caution",
+      "status": "FN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 200.89,
+      "risk_engine_latency_ms": 0.09,
+      "total_latency_ms": 200.97,
+      "text": "BlueDart Express: Parcel held at Mumbai customs hub. Update shipping address and pay customs fee of Rs 140 at http://bluedart-customs-clearance.site"
+    },
+    {
+      "id": "heldout_scam_13",
+      "category": "Romance Fraud",
+      "true_label": "scam",
+      "predicted_label": "scam",
+      "score": 65,
+      "risk_level": "High Scam Risk",
+      "status": "TP",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 199.66,
+      "risk_engine_latency_ms": 0.06,
+      "total_latency_ms": 199.72,
+      "text": "My love, my luggage containing gold watches and $50,000 cash was detained at Delhi airport customs. Wire Rs 85,000 to diplomat agent via IMPS to clear release."
+    },
+    {
+      "id": "heldout_scam_14",
+      "category": "Advance-Fee",
+      "true_label": "scam",
+      "predicted_label": "scam",
+      "score": 65,
+      "risk_level": "High Scam Risk",
+      "status": "TP",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 188.17,
+      "risk_engine_latency_ms": 0.06,
+      "total_latency_ms": 188.23,
+      "text": "PM Welfare Fund Grant: You are selected for Rs 5,00,000 financial grant! Deposit Rs 4,500 file processing fee to claim release check."
+    },
+    {
+      "id": "heldout_scam_15",
+      "category": "Tech Support",
+      "true_label": "scam",
+      "predicted_label": "legitimate",
+      "score": 25,
+      "risk_level": "Caution",
+      "status": "FN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 206.75,
+      "risk_engine_latency_ms": 0.06,
+      "total_latency_ms": 206.81,
+      "text": "Windows Security Notice: Critical Trojan virus detected on your system! Call toll-free computer technical support +1-888-555-0177 immediately to stop data deletion."
+    },
+    {
+      "id": "heldout_scam_16",
+      "category": "Malware Distribution",
+      "true_label": "scam",
+      "predicted_label": "scam",
+      "score": 78,
+      "risk_level": "High Scam Risk",
+      "status": "TP",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 191.98,
+      "risk_engine_latency_ms": 0.06,
+      "total_latency_ms": 192.04,
+      "text": "Income Tax Department Notice: Download attached Tax_Refund_Statement_2024.exe file and run as administrator to claim tax refund."
+    },
+    {
+      "id": "heldout_scam_17",
+      "category": "Banking Phishing",
+      "true_label": "scam",
+      "predicted_label": "scam",
+      "score": 85,
+      "risk_level": "Critical Threat",
+      "status": "TP",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 213.83,
+      "risk_engine_latency_ms": 0.1,
+      "total_latency_ms": 213.92,
+      "text": "SBI Alert: YONO SBI account de-activated. Update Aadhaar details immediately at http://sbi-yono-update.net or account will be permanently blocked."
+    },
+    {
+      "id": "heldout_scam_18",
+      "category": "OTP Theft",
+      "true_label": "scam",
+      "predicted_label": "legitimate",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "status": "FN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 206.31,
+      "risk_engine_latency_ms": 0.06,
+      "total_latency_ms": 206.37,
+      "text": "WhatsApp Security: Someone tried to register your number on a new phone. Provide the 6-digit SMS verification code to our technical helpline agent to secure account."
+    },
+    {
+      "id": "heldout_scam_19",
+      "category": "UPI Scam",
+      "true_label": "scam",
+      "predicted_label": "legitimate",
+      "score": 25,
+      "risk_level": "Caution",
+      "status": "FN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 199.22,
+      "risk_engine_latency_ms": 0.06,
+      "total_latency_ms": 199.29,
+      "text": "Electricity Bill Alert: Your power will be disconnected tonight at 9:30 PM due to unpaid bill. Call officer or scan UPI QR code and enter PIN to pay bill immediately."
+    },
+    {
+      "id": "heldout_scam_20",
+      "category": "Fake Job",
+      "true_label": "scam",
+      "predicted_label": "scam",
+      "score": 80,
+      "risk_level": "High Scam Risk",
+      "status": "TP",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 201.18,
+      "risk_engine_latency_ms": 0.07,
+      "total_latency_ms": 201.26,
+      "text": "Amazon Data Entry Remote Job: Earn Rs 45,000/month. We send Rs 1,20,000 cheque for desktop equipment. Deposit check and Zelle/UPI Rs 90,000 back to equipment vendor."
+    },
+    {
+      "id": "heldout_scam_21",
+      "category": "Fake Internship",
+      "true_label": "scam",
+      "predicted_label": "legitimate",
+      "score": 40,
+      "risk_level": "Caution",
+      "status": "FN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 195.16,
+      "risk_engine_latency_ms": 0.07,
+      "total_latency_ms": 195.23,
+      "text": "Congratulations Student! Selected for Winter Web Dev Internship! Pay refundable security deposit of Rs 1,500 via PhonePe within 2 hours to confirm slot."
+    },
+    {
+      "id": "heldout_scam_22",
+      "category": "Delivery Scam",
+      "true_label": "scam",
+      "predicted_label": "legitimate",
+      "score": 40,
+      "risk_level": "Caution",
+      "status": "FN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 200.41,
+      "risk_engine_latency_ms": 0.09,
+      "total_latency_ms": 200.5,
+      "text": "DTDC Courier: Shipment address unverified. Update details and pay Rs 18 fee at http://dtdc-express-tracking.info"
+    },
+    {
+      "id": "heldout_scam_23",
+      "category": "Romance Fraud",
+      "true_label": "scam",
+      "predicted_label": "legitimate",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "status": "FN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 187.0,
+      "risk_engine_latency_ms": 0.05,
+      "total_latency_ms": 187.05,
+      "text": "My dearest, I am stuck in London immigration with medical clearance fees. Transfer $1,000 Bitcoin to my agent's wallet to help me fly to India."
+    },
+    {
+      "id": "heldout_scam_24",
+      "category": "Advance-Fee",
+      "true_label": "scam",
+      "predicted_label": "legitimate",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "status": "FN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 188.26,
+      "risk_engine_latency_ms": 0.05,
+      "total_latency_ms": 188.31,
+      "text": "You won Rs 25,00,000 in KBC Lucky Draw! Transfer Rs 3,200 GST clearance fee via UPI to release prize check."
+    },
+    {
+      "id": "heldout_scam_25",
+      "category": "Tech Support",
+      "true_label": "scam",
+      "predicted_label": "scam",
+      "score": 100,
+      "risk_level": "Critical Threat",
+      "status": "TP",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 213.54,
+      "risk_engine_latency_ms": 0.06,
+      "total_latency_ms": 213.6,
+      "text": "Geek Squad Auto-Renewal: Your annual membership of $349.99 was charged to Visa. Call refund agent +1-888-555-0133 to cancel immediately."
+    },
+    {
+      "id": "heldout_scam_26",
+      "category": "Malware Distribution",
+      "true_label": "scam",
+      "predicted_label": "scam",
+      "score": 65,
+      "risk_level": "High Scam Risk",
+      "status": "TP",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 195.64,
+      "risk_engine_latency_ms": 0.06,
+      "total_latency_ms": 195.7,
+      "text": "Urgent Bank Audit: Attached file Bank_Security_Update.exe contains mandatory patches. Download and execute file on your computer."
+    },
+    {
+      "id": "heldout_scam_27",
+      "category": "Banking Phishing",
+      "true_label": "scam",
+      "predicted_label": "legitimate",
+      "score": 40,
+      "risk_level": "Caution",
+      "status": "FN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 206.69,
+      "risk_engine_latency_ms": 0.09,
+      "total_latency_ms": 206.78,
+      "text": "Kotak Bank: Your debit card is blocked due to international transaction alert. Reactivate now at http://kotak-card-verify.net"
+    },
+    {
+      "id": "heldout_scam_28",
+      "category": "OTP Theft",
+      "true_label": "scam",
+      "predicted_label": "scam",
+      "score": 65,
+      "risk_level": "High Scam Risk",
+      "status": "TP",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 206.63,
+      "risk_engine_latency_ms": 0.06,
+      "total_latency_ms": 206.69,
+      "text": "Your SBI OTP for login is 382910. Provide this code to our customer care executive to unfreeze account."
+    },
+    {
+      "id": "heldout_scam_29",
+      "category": "UPI Scam",
+      "true_label": "scam",
+      "predicted_label": "scam",
+      "score": 65,
+      "risk_level": "High Scam Risk",
+      "status": "TP",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 211.62,
+      "risk_engine_latency_ms": 0.05,
+      "total_latency_ms": 211.67,
+      "text": "Paytm Cashback: Received Rs 500 cashback reward! Tap link and enter your 4-digit UPI PIN to credit wallet."
+    },
+    {
+      "id": "heldout_scam_30",
+      "category": "Fake Job",
+      "true_label": "scam",
+      "predicted_label": "scam",
+      "score": 86,
+      "risk_level": "Critical Threat",
+      "status": "TP",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 203.51,
+      "risk_engine_latency_ms": 0.06,
+      "total_latency_ms": 203.57,
+      "text": "Remote Data Specialist $45/hr. Deposit $3,500 check, keep $500 bonus, wire remaining $3,000 to vendor via Zelle."
+    },
+    {
+      "id": "heldout_legit_01",
+      "category": "Genuine Bank Notification",
+      "true_label": "legitimate",
+      "predicted_label": "legitimate",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "status": "TN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 198.85,
+      "risk_engine_latency_ms": 0.05,
+      "total_latency_ms": 198.89,
+      "text": "HDFC Bank: Rs. 2,500.00 credited to account ending 4012 on 24-Sep-24 by NEFT. Available balance: Rs. 38,420.00."
+    },
+    {
+      "id": "heldout_legit_02",
+      "category": "Genuine Bank Notification",
+      "true_label": "legitimate",
+      "predicted_label": "legitimate",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "status": "TN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 198.61,
+      "risk_engine_latency_ms": 0.05,
+      "total_latency_ms": 198.66,
+      "text": "ICICI Bank: Your credit card statement for statement ending Sep 20 is ready. View details in iMobile app."
+    },
+    {
+      "id": "heldout_legit_03",
+      "category": "Genuine 2FA",
+      "true_label": "legitimate",
+      "predicted_label": "legitimate",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "status": "TN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 196.99,
+      "risk_engine_latency_ms": 0.05,
+      "total_latency_ms": 197.04,
+      "text": "849201 is your OTP for Axis Bank NetBanking sign-in. Do not share this OTP with anyone, including bank staff."
+    },
+    {
+      "id": "heldout_legit_04",
+      "category": "Genuine 2FA",
+      "true_label": "legitimate",
+      "predicted_label": "legitimate",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "status": "TN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 185.95,
+      "risk_engine_latency_ms": 0.05,
+      "total_latency_ms": 186.0,
+      "text": "Your PayTM login OTP is 392810. PayTM never calls to ask for OTP. Keep it private."
+    },
+    {
+      "id": "heldout_legit_05",
+      "category": "Legitimate Receipt",
+      "true_label": "legitimate",
+      "predicted_label": "legitimate",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "status": "TN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 198.32,
+      "risk_engine_latency_ms": 0.05,
+      "total_latency_ms": 198.37,
+      "text": "Flipkart Order Confirmed: Item 'Wireless Earbuds' will be delivered by Thursday. Track inside official Flipkart app."
+    },
+    {
+      "id": "heldout_legit_06",
+      "category": "Legitimate Receipt",
+      "true_label": "legitimate",
+      "predicted_label": "legitimate",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "status": "TN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 186.23,
+      "risk_engine_latency_ms": 0.04,
+      "total_latency_ms": 186.28,
+      "text": "Swiggy: Order #98421 confirmed from Biryani House. Delivery executive assigned. Track in app."
+    },
+    {
+      "id": "heldout_legit_07",
+      "category": "Legitimate Job Offer",
+      "true_label": "legitimate",
+      "predicted_label": "legitimate",
+      "score": 40,
+      "risk_level": "Caution",
+      "status": "TN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 186.83,
+      "risk_engine_latency_ms": 0.08,
+      "total_latency_ms": 186.91,
+      "text": "Infosys HR: Formal offer letter for Systems Engineer position is uploaded in your official career portal at https://careers.infosys.com"
+    },
+    {
+      "id": "heldout_legit_08",
+      "category": "Legitimate Job Offer",
+      "true_label": "legitimate",
+      "predicted_label": "legitimate",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "status": "TN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 202.06,
+      "risk_engine_latency_ms": 0.05,
+      "total_latency_ms": 202.11,
+      "text": "TCS Recruitment: Thank you for attending technical interview. Check your application status on official NextStep portal."
+    },
+    {
+      "id": "heldout_legit_09",
+      "category": "Genuine Internship",
+      "true_label": "legitimate",
+      "predicted_label": "legitimate",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "status": "TN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 188.27,
+      "risk_engine_latency_ms": 0.05,
+      "total_latency_ms": 188.32,
+      "text": "Wipro University Hiring: Your internship interview is scheduled for Friday on MS Teams. Check calendar invite in email."
+    },
+    {
+      "id": "heldout_legit_10",
+      "category": "Genuine Internship",
+      "true_label": "legitimate",
+      "predicted_label": "legitimate",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "status": "TN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 194.33,
+      "risk_engine_latency_ms": 0.05,
+      "total_latency_ms": 194.37,
+      "text": "IIT Bombay Research Internship: Your application is shortlisted for faculty review. No payment is required."
+    },
+    {
+      "id": "heldout_legit_11",
+      "category": "Legitimate Delivery",
+      "true_label": "legitimate",
+      "predicted_label": "legitimate",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "status": "TN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 198.59,
+      "risk_engine_latency_ms": 0.04,
+      "total_latency_ms": 198.64,
+      "text": "BlueDart Update: AWB #84920148 is out for delivery today. Delivery agent: Ramesh Kumar."
+    },
+    {
+      "id": "heldout_legit_12",
+      "category": "Legitimate Delivery",
+      "true_label": "legitimate",
+      "predicted_label": "legitimate",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "status": "TN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 192.76,
+      "risk_engine_latency_ms": 0.05,
+      "total_latency_ms": 192.81,
+      "text": "India Post Informed Notice: Speed Post item ED94820148IN delivered at Post Office counter."
+    },
+    {
+      "id": "heldout_legit_13",
+      "category": "Normal Payment Request",
+      "true_label": "legitimate",
+      "predicted_label": "legitimate",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "status": "TN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 195.86,
+      "risk_engine_latency_ms": 0.05,
+      "total_latency_ms": 195.9,
+      "text": "PhonePe: Priya requested Rs 350 for cab fare share. Accept or decline inside PhonePe app."
+    },
+    {
+      "id": "heldout_legit_14",
+      "category": "Normal Payment Request",
+      "true_label": "legitimate",
+      "predicted_label": "legitimate",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "status": "TN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 218.25,
+      "risk_engine_latency_ms": 0.04,
+      "total_latency_ms": 218.3,
+      "text": "GooglePay: Electricity bill payment of Rs 1,420 due on Oct 05. Pay securely inside GooglePay app."
+    },
+    {
+      "id": "heldout_legit_15",
+      "category": "Legitimate Marketing",
+      "true_label": "legitimate",
+      "predicted_label": "legitimate",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "status": "TN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 195.86,
+      "risk_engine_latency_ms": 0.05,
+      "total_latency_ms": 195.9,
+      "text": "Zomato Gold: 50% off on dining out this weekend! Discover partner restaurants in the Zomato app."
+    },
+    {
+      "id": "heldout_legit_16",
+      "category": "Genuine Bank Notification",
+      "true_label": "legitimate",
+      "predicted_label": "legitimate",
+      "score": 19,
+      "risk_level": "Low Risk",
+      "status": "TN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 185.9,
+      "risk_engine_latency_ms": 0.05,
+      "total_latency_ms": 185.95,
+      "text": "SBI Alert: ATM cash withdrawal of Rs 5,000 from ATM #S1A04. If not done by you, SMS BLOCK to 567676."
+    },
+    {
+      "id": "heldout_legit_17",
+      "category": "Genuine 2FA",
+      "true_label": "legitimate",
+      "predicted_label": "legitimate",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "status": "TN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 195.86,
+      "risk_engine_latency_ms": 0.04,
+      "total_latency_ms": 195.91,
+      "text": "Your Apple ID Verification Code is: 194820. Don't give this code to anyone."
+    },
+    {
+      "id": "heldout_legit_18",
+      "category": "Legitimate Receipt",
+      "true_label": "legitimate",
+      "predicted_label": "legitimate",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "status": "TN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 198.34,
+      "risk_engine_latency_ms": 0.05,
+      "total_latency_ms": 198.39,
+      "text": "MakeMyTrip: Flight ticket confirmed for DEL to BLR on 15-Oct. E-ticket sent to registered email."
+    },
+    {
+      "id": "heldout_legit_19",
+      "category": "Legitimate Job Offer",
+      "true_label": "legitimate",
+      "predicted_label": "legitimate",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "status": "TN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 193.36,
+      "risk_engine_latency_ms": 0.05,
+      "total_latency_ms": 193.41,
+      "text": "Accenture Careers: Your application status for Application Lead has been updated on careers.accenture.com"
+    },
+    {
+      "id": "heldout_legit_20",
+      "category": "Genuine Internship",
+      "true_label": "legitimate",
+      "predicted_label": "legitimate",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "status": "TN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 183.0,
+      "risk_engine_latency_ms": 0.05,
+      "total_latency_ms": 183.05,
+      "text": "DRDO Student Internship: List of selected candidates published on official website drdo.gov.in"
+    },
+    {
+      "id": "heldout_legit_21",
+      "category": "Legitimate Delivery",
+      "true_label": "legitimate",
+      "predicted_label": "legitimate",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "status": "TN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 180.05,
+      "risk_engine_latency_ms": 0.05,
+      "total_latency_ms": 180.1,
+      "text": "Delhivery: Package 98421048 is out for delivery. OTP for delivery is 4819."
+    },
+    {
+      "id": "heldout_legit_22",
+      "category": "Normal Payment Request",
+      "true_label": "legitimate",
+      "predicted_label": "legitimate",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "status": "TN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 179.92,
+      "risk_engine_latency_ms": 0.04,
+      "total_latency_ms": 179.96,
+      "text": "CRED: Your credit card bill of Rs 14,250 is due in 3 days. Pay via CRED app for cashback."
+    },
+    {
+      "id": "heldout_legit_23",
+      "category": "Legitimate Marketing",
+      "true_label": "legitimate",
+      "predicted_label": "legitimate",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "status": "TN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 181.93,
+      "risk_engine_latency_ms": 0.04,
+      "total_latency_ms": 181.98,
+      "text": "BookMyShow: Flat 20% off on movie tickets this Friday! Use code MOVIE20 in the BookMyShow app."
+    },
+    {
+      "id": "heldout_legit_24",
+      "category": "Genuine Bank Notification",
+      "true_label": "legitimate",
+      "predicted_label": "legitimate",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "status": "TN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 204.03,
+      "risk_engine_latency_ms": 0.05,
+      "total_latency_ms": 204.08,
+      "text": "Kotak Mahindra Bank: Auto-debit of Rs 599 for Netflix subscription was successful."
+    },
+    {
+      "id": "heldout_legit_25",
+      "category": "Genuine 2FA",
+      "true_label": "legitimate",
+      "predicted_label": "legitimate",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "status": "TN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 193.62,
+      "risk_engine_latency_ms": 0.07,
+      "total_latency_ms": 193.69,
+      "text": "Your Uber security code is 7481. Never share this code with anyone, including Uber drivers."
+    },
+    {
+      "id": "heldout_legit_26",
+      "category": "Legitimate Receipt",
+      "true_label": "legitimate",
+      "predicted_label": "legitimate",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "status": "TN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 189.0,
+      "risk_engine_latency_ms": 0.05,
+      "total_latency_ms": 189.04,
+      "text": "Uber Receipt: Rs 240.00 for trip on 24-Sep. Detailed receipt emailed to your address."
+    },
+    {
+      "id": "heldout_legit_27",
+      "category": "Legitimate Job Offer",
+      "true_label": "legitimate",
+      "predicted_label": "legitimate",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "status": "TN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 197.39,
+      "risk_engine_latency_ms": 0.05,
+      "total_latency_ms": 197.43,
+      "text": "Capgemini Recruitment: Please update your location preferences on the official onboarding portal."
+    },
+    {
+      "id": "heldout_legit_28",
+      "category": "Genuine Internship",
+      "true_label": "legitimate",
+      "predicted_label": "legitimate",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "status": "TN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 195.11,
+      "risk_engine_latency_ms": 0.04,
+      "total_latency_ms": 195.16,
+      "text": "IISc Summer Fellowship: Selected candidates list announced on iisc.ac.in portal."
+    },
+    {
+      "id": "heldout_legit_29",
+      "category": "Legitimate Delivery",
+      "true_label": "legitimate",
+      "predicted_label": "legitimate",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "status": "TN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 191.91,
+      "risk_engine_latency_ms": 0.05,
+      "total_latency_ms": 191.95,
+      "text": "Amazon.in: Package with order #402-9842104 will be delivered today by 8 PM."
+    },
+    {
+      "id": "heldout_legit_30",
+      "category": "Legitimate Marketing",
+      "true_label": "legitimate",
+      "predicted_label": "legitimate",
+      "score": 5,
+      "risk_level": "Low Risk",
+      "status": "TN",
+      "source_type": "synthetic_author_constructed",
+      "rag_latency_ms": 203.59,
+      "risk_engine_latency_ms": 0.04,
+      "total_latency_ms": 203.64,
+      "text": "Jio: Your daily 1.5GB data pack has reached 80% usage. Recharge now in MyJio app."
+    }
+  ]
+}

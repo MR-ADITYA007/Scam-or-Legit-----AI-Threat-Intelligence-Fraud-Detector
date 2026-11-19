@@ -13,6 +13,7 @@ ENV/
 
 # Vector DB & Local Stores
 backend/chroma_db/
+scratch/
 
 # IDE & OS
 .vscode/

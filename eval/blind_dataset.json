@@ -1,0 +1,72 @@
+[
+  {
+    "id": "blind_scam_01",
+    "category": "OTP Theft",
+    "label": "scam",
+    "text": "Dear user, your HDFC bank account is under review. Please share your 6-digit confirmation pin to the automated agent on line to prevent block.",
+    "source_type": "synthetic"
+  },
+  {
+    "id": "blind_scam_02",
+    "category": "Delivery Scam",
+    "label": "scam",
+    "text": "FedEx: Delivery failed due to unpaid customs fee of Rs 35. Please visit http://fedex-clearance-track.site and pay to release parcel.",
+    "source_type": "synthetic"
+  },
+  {
+    "id": "blind_scam_03",
+    "category": "Fake Internship",
+    "label": "scam",
+    "text": "Congratulations! You are selected for the AI Internship at Google Partners. Pay a one-time refundable laptop security deposit of Rs 3000 via GPay to confirm slot.",
+    "source_type": "synthetic"
+  },
+  {
+    "id": "blind_scam_04",
+    "category": "UPI Scam",
+    "label": "scam",
+    "text": "KBC Winner! You won Rs 5,00,000. Open PhonePe, scan the QR code and enter your PIN to accept the prize money instantly.",
+    "source_type": "synthetic"
+  },
+  {
+    "id": "blind_scam_05",
+    "category": "Banking Phishing",
+    "label": "scam",
+    "text": "ICICI Alert: PAN card linkage failed. Your account will be restricted in 1 hour. Update PAN securely here: http://icici-pan-kyc-update.com",
+    "source_type": "synthetic"
+  },
+  {
+    "id": "blind_legit_01",
+    "category": "Legitimate Receipt",
+    "label": "legitimate",
+    "text": "Swiggy Order #98129: Your order has been delivered successfully. Rate your experience on the app.",
+    "source_type": "synthetic"
+  },
+  {
+    "id": "blind_legit_02",
+    "category": "Genuine 2FA",
+    "label": "legitimate",
+    "text": "739103 is your WhatsApp verification code. Do not share this code with anyone.",
+    "source_type": "synthetic"
+  },
+  {
+    "id": "blind_legit_03",
+    "category": "Genuine Bank Notification",
+    "label": "legitimate",
+    "text": "SBI Alert: A transaction of Rs 150 was made on your debit card ending in 4101 at Amazon. If not you, contact branch.",
+    "source_type": "synthetic"
+  },
+  {
+    "id": "blind_legit_04",
+    "category": "Legitimate Job Offer",
+    "label": "legitimate",
+    "text": "Dear Candidate, we are pleased to offer you the role of SDE at TechCorp. Please review the attached offer letter. No payment is required to join us.",
+    "source_type": "synthetic"
+  },
+  {
+    "id": "blind_legit_05",
+    "category": "Legitimate Delivery",
+    "label": "legitimate",
+    "text": "BlueDart: Your package AWB 182910 is out for delivery today. Track at bluedart.com or call courier.",
+    "source_type": "synthetic"
+  }
+]

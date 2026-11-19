@@ -887,6 +887,55 @@ textarea#messageInput:focus {
     z-index: 100;
 }
 
+.disclaimer-note {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.flag-evidence {
+    font-size: 11px;
+    color: var(--accent-cyan);
+    margin-top: 4px;
+    font-style: italic;
+}
+
+.evidence-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 4px;
+}
+
+.evidence-meta {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: 10px;
+    color: var(--text-muted);
+}
+
+.badge-scam {
+    background: rgba(249, 115, 22, 0.2);
+    color: #ffedd5;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.badge-legitimate {
+    background: rgba(16, 185, 129, 0.2);
+    color: #d1fae5;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 9px;
+    font-weight: 700;
+}
+
 .hidden { display: none !important; }
 
 /* Loading Skeleton */
@@ -899,3 +948,4 @@ textarea#messageInput:focus {
     50% { opacity: 0.8; }
     100% { opacity: 0.4; }
 }
+

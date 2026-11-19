@@ -1,0 +1,603 @@
+[
+  {
+    "id": "heldout_scam_01",
+    "category": "Banking Phishing",
+    "label": "scam",
+    "text": "HDFC Bank Alert: Your netbanking account has been suspended due to pending PAN card re-verification. Complete KYC now at http://hdfc-kyc-update-portal.com or debit card will be blocked.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Constructed based on documented Indian banking KYC SMS phishing tactics.",
+    "limitations_note": "Synthetic test case for algorithmic validation, does not represent live traffic volume."
+  },
+  {
+    "id": "heldout_scam_02",
+    "category": "Banking Phishing",
+    "label": "scam",
+    "text": "ICICI Bank Warning: An unverified transfer of Rs. 45,000 was initiated. If you did not authorize this, block account immediately at http://icici-security-shield.net/block",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Modelled after fraudulent bank alert SMS targeting netbanking users.",
+    "limitations_note": "Synthetic benchmark example."
+  },
+  {
+    "id": "heldout_scam_03",
+    "category": "OTP Theft",
+    "label": "scam",
+    "text": "Axis Bank: Your 6-digit OTP for transaction Rs 12,500 is 748192. Our customer support agent is calling you right now—please state this code to verify your transaction.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Author-constructed sample representing phone call 2FA interception scams.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_scam_04",
+    "category": "OTP Theft",
+    "label": "scam",
+    "text": "PAYTM Security: To prevent unauthorized wallet access, read out your one-time verification password to the support executive on line.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Social engineering OTP harvesting tactic.",
+    "limitations_note": "Synthetic benchmark example."
+  },
+  {
+    "id": "heldout_scam_05",
+    "category": "UPI Scam",
+    "label": "scam",
+    "text": "GooglePay Reward Alert: You have won a scratch card reward of Rs. 850! Scan this QR code and input your 6-digit UPI PIN to claim reward into your bank account.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Constructed based on prevalent Indian UPI scratch card PIN reverse traps.",
+    "limitations_note": "Synthetic benchmark example."
+  },
+  {
+    "id": "heldout_scam_06",
+    "category": "UPI Scam",
+    "label": "scam",
+    "text": "PhonePe Notice: Rs 1,500 sent by buyer for your OLX sofa. Open link http://phonepe-claim-cash.net and enter your UPI PIN to accept money into wallet.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "OLX marketplace UPI reverse transfer trap.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_scam_07",
+    "category": "Fake Job",
+    "label": "scam",
+    "text": "Congratulations! Selected for Remote Quality Analyst at Rs 65,000/month. We will send a cashier cheque of Rs 1,50,000 for laptop setup. Deposit check and NEFT Rs 1,00,000 back to our IT vendor.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Remote job cheque overpayment scheme adapted for Indian currency.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_scam_08",
+    "category": "Fake Job",
+    "label": "scam",
+    "text": "Part-Time YouTube Video Liking Job! Earn Rs 3,000 daily working 1 hour. Pay 1-time account activation fee of Rs 1,200 via UPI to receive task link.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Task-based YouTube video like scam prevalent on Telegram/WhatsApp.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_scam_09",
+    "category": "Fake Internship",
+    "label": "scam",
+    "text": "TechCorp Summer Virtual Internship Offer: Pay refundable seat reservation fee of Rs 2,500 via GPay within 3 hours to confirm candidate slot.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Pay-to-work virtual internship deposit trap targeting Indian engineering students.",
+    "limitations_note": "Synthetic benchmark example."
+  },
+  {
+    "id": "heldout_scam_10",
+    "category": "Fake Internship",
+    "label": "scam",
+    "text": "Student Internship Selected! To complete onboarding, purchase mandatory Industry Python Certificate (Rs 1,899) from http://tech-lms-portal.org",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Mandatory course/certificate purchase trap.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_scam_11",
+    "category": "Delivery Scam",
+    "label": "scam",
+    "text": "India Post Alert: Package #IN948210 cannot be delivered due to incorrect house number. Pay Rs 25 redelivery charge at http://indiapost-redeliver.top/pay",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Postal micro-payment smishing targeting India Post users.",
+    "limitations_note": "Synthetic benchmark example."
+  },
+  {
+    "id": "heldout_scam_12",
+    "category": "Delivery Scam",
+    "label": "scam",
+    "text": "BlueDart Express: Parcel held at Mumbai customs hub. Update shipping address and pay customs fee of Rs 140 at http://bluedart-customs-clearance.site",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Courier customs clearance fee smishing.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_scam_13",
+    "category": "Romance Fraud",
+    "label": "scam",
+    "text": "My love, my luggage containing gold watches and $50,000 cash was detained at Delhi airport customs. Wire Rs 85,000 to diplomat agent via IMPS to clear release.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Airport customs diplomat luggage emergency romance fraud.",
+    "limitations_note": "Synthetic benchmark example."
+  },
+  {
+    "id": "heldout_scam_14",
+    "category": "Advance-Fee",
+    "label": "scam",
+    "text": "PM Welfare Fund Grant: You are selected for Rs 5,00,000 financial grant! Deposit Rs 4,500 file processing fee to claim release check.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Government welfare grant advance fee fraud.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_scam_15",
+    "category": "Tech Support",
+    "label": "scam",
+    "text": "Windows Security Notice: Critical Trojan virus detected on your system! Call toll-free computer technical support +1-888-555-0177 immediately to stop data deletion.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Fake tech support virus panic prompt.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_scam_16",
+    "category": "Malware Distribution",
+    "label": "scam",
+    "text": "Income Tax Department Notice: Download attached Tax_Refund_Statement_2024.exe file and run as administrator to claim tax refund.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Tax refund executable malware spear-phishing.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_scam_17",
+    "category": "Banking Phishing",
+    "label": "scam",
+    "text": "SBI Alert: YONO SBI account de-activated. Update Aadhaar details immediately at http://sbi-yono-update.net or account will be permanently blocked.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "YONO SBI Aadhaar update phishing SMS.",
+    "limitations_note": "Synthetic benchmark example."
+  },
+  {
+    "id": "heldout_scam_18",
+    "category": "OTP Theft",
+    "label": "scam",
+    "text": "WhatsApp Security: Someone tried to register your number on a new phone. Provide the 6-digit SMS verification code to our technical helpline agent to secure account.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "WhatsApp account takeover code request.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_scam_19",
+    "category": "UPI Scam",
+    "label": "scam",
+    "text": "Electricity Bill Alert: Your power will be disconnected tonight at 9:30 PM due to unpaid bill. Call officer or scan UPI QR code and enter PIN to pay bill immediately.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Electricity bill disconnection UPI panic scam.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_scam_20",
+    "category": "Fake Job",
+    "label": "scam",
+    "text": "Amazon Data Entry Remote Job: Earn Rs 45,000/month. We send Rs 1,20,000 cheque for desktop equipment. Deposit check and Zelle/UPI Rs 90,000 back to equipment vendor.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Check overpayment remote job trap.",
+    "limitations_note": "Synthetic benchmark example."
+  },
+  {
+    "id": "heldout_scam_21",
+    "category": "Fake Internship",
+    "label": "scam",
+    "text": "Congratulations Student! Selected for Winter Web Dev Internship! Pay refundable security deposit of Rs 1,500 via PhonePe within 2 hours to confirm slot.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Pay-to-work internship deposit trap.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_scam_22",
+    "category": "Delivery Scam",
+    "label": "scam",
+    "text": "DTDC Courier: Shipment address unverified. Update details and pay Rs 18 fee at http://dtdc-express-tracking.info",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "DTDC courier smishing URL.",
+    "limitations_note": "Synthetic benchmark example."
+  },
+  {
+    "id": "heldout_scam_23",
+    "category": "Romance Fraud",
+    "label": "scam",
+    "text": "My dearest, I am stuck in London immigration with medical clearance fees. Transfer $1,000 Bitcoin to my agent's wallet to help me fly to India.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Overseas romance emergency Bitcoin transfer request.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_scam_24",
+    "category": "Advance-Fee",
+    "label": "scam",
+    "text": "You won Rs 25,00,000 in KBC Lucky Draw! Transfer Rs 3,200 GST clearance fee via UPI to release prize check.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "KBC lottery advance fee fraud.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_scam_25",
+    "category": "Tech Support",
+    "label": "scam",
+    "text": "Geek Squad Auto-Renewal: Your annual membership of $349.99 was charged to Visa. Call refund agent +1-888-555-0133 to cancel immediately.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Toll-free call center fake refund invoice.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_scam_26",
+    "category": "Malware Distribution",
+    "label": "scam",
+    "text": "Urgent Bank Audit: Attached file Bank_Security_Update.exe contains mandatory patches. Download and execute file on your computer.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Executable malware attachment prompt.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_scam_27",
+    "category": "Banking Phishing",
+    "label": "scam",
+    "text": "Kotak Bank: Your debit card is blocked due to international transaction alert. Reactivate now at http://kotak-card-verify.net",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Debit card reactivation phishing link.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_scam_28",
+    "category": "OTP Theft",
+    "label": "scam",
+    "text": "Your SBI OTP for login is 382910. Provide this code to our customer care executive to unfreeze account.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Customer support executive OTP theft prompt.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_scam_29",
+    "category": "UPI Scam",
+    "label": "scam",
+    "text": "Paytm Cashback: Received Rs 500 cashback reward! Tap link and enter your 4-digit UPI PIN to credit wallet.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Paytm cashback UPI PIN trap.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_scam_30",
+    "category": "Fake Job",
+    "label": "scam",
+    "text": "Remote Data Specialist $45/hr. Deposit $3,500 check, keep $500 bonus, wire remaining $3,000 to vendor via Zelle.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Cashier check overpayment scheme.",
+    "limitations_note": "Synthetic test case."
+  },
+
+  {
+    "id": "heldout_legit_01",
+    "category": "Genuine Bank Notification",
+    "label": "legitimate",
+    "text": "HDFC Bank: Rs. 2,500.00 credited to account ending 4012 on 24-Sep-24 by NEFT. Available balance: Rs. 38,420.00.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Standard transactional SMS format used by Indian retail banks.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_legit_02",
+    "category": "Genuine Bank Notification",
+    "label": "legitimate",
+    "text": "ICICI Bank: Your credit card statement for statement ending Sep 20 is ready. View details in iMobile app.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Standard credit card statement notice directing to official app.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_legit_03",
+    "category": "Genuine 2FA",
+    "label": "legitimate",
+    "text": "849201 is your OTP for Axis Bank NetBanking sign-in. Do not share this OTP with anyone, including bank staff.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Standard 2FA authentication SMS containing security warning.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_legit_04",
+    "category": "Genuine 2FA",
+    "label": "legitimate",
+    "text": "Your PayTM login OTP is 392810. PayTM never calls to ask for OTP. Keep it private.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Standard wallet 2FA login notice.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_legit_05",
+    "category": "Legitimate Receipt",
+    "label": "legitimate",
+    "text": "Flipkart Order Confirmed: Item 'Wireless Earbuds' will be delivered by Thursday. Track inside official Flipkart app.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "E-commerce order confirmation notice.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_legit_06",
+    "category": "Legitimate Receipt",
+    "label": "legitimate",
+    "text": "Swiggy: Order #98421 confirmed from Biryani House. Delivery executive assigned. Track in app.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Food delivery order receipt.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_legit_07",
+    "category": "Legitimate Job Offer",
+    "label": "legitimate",
+    "text": "Infosys HR: Formal offer letter for Systems Engineer position is uploaded in your official career portal at https://careers.infosys.com",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Corporate IT job offer referencing official corporate domain.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_legit_08",
+    "category": "Legitimate Job Offer",
+    "label": "legitimate",
+    "text": "TCS Recruitment: Thank you for attending technical interview. Check your application status on official NextStep portal.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Corporate recruitment status update.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_legit_09",
+    "category": "Genuine Internship",
+    "label": "legitimate",
+    "text": "Wipro University Hiring: Your internship interview is scheduled for Friday on MS Teams. Check calendar invite in email.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Campus internship interview scheduling notice.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_legit_10",
+    "category": "Genuine Internship",
+    "label": "legitimate",
+    "text": "IIT Bombay Research Internship: Your application is shortlisted for faculty review. No payment is required.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Academic research internship notice.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_legit_11",
+    "category": "Legitimate Delivery",
+    "label": "legitimate",
+    "text": "BlueDart Update: AWB #84920148 is out for delivery today. Delivery agent: Ramesh Kumar.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Courier out for delivery SMS notice.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_legit_12",
+    "category": "Legitimate Delivery",
+    "label": "legitimate",
+    "text": "India Post Informed Notice: Speed Post item ED94820148IN delivered at Post Office counter.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Postal tracking notification.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_legit_13",
+    "category": "Normal Payment Request",
+    "label": "legitimate",
+    "text": "PhonePe: Priya requested Rs 350 for cab fare share. Accept or decline inside PhonePe app.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Peer-to-peer bill split request inside official app.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_legit_14",
+    "category": "Normal Payment Request",
+    "label": "legitimate",
+    "text": "GooglePay: Electricity bill payment of Rs 1,420 due on Oct 05. Pay securely inside GooglePay app.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Utility bill payment reminder in official app.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_legit_15",
+    "category": "Legitimate Marketing",
+    "label": "legitimate",
+    "text": "Zomato Gold: 50% off on dining out this weekend! Discover partner restaurants in the Zomato app.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Legitimate promotional marketing SMS.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_legit_16",
+    "category": "Genuine Bank Notification",
+    "label": "legitimate",
+    "text": "SBI Alert: ATM cash withdrawal of Rs 5,000 from ATM #S1A04. If not done by you, SMS BLOCK to 567676.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Standard ATM withdrawal security alert.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_legit_17",
+    "category": "Genuine 2FA",
+    "label": "legitimate",
+    "text": "Your Apple ID Verification Code is: 194820. Don't give this code to anyone.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Official 2FA code notification.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_legit_18",
+    "category": "Legitimate Receipt",
+    "label": "legitimate",
+    "text": "MakeMyTrip: Flight ticket confirmed for DEL to BLR on 15-Oct. E-ticket sent to registered email.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Travel booking confirmation notice.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_legit_19",
+    "category": "Legitimate Job Offer",
+    "label": "legitimate",
+    "text": "Accenture Careers: Your application status for Application Lead has been updated on careers.accenture.com",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Career portal application status update.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_legit_20",
+    "category": "Genuine Internship",
+    "label": "legitimate",
+    "text": "DRDO Student Internship: List of selected candidates published on official website drdo.gov.in",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Government internship selection notice.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_legit_21",
+    "category": "Legitimate Delivery",
+    "label": "legitimate",
+    "text": "Delhivery: Package 98421048 is out for delivery. OTP for delivery is 4819.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Delivery OTP verification notice.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_legit_22",
+    "category": "Normal Payment Request",
+    "label": "legitimate",
+    "text": "CRED: Your credit card bill of Rs 14,250 is due in 3 days. Pay via CRED app for cashback.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Credit card bill payment reminder.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_legit_23",
+    "category": "Legitimate Marketing",
+    "label": "legitimate",
+    "text": "BookMyShow: Flat 20% off on movie tickets this Friday! Use code MOVIE20 in the BookMyShow app.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Promotional marketing SMS.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_legit_24",
+    "category": "Genuine Bank Notification",
+    "label": "legitimate",
+    "text": "Kotak Mahindra Bank: Auto-debit of Rs 599 for Netflix subscription was successful.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Auto-debit mandate transaction alert.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_legit_25",
+    "category": "Genuine 2FA",
+    "label": "legitimate",
+    "text": "Your Uber security code is 7481. Never share this code with anyone, including Uber drivers.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Ride-sharing authentication security SMS.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_legit_26",
+    "category": "Legitimate Receipt",
+    "label": "legitimate",
+    "text": "Uber Receipt: Rs 240.00 for trip on 24-Sep. Detailed receipt emailed to your address.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Ride receipt confirmation.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_legit_27",
+    "category": "Legitimate Job Offer",
+    "label": "legitimate",
+    "text": "Capgemini Recruitment: Please update your location preferences on the official onboarding portal.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Onboarding logistics SMS update.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_legit_28",
+    "category": "Genuine Internship",
+    "label": "legitimate",
+    "text": "IISc Summer Fellowship: Selected candidates list announced on iisc.ac.in portal.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Academic fellowship announcement.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_legit_29",
+    "category": "Legitimate Delivery",
+    "label": "legitimate",
+    "text": "Amazon.in: Package with order #402-9842104 will be delivered today by 8 PM.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "E-commerce delivery tracking SMS.",
+    "limitations_note": "Synthetic test case."
+  },
+  {
+    "id": "heldout_legit_30",
+    "category": "Legitimate Marketing",
+    "label": "legitimate",
+    "text": "Jio: Your daily 1.5GB data pack has reached 80% usage. Recharge now in MyJio app.",
+    "source_type": "synthetic_author_constructed",
+    "source_name": "Synthetic Cybersecurity Test Bench",
+    "provenance_note": "Telecom data usage notification.",
+    "limitations_note": "Synthetic test case."
+  }
+]

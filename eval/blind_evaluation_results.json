@@ -1,0 +1,477 @@
+{
+  "evaluation_type": "V3 Semantic Evidence Blind Evaluation",
+  "dataset_name": "blind_dataset.json",
+  "dataset_size": 10,
+  "scam_samples": 5,
+  "legitimate_samples": 5,
+  "confusion_matrix": {
+    "tp": 5,
+    "fp": 0,
+    "tn": 5,
+    "fn": 0
+  },
+  "metrics": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "specificity": 1.0,
+    "false_positive_rate": 0.0,
+    "f1_score": 1.0
+  },
+  "v2_comparison": {
+    "v2_scam_recall": 0.2,
+    "v3_scam_recall": 1.0
+  },
+  "timing_breakdown": {
+    "mean_total_latency_ms": 8186.2,
+    "mean_gemini_success_latency_ms": 6984.72,
+    "mean_gemini_failed_latency_ms": 0.0,
+    "mean_local_latency_ms": 1201.48
+  },
+  "category_breakdown": {
+    "OTP Theft": {
+      "total": 1,
+      "tp": 1,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    },
+    "Delivery Scam": {
+      "total": 1,
+      "tp": 1,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    },
+    "Fake Internship": {
+      "total": 1,
+      "tp": 1,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    },
+    "UPI Scam": {
+      "total": 1,
+      "tp": 1,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    },
+    "Banking Phishing": {
+      "total": 1,
+      "tp": 1,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    },
+    "Legitimate Receipt": {
+      "total": 1,
+      "tp": 0,
+      "fp": 0,
+      "tn": 1,
+      "fn": 0
+    },
+    "Genuine 2FA": {
+      "total": 1,
+      "tp": 0,
+      "fp": 0,
+      "tn": 1,
+      "fn": 0
+    },
+    "Genuine Bank Notification": {
+      "total": 1,
+      "tp": 0,
+      "fp": 0,
+      "tn": 1,
+      "fn": 0
+    },
+    "Legitimate Job Offer": {
+      "total": 1,
+      "tp": 0,
+      "fp": 0,
+      "tn": 1,
+      "fn": 0
+    },
+    "Legitimate Delivery": {
+      "total": 1,
+      "tp": 0,
+      "fp": 0,
+      "tn": 1,
+      "fn": 0
+    }
+  },
+  "false_positives": [],
+  "false_negatives": [],
+  "per_sample_predictions": [
+    {
+      "id": "blind_scam_01",
+      "category": "OTP Theft",
+      "v2_score": 5,
+      "semantic_score": 98,
+      "v3_score": 98,
+      "predicted_label": "scam",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "semantic_evidence": {
+        "requested_action": "disclose_credentials",
+        "claimed_identity_verifiable": false,
+        "context": {
+          "urgency": true,
+          "threat": true,
+          "reward": false,
+          "emotional_pressure": true,
+          "unusual_payment": false
+        },
+        "technical_evidence": {
+          "url_mismatch": false,
+          "executable_attachment": false,
+          "credential_collection": true
+        },
+        "benign_context": {
+          "protective_warning": false,
+          "ordinary_receipt": false,
+          "legitimate_otp_notice": false
+        }
+      },
+      "total_latency_ms": 15658.56,
+      "gemini_success_latency_ms": 12909.69,
+      "gemini_failed_latency_ms": 0.0,
+      "local_latency_ms": 2748.87,
+      "true_label": "scam",
+      "status": "TP"
+    },
+    {
+      "id": "blind_scam_02",
+      "category": "Delivery Scam",
+      "v2_score": 79,
+      "semantic_score": 82,
+      "v3_score": 82,
+      "predicted_label": "scam",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "semantic_evidence": {
+        "requested_action": "pay_money",
+        "claimed_identity_verifiable": false,
+        "context": {
+          "urgency": true,
+          "threat": false,
+          "reward": false,
+          "emotional_pressure": false,
+          "unusual_payment": true
+        },
+        "technical_evidence": {
+          "url_mismatch": true,
+          "executable_attachment": false,
+          "credential_collection": true
+        },
+        "benign_context": {
+          "protective_warning": false,
+          "ordinary_receipt": false,
+          "legitimate_otp_notice": false
+        }
+      },
+      "total_latency_ms": 7704.87,
+      "gemini_success_latency_ms": 7327.75,
+      "gemini_failed_latency_ms": 0.0,
+      "local_latency_ms": 377.12,
+      "true_label": "scam",
+      "status": "TP"
+    },
+    {
+      "id": "blind_scam_03",
+      "category": "Fake Internship",
+      "v2_score": 19,
+      "semantic_score": 85,
+      "v3_score": 85,
+      "predicted_label": "scam",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "semantic_evidence": {
+        "requested_action": "pay_money",
+        "claimed_identity_verifiable": false,
+        "context": {
+          "urgency": true,
+          "threat": false,
+          "reward": true,
+          "emotional_pressure": true,
+          "unusual_payment": true
+        },
+        "technical_evidence": {
+          "url_mismatch": false,
+          "executable_attachment": false,
+          "credential_collection": false
+        },
+        "benign_context": {
+          "protective_warning": false,
+          "ordinary_receipt": false,
+          "legitimate_otp_notice": false
+        }
+      },
+      "total_latency_ms": 8227.48,
+      "gemini_success_latency_ms": 6111.72,
+      "gemini_failed_latency_ms": 0.0,
+      "local_latency_ms": 2115.76,
+      "true_label": "scam",
+      "status": "TP"
+    },
+    {
+      "id": "blind_scam_04",
+      "category": "UPI Scam",
+      "v2_score": 5,
+      "semantic_score": 95,
+      "v3_score": 95,
+      "predicted_label": "scam",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "semantic_evidence": {
+        "requested_action": "scan_qr",
+        "claimed_identity_verifiable": false,
+        "context": {
+          "urgency": true,
+          "threat": false,
+          "reward": true,
+          "emotional_pressure": true,
+          "unusual_payment": true
+        },
+        "technical_evidence": {
+          "url_mismatch": false,
+          "executable_attachment": false,
+          "credential_collection": true
+        },
+        "benign_context": {
+          "protective_warning": false,
+          "ordinary_receipt": false,
+          "legitimate_otp_notice": false
+        }
+      },
+      "total_latency_ms": 7136.74,
+      "gemini_success_latency_ms": 6679.87,
+      "gemini_failed_latency_ms": 0.0,
+      "local_latency_ms": 456.87,
+      "true_label": "scam",
+      "status": "TP"
+    },
+    {
+      "id": "blind_scam_05",
+      "category": "Banking Phishing",
+      "v2_score": 40,
+      "semantic_score": 95,
+      "v3_score": 95,
+      "predicted_label": "scam",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "semantic_evidence": {
+        "requested_action": "click_link",
+        "claimed_identity_verifiable": false,
+        "context": {
+          "urgency": true,
+          "threat": true,
+          "reward": false,
+          "emotional_pressure": true,
+          "unusual_payment": false
+        },
+        "technical_evidence": {
+          "url_mismatch": true,
+          "executable_attachment": false,
+          "credential_collection": true
+        },
+        "benign_context": {
+          "protective_warning": false,
+          "ordinary_receipt": false,
+          "legitimate_otp_notice": false
+        }
+      },
+      "total_latency_ms": 8872.81,
+      "gemini_success_latency_ms": 7503.1,
+      "gemini_failed_latency_ms": 0.0,
+      "local_latency_ms": 1369.71,
+      "true_label": "scam",
+      "status": "TP"
+    },
+    {
+      "id": "blind_legit_01",
+      "category": "Legitimate Receipt",
+      "v2_score": 5,
+      "semantic_score": 5,
+      "v3_score": 5,
+      "predicted_label": "legitimate",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "semantic_evidence": {
+        "requested_action": "none",
+        "claimed_identity_verifiable": true,
+        "context": {
+          "urgency": false,
+          "threat": false,
+          "reward": false,
+          "emotional_pressure": false,
+          "unusual_payment": false
+        },
+        "technical_evidence": {
+          "url_mismatch": false,
+          "executable_attachment": false,
+          "credential_collection": false
+        },
+        "benign_context": {
+          "protective_warning": false,
+          "ordinary_receipt": true,
+          "legitimate_otp_notice": false
+        }
+      },
+      "total_latency_ms": 5287.3,
+      "gemini_success_latency_ms": 4261.52,
+      "gemini_failed_latency_ms": 0.0,
+      "local_latency_ms": 1025.78,
+      "true_label": "legitimate",
+      "status": "TN"
+    },
+    {
+      "id": "blind_legit_02",
+      "category": "Genuine 2FA",
+      "v2_score": 2,
+      "semantic_score": 5,
+      "v3_score": 5,
+      "predicted_label": "legitimate",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "semantic_evidence": {
+        "requested_action": "none",
+        "claimed_identity_verifiable": true,
+        "context": {
+          "urgency": false,
+          "threat": false,
+          "reward": false,
+          "emotional_pressure": false,
+          "unusual_payment": false
+        },
+        "technical_evidence": {
+          "url_mismatch": false,
+          "executable_attachment": false,
+          "credential_collection": false
+        },
+        "benign_context": {
+          "protective_warning": true,
+          "ordinary_receipt": false,
+          "legitimate_otp_notice": true
+        }
+      },
+      "total_latency_ms": 6281.29,
+      "gemini_success_latency_ms": 5262.24,
+      "gemini_failed_latency_ms": 0.0,
+      "local_latency_ms": 1019.05,
+      "true_label": "legitimate",
+      "status": "TN"
+    },
+    {
+      "id": "blind_legit_03",
+      "category": "Genuine Bank Notification",
+      "v2_score": 5,
+      "semantic_score": 10,
+      "v3_score": 10,
+      "predicted_label": "legitimate",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "semantic_evidence": {
+        "requested_action": "none",
+        "claimed_identity_verifiable": false,
+        "context": {
+          "urgency": false,
+          "threat": false,
+          "reward": false,
+          "emotional_pressure": false,
+          "unusual_payment": false
+        },
+        "technical_evidence": {
+          "url_mismatch": false,
+          "executable_attachment": false,
+          "credential_collection": false
+        },
+        "benign_context": {
+          "protective_warning": true,
+          "ordinary_receipt": true,
+          "legitimate_otp_notice": false
+        }
+      },
+      "total_latency_ms": 9044.13,
+      "gemini_success_latency_ms": 7564.17,
+      "gemini_failed_latency_ms": 0.0,
+      "local_latency_ms": 1479.96,
+      "true_label": "legitimate",
+      "status": "TN"
+    },
+    {
+      "id": "blind_legit_04",
+      "category": "Legitimate Job Offer",
+      "v2_score": 5,
+      "semantic_score": 15,
+      "v3_score": 15,
+      "predicted_label": "legitimate",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "semantic_evidence": {
+        "requested_action": "none",
+        "claimed_identity_verifiable": false,
+        "context": {
+          "urgency": false,
+          "threat": false,
+          "reward": true,
+          "emotional_pressure": false,
+          "unusual_payment": false
+        },
+        "technical_evidence": {
+          "url_mismatch": false,
+          "executable_attachment": false,
+          "credential_collection": false
+        },
+        "benign_context": {
+          "protective_warning": true,
+          "ordinary_receipt": false,
+          "legitimate_otp_notice": false
+        }
+      },
+      "total_latency_ms": 7408.96,
+      "gemini_success_latency_ms": 6863.13,
+      "gemini_failed_latency_ms": 0.0,
+      "local_latency_ms": 545.83,
+      "true_label": "legitimate",
+      "status": "TN"
+    },
+    {
+      "id": "blind_legit_05",
+      "category": "Legitimate Delivery",
+      "v2_score": 5,
+      "semantic_score": 5,
+      "v3_score": 5,
+      "predicted_label": "legitimate",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "semantic_evidence": {
+        "requested_action": "click_link",
+        "claimed_identity_verifiable": true,
+        "context": {
+          "urgency": false,
+          "threat": false,
+          "reward": false,
+          "emotional_pressure": false,
+          "unusual_payment": false
+        },
+        "technical_evidence": {
+          "url_mismatch": false,
+          "executable_attachment": false,
+          "credential_collection": false
+        },
+        "benign_context": {
+          "protective_warning": false,
+          "ordinary_receipt": true,
+          "legitimate_otp_notice": false
+        }
+      },
+      "total_latency_ms": 6239.85,
+      "gemini_success_latency_ms": 5364.04,
+      "gemini_failed_latency_ms": 0.0,
+      "local_latency_ms": 875.81,
+      "true_label": "legitimate",
+      "status": "TN"
+    }
+  ]
+}
