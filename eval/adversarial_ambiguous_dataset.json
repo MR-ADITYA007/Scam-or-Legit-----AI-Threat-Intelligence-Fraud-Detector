@@ -1,0 +1,142 @@
+[
+  {
+    "id": "adv_scam_01",
+    "category": "Soft Grooming Romance",
+    "label": "scam",
+    "text": "Hi Aditya, it was great connecting on LinkedIn earlier. I am an art gallery curator currently traveling in Singapore. I really admired your profile and would love to exchange thoughts on creative design.",
+    "difficulty": "Hard — No overt financial demand yet; conversational rapport grooming"
+  },
+  {
+    "id": "adv_scam_02",
+    "category": "Google Doc Phishing",
+    "label": "scam",
+    "text": "Google Drive: Internal Team Shared Document: '2025_Q1_Compensation_Restructuring_Confidential.pdf'. Please click here to review and acknowledge permissions: http://drive-google-doc-review.com/auth",
+    "difficulty": "Medium-Hard — Enterprise phishing using legitimate brand names"
+  },
+  {
+    "id": "adv_scam_03",
+    "category": "Fake Debt Settlement",
+    "label": "scam",
+    "text": "Legal Notice: Outstanding loan liability of Rs 14,800 is overdue. To prevent immediate field recovery visit and credit bureau default filing, pay settled amount of Rs 4,500 via UPI ID debt-settlement@oksbi today.",
+    "difficulty": "Hard — Mimics authentic aggressive debt collection"
+  },
+  {
+    "id": "adv_scam_04",
+    "category": "Copy-Trading Signal Trap",
+    "label": "scam",
+    "text": "Hey mate, sharing my automated forex trading bot results for this month (+320%). I don't charge any upfront fee, you only share 10% of weekly profits. Check the live MT5 verified account link here: bit.ly/fx-verified-bot",
+    "difficulty": "Medium — Looks like a peer trader offering advice"
+  },
+  {
+    "id": "adv_scam_05",
+    "category": "Subtle Delivery Typosquatting",
+    "label": "scam",
+    "text": "BlueDart Express: Consignment #9812739 arrived at regional hub with incomplete street landmark. Verify delivery pin and address at https://bluedart-trackparcel.in to ensure tomorrow dispatch.",
+    "difficulty": "Medium — Subtle typosquatting domain (.in instead of official .com)"
+  },
+  {
+    "id": "adv_scam_06",
+    "category": "Marketplace Inspection Gate Fee",
+    "label": "scam",
+    "text": "I am selling my 2021 Hyundai i20 on OLX for Rs 4.2 Lakhs as I am transferred to military cantonment. The car is at CISF cargo terminal. Pay Rs 2,500 refundable gate clearance pass to inspect vehicle.",
+    "difficulty": "Medium — Classic army/cargo inspection fee advance scam"
+  },
+  {
+    "id": "adv_scam_07",
+    "category": "Utility Bill Discount Phishing",
+    "label": "scam",
+    "text": "State Electricity Board: Under green energy subsidy scheme, get flat 25% cashback on your pending electricity bill. Pay through official partner portal: http://billpay-discount-discom.info/subsidy",
+    "difficulty": "Medium — Lures with government subsidy rather than threat"
+  },
+  {
+    "id": "adv_scam_08",
+    "category": "Tech Webinar Upsell",
+    "label": "scam",
+    "text": "Exclusive Generative AI Architecture Masterclass by Ex-Google Director. Free for first 50 participants, but requires Rs 499 seat lock-in refundable deposit. Reserve your VIP slot at http://ai-masterclass-reserve.site",
+    "difficulty": "Hard — Mimics legitimate educational bootcamps"
+  },
+  {
+    "id": "adv_scam_09",
+    "category": "Fake Telecom Sim Swap Pretext",
+    "label": "scam",
+    "text": "Telecom Regulatory Compliance: Your e-SIM profile upgrade request has been submitted. If you did NOT request this eSIM swap, press 1 or call our customer retention officer immediately at 9845019281.",
+    "difficulty": "Hard — Reverse social engineering forcing a callback"
+  },
+  {
+    "id": "adv_scam_10",
+    "category": "Freelance Escrow Phishing",
+    "label": "scam",
+    "text": "Upwork Notification: Client has deposited $1,200 into milestone escrow for your mobile app design project. Connect your crypto wallet or debit card at http://upwork-escrow-release.net to accept payout.",
+    "difficulty": "Medium-Hard — Realistic freelancer milestone trap"
+  },
+  {
+    "id": "adv_legit_01",
+    "category": "Aggressive Debt Reminder",
+    "label": "legitimate",
+    "text": "HDFC Bank Alert: Your Loan A/c ending 4910 has overdue EMI of Rs 4,890 as of 20-Nov. Overdue penalty applies daily. To clear dues immediately, pay via official netbanking at netbanking.hdfcbank.com or call your home branch.",
+    "difficulty": "Hard — Highly urgent and threatening tone, but completely genuine"
+  },
+  {
+    "id": "adv_legit_02",
+    "category": "Urgent Flash Sale Promotion",
+    "label": "legitimate",
+    "text": "Myntra Midnight Flash Sale! Flat 60% to 80% OFF on top sportswear brands. Deal expires in exactly 2 hours! Claim your discounts now at https://www.myntra.com/sale before inventory sells out.",
+    "difficulty": "Medium-Hard — High artificial urgency and countdown, but legitimate marketing"
+  },
+  {
+    "id": "adv_legit_03",
+    "category": "Third-Party Retailer Survey",
+    "label": "legitimate",
+    "text": "Amazon Customer Insights: Tell us about your recent grocery shopping experience and stand a chance to win a Rs 500 Amazon Pay gift card. Take the 3-minute survey here: https://amazon.co.in/feedback/survey",
+    "difficulty": "Medium — Offers financial reward for survey, but from official brand"
+  },
+  {
+    "id": "adv_legit_04",
+    "category": "Hospital Diagnostic Portal",
+    "label": "legitimate",
+    "text": "Apollo Diagnostics: Your blood investigation report for Ref #AP892109 is ready. Access and download your verified lab results at https://apollodiagnostics.in/reports using registered mobile OTP.",
+    "difficulty": "Medium — Direct medical link, standard genuine practice"
+  },
+  {
+    "id": "adv_legit_05",
+    "category": "Official Bank Credit Limit Bump",
+    "label": "legitimate",
+    "text": "ICICI Bank: Congratulations! You are pre-approved for a credit limit enhancement from Rs 2.5L to Rs 4.0L on your Coral card with zero charges. To accept, login to iMobile Pay or SMS CRLIM to 5676766.",
+    "difficulty": "Hard — Unsolicited financial upgrade, but authentic channel"
+  },
+  {
+    "id": "adv_legit_06",
+    "category": "Corporate Recruiter Inbound",
+    "label": "legitimate",
+    "text": "Hi Aditya, I am a technical recruiter at Swiggy. We came across your GitHub projects and would love to speak regarding a Senior Backend Engineer opening. If interested, feel free to schedule a quick 15-min chat: calendly.com/swiggy-talent-team",
+    "difficulty": "Medium-Hard — Cold recruiter message with third-party link (Calendly)"
+  },
+  {
+    "id": "adv_legit_07",
+    "category": "Government Tax E-Filing Alert",
+    "label": "legitimate",
+    "text": "Income Tax Department: E-verification for your ITR filed for AY 2024-25 is pending. Please complete e-verification within 30 days of filing using Aadhaar OTP on the official portal incometax.gov.in.",
+    "difficulty": "Medium — Official warning with compliance deadline"
+  },
+  {
+    "id": "adv_legit_08",
+    "category": "Airline Schedule Modification",
+    "label": "legitimate",
+    "text": "Air India Flight Alert: Flight AI-804 from DEL to BOM on 21-Nov is rescheduled to depart at 19:30 hrs due to airspace congestion. Review revised itinerary or rebook at airindia.com/manage-booking.",
+    "difficulty": "Easy-Medium — Genuine operational disruption notice"
+  },
+  {
+    "id": "adv_legit_09",
+    "category": "Corporate IT Password Expiry",
+    "label": "legitimate",
+    "text": "IT Security Notice: Your corporate single sign-on (SSO) password will expire in 3 days. Change your password before Friday via the internal corporate portal auth.company.internal or contact IT Helpdesk.",
+    "difficulty": "Hard — Credential change request, but points to internal intranet"
+  },
+  {
+    "id": "adv_legit_10",
+    "category": "Peer P2P Payment Request",
+    "label": "legitimate",
+    "text": "PhonePe: Rahul Sharma has requested Rs 450 for 'Dinner split at Truffles'. Open PhonePe app to review and approve the payment request. Do not enter PIN to receive money.",
+    "difficulty": "Hard — Payment request, but includes standard genuine safety protective warning"
+  }
+]

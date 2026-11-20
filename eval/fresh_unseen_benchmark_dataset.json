@@ -1,0 +1,212 @@
+[
+  {
+    "id": "fresh_scam_01",
+    "category": "Digital Arrest Extortion",
+    "label": "scam",
+    "text": "CBI Cyber Cell Notice: A suspicious parcel containing illegal contraband under your Aadhaar has been intercepted at Mumbai airport. Connect immediately via video call to prevent immediate physical arrest under PMLA.",
+    "source_type": "synthetic_unseen"
+  },
+  {
+    "id": "fresh_scam_02",
+    "category": "Electricity Bill Threat",
+    "label": "scam",
+    "text": "Dear Consumer, your electricity power connection will be disconnected tonight at 9:30 PM because previous month bill was not updated. Immediately contact power officer Mr. Sharma at 9812345678 to update bill.",
+    "source_type": "synthetic_unseen"
+  },
+  {
+    "id": "fresh_scam_03",
+    "category": "Stock VIP Group Trap",
+    "label": "scam",
+    "text": "SEBI Certified Institutional VIP Club: Get guaranteed 400% weekly return on upper-circuit penny stocks. Join our exclusive Telegram group https://t.me/vip-insider-wealth to start trading on institutional terminal.",
+    "source_type": "synthetic_unseen"
+  },
+  {
+    "id": "fresh_scam_04",
+    "category": "YouTube Like Part-Time Job",
+    "label": "scam",
+    "text": "Earn Rs 3000 to Rs 8000 daily from home! Simply like YouTube videos and subscribe to channels. We already transferred Rs 150 test bonus. Contact manager on WhatsApp to activate daily VIP task bundle.",
+    "source_type": "synthetic_unseen"
+  },
+  {
+    "id": "fresh_scam_05",
+    "category": "Postal Address Smishing",
+    "label": "scam",
+    "text": "IndiaPost: Your parcel IN8492018 cannot be dispatched due to invalid delivery street address. Please update your address within 24 hours at http://indiapost-parcel-redelivery.top or package will be returned.",
+    "source_type": "synthetic_unseen"
+  },
+  {
+    "id": "fresh_scam_06",
+    "category": "FASTag Deactivation Alert",
+    "label": "scam",
+    "text": "Alert: Your NHAI FASTag wallet has been blocked due to incomplete KYC guidelines. Update your vehicle RC details and pay Rs 100 recharge immediately at http://fastag-nhai-kyc.online to avoid toll penalty.",
+    "source_type": "synthetic_unseen"
+  },
+  {
+    "id": "fresh_scam_07",
+    "category": "Income Tax Refund Phishing",
+    "label": "scam",
+    "text": "Income Tax Dept: An excess tax refund of Rs 18,450 has been approved for assessment year 2024-25. Please confirm your bank account and debit card credentials here: http://incometax-refund-claim.org/verify",
+    "source_type": "synthetic_unseen"
+  },
+  {
+    "id": "fresh_scam_08",
+    "category": "Credit Card Points Expiry",
+    "label": "scam",
+    "text": "Dear SBI Cardholder, your 9,850 reward points worth Rs 4,925 will expire today at midnight. Redeem points instantly for Amazon vouchers or cash credit by visiting http://sbicard-rewardpoints-claim.xyz",
+    "source_type": "synthetic_unseen"
+  },
+  {
+    "id": "fresh_scam_09",
+    "category": "Remote Access Device Trap",
+    "label": "scam",
+    "text": "Bank Customer Support: We noticed duplicate pending debit transactions on your mobile banking. Install QuickSupport or AnyDesk from Play Store and share the 9-digit session code so our technical team can fix your security glitch.",
+    "source_type": "synthetic_unseen"
+  },
+  {
+    "id": "fresh_scam_10",
+    "category": "Crypto Cloud Mining Trap",
+    "label": "scam",
+    "text": "Binance Cloud Mining Partnership: Invest Rs 10,000 today in our USDT hash-rate pool and withdraw Rs 850 daily automatic passive returns. Deposit USDT to wallet TRC20: TL1x89FmN928vK to start mining.",
+    "source_type": "synthetic_unseen"
+  },
+  {
+    "id": "fresh_scam_11",
+    "category": "Customs Clearance Fee Trap",
+    "label": "scam",
+    "text": "Hello my dear, I sent you a gift package containing gold jewelry and cash from London, but customs officer at Delhi airport has detained it. Please transfer Rs 35,000 clearance tax to customs clearance account right now.",
+    "source_type": "synthetic_unseen"
+  },
+  {
+    "id": "fresh_scam_12",
+    "category": "Work Laptop Security Deposit",
+    "label": "scam",
+    "text": "Offer Letter: You are appointed as Remote Data Analyst at Microsoft Partner Solutions. Monthly stipend Rs 45,000. Send Rs 4,500 refundable courier deposit via PhonePe to release your company MacBook Pro.",
+    "source_type": "synthetic_unseen"
+  },
+  {
+    "id": "fresh_scam_13",
+    "category": "WhatsApp Bank KYC Update",
+    "label": "scam",
+    "text": "HDFC Banking Alert: Your NetBanking service is disabled. To reactivate your account without visiting branch, send photos of your PAN card, Aadhaar, and debit card front & back to this WhatsApp executive number.",
+    "source_type": "synthetic_unseen"
+  },
+  {
+    "id": "fresh_scam_14",
+    "category": "SIM Biometric Deactivation",
+    "label": "scam",
+    "text": "Jio Alert: Your SIM card verification has expired under telecom regulations. Your outgoing services will stop within 6 hours. Complete instant e-KYC by entering your mobile number and OTP at http://jio-ekyc-telecom.info",
+    "source_type": "synthetic_unseen"
+  },
+  {
+    "id": "fresh_scam_15",
+    "category": "Rental Token Deposit Fraud",
+    "label": "scam",
+    "text": "Luxury 2BHK flat in HSR Layout available for rent at just Rs 18,000/month. Multiple tenants are waiting. Send Rs 5,000 gate pass token money on Google Pay to book slot before viewing.",
+    "source_type": "synthetic_unseen"
+  },
+  {
+    "id": "fresh_legit_01",
+    "category": "Genuine Bank Notification",
+    "label": "legitimate",
+    "text": "HDFC Bank: Rs 450.00 spent on your Debit Card ending 8219 at Nature's Basket on 19-Nov-2024. Available balance: Rs 42,109.80. If not you, SMS BLOCK to 5676712.",
+    "source_type": "synthetic_unseen"
+  },
+  {
+    "id": "fresh_legit_02",
+    "category": "Genuine Delivery OTP",
+    "label": "legitimate",
+    "text": "Swiggy Delivery: Your food order from Meghana Foods is arriving in 5 mins. Share delivery pin 4910 with the delivery partner upon arrival.",
+    "source_type": "synthetic_unseen"
+  },
+  {
+    "id": "fresh_legit_03",
+    "category": "E-Commerce Receipt",
+    "label": "legitimate",
+    "text": "Zomato Order #8921873 confirmed. Payment of Rs 389 received via UPI. Download your tax invoice from the Zomato app profile history.",
+    "source_type": "synthetic_unseen"
+  },
+  {
+    "id": "fresh_legit_04",
+    "category": "Genuine Security Warning",
+    "label": "legitimate",
+    "text": "Google Security Alert: A new sign-in was detected on your Google Account from Chrome on Windows in New Delhi. If this was you, no action is needed.",
+    "source_type": "synthetic_unseen"
+  },
+  {
+    "id": "fresh_legit_05",
+    "category": "Railway Booking Confirmation",
+    "label": "legitimate",
+    "text": "IRCTC PNR #2849102839: Train 12626 Kerala Express confirmed. Coach B3, Berth 24 (Lower). Departure NDLS 20:10. Please carry valid government ID proof during journey.",
+    "source_type": "synthetic_unseen"
+  },
+  {
+    "id": "fresh_legit_06",
+    "category": "Courier Dispatch Notice",
+    "label": "legitimate",
+    "text": "Amazon: Your package with order #402-9182371 has been dispatched via Amazon Logistics. Tracking ID: ATS9182019. Track delivery status on your Amazon app.",
+    "source_type": "synthetic_unseen"
+  },
+  {
+    "id": "fresh_legit_07",
+    "category": "Genuine 2FA Notification",
+    "label": "legitimate",
+    "text": "829103 is your ICICI Bank NetBanking login OTP. Valid for 3 minutes. Never disclose this OTP to anyone including bank representatives.",
+    "source_type": "synthetic_unseen"
+  },
+  {
+    "id": "fresh_legit_08",
+    "category": "Utility Bill Receipt",
+    "label": "legitimate",
+    "text": "Airtel Xstream Fiber: Payment of Rs 943.00 for account 0114829102 successful via auto-debit on 19-Nov-2024. Next billing cycle starts 20-Dec-2024.",
+    "source_type": "synthetic_unseen"
+  },
+  {
+    "id": "fresh_legit_09",
+    "category": "Academic Schedule Alert",
+    "label": "legitimate",
+    "text": "Delhi University Examination Notice: The semester examination timetable for Semester III has been uploaded on the official examination portal du.ac.in. Check hall ticket details.",
+    "source_type": "synthetic_unseen"
+  },
+  {
+    "id": "fresh_legit_10",
+    "category": "Fintech Bill Acknowledgement",
+    "label": "legitimate",
+    "text": "CRED: Your HDFC Bank Credit Card bill payment of Rs 14,280 is processed and settled with the bank. Transaction reference ID: CRD9182039.",
+    "source_type": "synthetic_unseen"
+  },
+  {
+    "id": "fresh_legit_11",
+    "category": "Doctor Appointment Reminder",
+    "label": "legitimate",
+    "text": "Practo Appointment Confirmed: Dr. Anjali Mehta (Dermatologist) on Thu, 21-Nov at 11:30 AM at Apollo Clinic, Indiranagar. Please arrive 10 minutes prior.",
+    "source_type": "synthetic_unseen"
+  },
+  {
+    "id": "fresh_legit_12",
+    "category": "Airline Web Check-in",
+    "label": "legitimate",
+    "text": "IndiGo Flight 6E-204 from BLR to DEL on 22-Nov. Web check-in is now open. Visit goindigo.in or open IndiGo app to select your seat and download boarding pass.",
+    "source_type": "synthetic_unseen"
+  },
+  {
+    "id": "fresh_legit_13",
+    "category": "Subscription Auto-Renewal",
+    "label": "legitimate",
+    "text": "Netflix: Your standard monthly subscription of Rs 499 has renewed successfully. You can manage your membership plan anytime at netflix.com/youraccount.",
+    "source_type": "synthetic_unseen"
+  },
+  {
+    "id": "fresh_legit_14",
+    "category": "Corporate Interview Invitation",
+    "label": "legitimate",
+    "text": "Dear Candidate, you are invited for Technical Round 1 for the Software Engineer role on Friday at 3:00 PM via Google Meet. Link: meet.google.com/abc-defg-hij",
+    "source_type": "synthetic_unseen"
+  },
+  {
+    "id": "fresh_legit_15",
+    "category": "Mobility Ride Receipt",
+    "label": "legitimate",
+    "text": "Uber: Thanks for riding with Ramesh. Total fare: Rs 214.00 paid via Uber Cash. View trip route and invoice on your Uber app.",
+    "source_type": "synthetic_unseen"
+  }
+]

@@ -1,0 +1,1126 @@
+{
+  "evaluation_type": "Fresh Unseen Live Benchmark Evaluation",
+  "dataset_name": "fresh_unseen_benchmark_dataset.json",
+  "dataset_size": 30,
+  "scam_samples": 15,
+  "legitimate_samples": 15,
+  "confusion_matrix": {
+    "tp": 14,
+    "fp": 0,
+    "tn": 15,
+    "fn": 1
+  },
+  "metrics": {
+    "accuracy": 0.9667,
+    "accuracy_percentage": 96.67,
+    "precision": 1.0,
+    "precision_percentage": 100.0,
+    "recall": 0.9333,
+    "recall_percentage": 93.33,
+    "specificity": 1.0,
+    "specificity_percentage": 100.0,
+    "false_positive_rate": 0.0,
+    "fpr_percentage": 0.0,
+    "f1_score": 0.9655
+  },
+  "v2_vs_v3_comparison": {
+    "v2_scam_recall": 0.2667,
+    "v2_scam_recall_percentage": 26.67,
+    "v3_scam_recall": 0.9333,
+    "v3_scam_recall_percentage": 93.33,
+    "semantic_lift_percentage": 66.67
+  },
+  "timing_breakdown": {
+    "mean_total_latency_ms": 60228.19,
+    "mean_gemini_latency_ms": 24786.14,
+    "mean_local_latency_ms": 1411.51
+  },
+  "category_breakdown": {
+    "Digital Arrest Extortion": {
+      "total": 1,
+      "tp": 1,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    },
+    "Electricity Bill Threat": {
+      "total": 1,
+      "tp": 1,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    },
+    "Stock VIP Group Trap": {
+      "total": 1,
+      "tp": 1,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    },
+    "YouTube Like Part-Time Job": {
+      "total": 1,
+      "tp": 1,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    },
+    "Postal Address Smishing": {
+      "total": 1,
+      "tp": 1,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    },
+    "FASTag Deactivation Alert": {
+      "total": 1,
+      "tp": 1,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    },
+    "Income Tax Refund Phishing": {
+      "total": 1,
+      "tp": 1,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    },
+    "Credit Card Points Expiry": {
+      "total": 1,
+      "tp": 1,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    },
+    "Remote Access Device Trap": {
+      "total": 1,
+      "tp": 1,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    },
+    "Crypto Cloud Mining Trap": {
+      "total": 1,
+      "tp": 1,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    },
+    "Customs Clearance Fee Trap": {
+      "total": 1,
+      "tp": 1,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    },
+    "Work Laptop Security Deposit": {
+      "total": 1,
+      "tp": 1,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    },
+    "WhatsApp Bank KYC Update": {
+      "total": 1,
+      "tp": 1,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    },
+    "SIM Biometric Deactivation": {
+      "total": 1,
+      "tp": 1,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    },
+    "Rental Token Deposit Fraud": {
+      "total": 1,
+      "tp": 0,
+      "fp": 0,
+      "tn": 0,
+      "fn": 1
+    },
+    "Genuine Bank Notification": {
+      "total": 1,
+      "tp": 0,
+      "fp": 0,
+      "tn": 1,
+      "fn": 0
+    },
+    "Genuine Delivery OTP": {
+      "total": 1,
+      "tp": 0,
+      "fp": 0,
+      "tn": 1,
+      "fn": 0
+    },
+    "E-Commerce Receipt": {
+      "total": 1,
+      "tp": 0,
+      "fp": 0,
+      "tn": 1,
+      "fn": 0
+    },
+    "Genuine Security Warning": {
+      "total": 1,
+      "tp": 0,
+      "fp": 0,
+      "tn": 1,
+      "fn": 0
+    },
+    "Railway Booking Confirmation": {
+      "total": 1,
+      "tp": 0,
+      "fp": 0,
+      "tn": 1,
+      "fn": 0
+    },
+    "Courier Dispatch Notice": {
+      "total": 1,
+      "tp": 0,
+      "fp": 0,
+      "tn": 1,
+      "fn": 0
+    },
+    "Genuine 2FA Notification": {
+      "total": 1,
+      "tp": 0,
+      "fp": 0,
+      "tn": 1,
+      "fn": 0
+    },
+    "Utility Bill Receipt": {
+      "total": 1,
+      "tp": 0,
+      "fp": 0,
+      "tn": 1,
+      "fn": 0
+    },
+    "Academic Schedule Alert": {
+      "total": 1,
+      "tp": 0,
+      "fp": 0,
+      "tn": 1,
+      "fn": 0
+    },
+    "Fintech Bill Acknowledgement": {
+      "total": 1,
+      "tp": 0,
+      "fp": 0,
+      "tn": 1,
+      "fn": 0
+    },
+    "Doctor Appointment Reminder": {
+      "total": 1,
+      "tp": 0,
+      "fp": 0,
+      "tn": 1,
+      "fn": 0
+    },
+    "Airline Web Check-in": {
+      "total": 1,
+      "tp": 0,
+      "fp": 0,
+      "tn": 1,
+      "fn": 0
+    },
+    "Subscription Auto-Renewal": {
+      "total": 1,
+      "tp": 0,
+      "fp": 0,
+      "tn": 1,
+      "fn": 0
+    },
+    "Corporate Interview Invitation": {
+      "total": 1,
+      "tp": 0,
+      "fp": 0,
+      "tn": 1,
+      "fn": 0
+    },
+    "Mobility Ride Receipt": {
+      "total": 1,
+      "tp": 0,
+      "fp": 0,
+      "tn": 1,
+      "fn": 0
+    }
+  },
+  "per_sample_predictions": [
+    {
+      "id": "fresh_scam_01",
+      "category": "Digital Arrest Extortion",
+      "true_label": "scam",
+      "v2_score": 25,
+      "semantic_score": 95,
+      "v3_score": 95,
+      "predicted_label": "scam",
+      "status": "TP",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "summary": "This is a high-severity 'Digital Arrest' scam where fraudsters impersonate law enforcement to extort money by threatening immediate arrest over fabricated illegal activities.",
+      "red_flags": [
+        {
+          "category": "Impersonation",
+          "description": "Impersonation of the CBI or Cyber Cell to create authority and fear.",
+          "severity": "Critical",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "CBI Cyber Cell Notice"
+        },
+        {
+          "category": "Urgency & Coercion",
+          "description": "Uses the threat of immediate physical arrest to bypass critical thinking.",
+          "severity": "Critical",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "prevent immediate physical arrest"
+        },
+        {
+          "category": "Unusual Communication",
+          "description": "Law enforcement agencies do not conduct investigations or 'arrest' people via video calls.",
+          "severity": "High",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "Connect immediately via video call"
+        },
+        {
+          "category": "Artificial Urgency & Threat Tactics",
+          "description": "Uses artificial time pressure or ultimatum to force fast compliance.",
+          "severity": "High",
+          "evidence_source": "Direct Text Analysis",
+          "matched_phrase": "Urgency trigger: 'immediately'"
+        }
+      ],
+      "total_latency_ms": 71234.79,
+      "gemini_latency_ms": 69742.21,
+      "local_latency_ms": 1492.58
+    },
+    {
+      "id": "fresh_scam_02",
+      "category": "Electricity Bill Threat",
+      "true_label": "scam",
+      "v2_score": 25,
+      "semantic_score": 82,
+      "v3_score": 82,
+      "predicted_label": "scam",
+      "status": "TP",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "summary": "This message employs a classic utility scam tactic, using a threat of immediate power disconnection to coerce the recipient into calling an unverified personal phone number.",
+      "red_flags": [
+        {
+          "category": "urgency_or_coercion",
+          "description": "Uses a specific, short-term deadline to create panic and bypass critical thinking.",
+          "severity": "High",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "disconnected tonight at 9:30 PM"
+        },
+        {
+          "category": "impersonation",
+          "description": "Claims to be a specific official ('Mr. Sharma') to build false trust, which is atypical for automated utility notices.",
+          "severity": "Medium",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "power officer Mr. Sharma"
+        },
+        {
+          "category": "suspicious_contact_method",
+          "description": "Directs the user to a mobile or unverified phone number rather than an official customer service portal or toll-free line.",
+          "severity": "High",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "contact power officer Mr. Sharma at 9812345678"
+        },
+        {
+          "category": "Artificial Urgency & Threat Tactics",
+          "description": "Uses artificial time pressure or ultimatum to force fast compliance.",
+          "severity": "High",
+          "evidence_source": "Direct Text Analysis",
+          "matched_phrase": "Urgency trigger: 'immediately'"
+        }
+      ],
+      "total_latency_ms": 34612.99,
+      "gemini_latency_ms": 33233.14,
+      "local_latency_ms": 1379.85
+    },
+    {
+      "id": "fresh_scam_03",
+      "category": "Stock VIP Group Trap",
+      "true_label": "scam",
+      "v2_score": 65,
+      "semantic_score": 82,
+      "v3_score": 82,
+      "predicted_label": "scam",
+      "status": "TP",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "summary": "This submission exhibits classic hallmarks of a 'Pig Butchering' or 'Pump and Dump' scam, utilizing impossible financial guarantees and fake regulatory credentials to lure victims to an anonymous Telegram channel.",
+      "red_flags": [
+        {
+          "category": "Unrealistic Financial Returns",
+          "description": "Claims of 400% weekly returns are mathematically impossible in legitimate markets and indicate a Ponzi or exit-scam scheme.",
+          "severity": "Critical",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "guaranteed 400% weekly return"
+        },
+        {
+          "category": "Regulatory Impersonation",
+          "description": "Fraudsters frequently claim SEBI or other regulatory certifications to establish false authority; legitimate institutional clubs do not recruit via unsolicited Telegram links.",
+          "severity": "High",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "SEBI Certified"
+        },
+        {
+          "category": "Suspicious Communication Channel",
+          "description": "The use of Telegram for 'institutional' trading is a major red flag, as it allows scammers to remain anonymous and delete message history.",
+          "severity": "High",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "https://t.me/vip-insider-wealth"
+        },
+        {
+          "category": "Guaranteed Profit / High-Yield Claim",
+          "description": "Claims guaranteed high financial return or risk-free crypto trading.",
+          "severity": "Critical",
+          "evidence_source": "Direct Text Analysis",
+          "matched_phrase": "Investment guarantee claims detected."
+        }
+      ],
+      "total_latency_ms": 54919.38,
+      "gemini_latency_ms": 53256.29,
+      "local_latency_ms": 1663.09
+    },
+    {
+      "id": "fresh_scam_04",
+      "category": "YouTube Like Part-Time Job",
+      "true_label": "scam",
+      "v2_score": 5,
+      "semantic_score": 82,
+      "v3_score": 82,
+      "predicted_label": "scam",
+      "status": "TP",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "summary": "This is a classic 'Task Scam' or 'YouTube Like Scam' where victims are lured with small initial rewards to build trust before being coerced into paying for 'VIP' task bundles.",
+      "red_flags": [
+        {
+          "category": "Unrealistic Financial Reward",
+          "description": "The promise of earning up to Rs 8000 daily for simple tasks like liking videos is economically unsustainable and a common fraud indicator.",
+          "severity": "Critical",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "Earn Rs 3000 to Rs 8000 daily from home!"
+        },
+        {
+          "category": "Bait-and-Switch Tactic",
+          "description": "The mention of a pre-transferred 'test bonus' is a psychological manipulation tactic used to establish false credibility.",
+          "severity": "High",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "already transferred Rs 150 test bonus"
+        },
+        {
+          "category": "Suspicious Communication Channel",
+          "description": "Directing users to WhatsApp to 'activate' work tasks is a standard method for scammers to avoid platform monitoring.",
+          "severity": "High",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "Contact manager on WhatsApp to activate daily VIP task bundle"
+        }
+      ],
+      "total_latency_ms": 9209.62,
+      "gemini_latency_ms": 7770.61,
+      "local_latency_ms": 1439.01
+    },
+    {
+      "id": "fresh_scam_05",
+      "category": "Postal Address Smishing",
+      "true_label": "scam",
+      "v2_score": 74,
+      "semantic_score": 82,
+      "v3_score": 82,
+      "predicted_label": "scam",
+      "status": "TP",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "summary": "This is a smishing (SMS phishing) attempt impersonating India Post to steal personal information or payment details via a fraudulent domain using artificial urgency.",
+      "red_flags": [
+        {
+          "category": "suspicious_link",
+          "description": "The URL uses a '.top' top-level domain instead of the official 'gov.in' domain used by India Post.",
+          "severity": "Critical",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "http://indiapost-parcel-redelivery.top"
+        },
+        {
+          "category": "urgency_or_coercion",
+          "description": "The message uses a strict 24-hour deadline to pressure the recipient into acting quickly without verification.",
+          "severity": "High",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "within 24 hours"
+        },
+        {
+          "category": "threat_of_loss",
+          "description": "The message threatens that the package will be returned to sender to force compliance.",
+          "severity": "Medium",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "package will be returned"
+        },
+        {
+          "category": "Deceptive or Unverified Link",
+          "description": "Contains unverified web domain (indiapost-parcel-redelivery.top) outside official brand channels.",
+          "severity": "High",
+          "evidence_source": "Direct Text Analysis",
+          "matched_phrase": "Unverified URL: http://indiapost-parcel-redelivery.top"
+        },
+        {
+          "category": "Artificial Urgency & Threat Tactics",
+          "description": "Uses artificial time pressure or ultimatum to force fast compliance.",
+          "severity": "High",
+          "evidence_source": "Direct Text Analysis",
+          "matched_phrase": "Urgency trigger: 'within 24 hours'"
+        }
+      ],
+      "total_latency_ms": 41153.84,
+      "gemini_latency_ms": 39822.48,
+      "local_latency_ms": 1331.36
+    },
+    {
+      "id": "fresh_scam_06",
+      "category": "FASTag Deactivation Alert",
+      "true_label": "scam",
+      "v2_score": 60,
+      "semantic_score": 82,
+      "v3_score": 82,
+      "predicted_label": "scam",
+      "status": "TP",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "summary": "This is a phishing attempt impersonating NHAI to steal payment information and vehicle details using a fraudulent domain and artificial urgency.",
+      "red_flags": [
+        {
+          "category": "Suspicious Link",
+          "description": "The message directs users to a non-official '.online' domain which is not associated with government or banking infrastructure.",
+          "severity": "Critical",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "http://fastag-nhai-kyc.online"
+        },
+        {
+          "category": "Urgency & Coercion",
+          "description": "The message uses a threat of account blocking and financial penalties to force immediate compliance.",
+          "severity": "High",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "immediately to avoid toll penalty"
+        },
+        {
+          "category": "Deceptive or Unverified Link",
+          "description": "Contains unverified web domain (fastag-nhai-kyc.online) outside official brand channels.",
+          "severity": "High",
+          "evidence_source": "Direct Text Analysis",
+          "matched_phrase": "Unverified URL: http://fastag-nhai-kyc.online"
+        },
+        {
+          "category": "Artificial Urgency & Threat Tactics",
+          "description": "Uses artificial time pressure or ultimatum to force fast compliance.",
+          "severity": "High",
+          "evidence_source": "Direct Text Analysis",
+          "matched_phrase": "Urgency trigger: 'immediately'"
+        }
+      ],
+      "total_latency_ms": 40236.96,
+      "gemini_latency_ms": 38879.89,
+      "local_latency_ms": 1357.07
+    },
+    {
+      "id": "fresh_scam_07",
+      "category": "Income Tax Refund Phishing",
+      "true_label": "scam",
+      "v2_score": 40,
+      "semantic_score": 95,
+      "v3_score": 95,
+      "predicted_label": "scam",
+      "status": "TP",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "summary": "This is a high-risk phishing attempt impersonating the Income Tax Department to steal banking and debit card credentials using a fake refund lure.",
+      "red_flags": [
+        {
+          "category": "Suspicious Link",
+          "description": "The URL provided (incometax-refund-claim.org) is not an official government domain; official Indian tax sites use .gov.in.",
+          "severity": "Critical",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "http://incometax-refund-claim.org/verify"
+        },
+        {
+          "category": "Credential Theft",
+          "description": "The message explicitly requests sensitive debit card credentials, which legitimate government agencies never ask for via SMS or unverified links.",
+          "severity": "Critical",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "confirm your bank account and debit card credentials"
+        },
+        {
+          "category": "Deceptive or Unverified Link",
+          "description": "Contains unverified web domain (incometax-refund-claim.org) outside official brand channels.",
+          "severity": "High",
+          "evidence_source": "Direct Text Analysis",
+          "matched_phrase": "Unverified URL: http://incometax-refund-claim.org/verify"
+        }
+      ],
+      "total_latency_ms": 49511.51,
+      "gemini_latency_ms": 48157.04,
+      "local_latency_ms": 1354.47
+    },
+    {
+      "id": "fresh_scam_08",
+      "category": "Credit Card Points Expiry",
+      "true_label": "scam",
+      "v2_score": 40,
+      "semantic_score": 92,
+      "v3_score": 92,
+      "predicted_label": "scam",
+      "status": "TP",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "summary": "This is a classic phishing attempt impersonating SBI Card. It uses a high-value reward and artificial urgency to drive users to a suspicious, non-official '.xyz' domain intended to steal banking credentials.",
+      "red_flags": [
+        {
+          "category": "Suspicious Domain",
+          "description": "The link provided (sbicard-rewardpoints-claim.xyz) is not an official SBI Card domain (sbicard.com) and uses a low-cost .xyz extension often favored by scammers.",
+          "severity": "Critical",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "http://sbicard-rewardpoints-claim.xyz"
+        },
+        {
+          "category": "Artificial Urgency",
+          "description": "The message creates a false sense of panic by claiming rewards will expire 'today at midnight' to prevent the user from verifying the claim.",
+          "severity": "High",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "expire today at midnight"
+        },
+        {
+          "category": "Baiting",
+          "description": "Promises a specific monetary reward (Rs 4,925) to entice the victim into clicking the malicious link.",
+          "severity": "High",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "reward points worth Rs 4,925"
+        },
+        {
+          "category": "Deceptive or Unverified Link",
+          "description": "Contains unverified web domain (sbicard-rewardpoints-claim.xyz) outside official brand channels.",
+          "severity": "High",
+          "evidence_source": "Direct Text Analysis",
+          "matched_phrase": "Unverified URL: http://sbicard-rewardpoints-claim.xyz"
+        }
+      ],
+      "total_latency_ms": 39802.9,
+      "gemini_latency_ms": 38360.28,
+      "local_latency_ms": 1442.62
+    },
+    {
+      "id": "fresh_scam_09",
+      "category": "Remote Access Device Trap",
+      "true_label": "scam",
+      "v2_score": 5,
+      "semantic_score": 98,
+      "v3_score": 98,
+      "predicted_label": "scam",
+      "status": "TP",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "summary": "This is a highly dangerous remote access scam where attackers impersonate bank staff to trick users into installing screen-sharing software to take over their device and bank accounts.",
+      "red_flags": [
+        {
+          "category": "Remote Access Request",
+          "description": "Legitimate financial institutions will never ask you to install remote control software like AnyDesk or QuickSupport to fix a security issue.",
+          "severity": "Critical",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "Install QuickSupport or AnyDesk from Play Store"
+        },
+        {
+          "category": "Credential Theft",
+          "description": "Sharing a session code provides the attacker with full visibility and control over your mobile device, including banking apps and SMS codes.",
+          "severity": "Critical",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "share the 9-digit session code"
+        },
+        {
+          "category": "Artificial Urgency",
+          "description": "The message uses the threat of 'duplicate pending debit transactions' to create panic and bypass critical thinking.",
+          "severity": "High",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "noticed duplicate pending debit transactions"
+        }
+      ],
+      "total_latency_ms": 25275.15,
+      "gemini_latency_ms": 23965.57,
+      "local_latency_ms": 1309.58
+    },
+    {
+      "id": "fresh_scam_10",
+      "category": "Crypto Cloud Mining Trap",
+      "true_label": "scam",
+      "v2_score": 5,
+      "semantic_score": 95,
+      "v3_score": 95,
+      "predicted_label": "scam",
+      "status": "TP",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "summary": "This is a fraudulent investment scheme impersonating Binance, promising an impossible 8.5% daily return to solicit non-recoverable cryptocurrency transfers.",
+      "red_flags": [
+        {
+          "category": "Unrealistic Financial Promise",
+          "description": "A daily return of 8.5% (Rs 850 on Rs 10,000) is mathematically unsustainable and a hallmark of Ponzi schemes.",
+          "severity": "Critical",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "withdraw Rs 850 daily automatic passive returns"
+        },
+        {
+          "category": "Irreversible Payment Method",
+          "description": "Direct transfers to a TRC20 wallet address provide no consumer protection or ability to reverse the transaction once the funds are sent.",
+          "severity": "High",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "Deposit USDT to wallet TRC20: TL1x89FmN928vK"
+        },
+        {
+          "category": "Brand Impersonation",
+          "description": "The use of the 'Binance' name without an official domain or verified platform link is a common tactic to gain false credibility.",
+          "severity": "High",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "Binance Cloud Mining Partnership"
+        }
+      ],
+      "total_latency_ms": 67516.82,
+      "gemini_latency_ms": 66040.18,
+      "local_latency_ms": 1476.64
+    },
+    {
+      "id": "fresh_scam_11",
+      "category": "Customs Clearance Fee Trap",
+      "true_label": "scam",
+      "v2_score": 5,
+      "semantic_score": 85,
+      "v3_score": 85,
+      "predicted_label": "scam",
+      "status": "TP",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "summary": "This is a classic advance-fee fraud attempt where the scammer uses a promise of high-value gifts (gold and cash) to manipulate the victim into paying fake customs clearance fees.",
+      "red_flags": [
+        {
+          "category": "Advance-Fee Fraud",
+          "description": "The request requires an upfront payment to release a supposed high-value reward.",
+          "severity": "Critical",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "transfer Rs 35,000 clearance tax"
+        },
+        {
+          "category": "Social Engineering",
+          "description": "Use of affectionate language and the promise of jewelry/cash to create emotional investment.",
+          "severity": "High",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "Hello my dear, I sent you a gift package containing gold jewelry and cash"
+        },
+        {
+          "category": "Urgency",
+          "description": "The sender creates artificial pressure to force a quick decision without verification.",
+          "severity": "High",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "right now"
+        }
+      ],
+      "total_latency_ms": 8809.18,
+      "gemini_latency_ms": 7274.1,
+      "local_latency_ms": 1535.08
+    },
+    {
+      "id": "fresh_scam_12",
+      "category": "Work Laptop Security Deposit",
+      "true_label": "scam",
+      "v2_score": 5,
+      "semantic_score": 85,
+      "v3_score": 85,
+      "predicted_label": "scam",
+      "status": "TP",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "summary": "This is a classic recruitment scam where a fraudulent job offer is used to solicit an upfront 'refundable' deposit for equipment delivery via a P2P payment app.",
+      "red_flags": [
+        {
+          "category": "Advance Fee Fraud",
+          "description": "Legitimate employers never require candidates to pay for their own equipment or shipping deposits upfront.",
+          "severity": "Critical",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "Send Rs 4,500 refundable courier deposit"
+        },
+        {
+          "category": "Unusual Payment Method",
+          "description": "The use of PhonePe, a peer-to-peer payment application, for corporate logistics is a major indicator of fraud.",
+          "severity": "High",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "via PhonePe"
+        }
+      ],
+      "total_latency_ms": 53204.39,
+      "gemini_latency_ms": 51812.91,
+      "local_latency_ms": 1391.48
+    },
+    {
+      "id": "fresh_scam_13",
+      "category": "WhatsApp Bank KYC Update",
+      "true_label": "scam",
+      "v2_score": 5,
+      "semantic_score": 98,
+      "v3_score": 98,
+      "predicted_label": "scam",
+      "status": "TP",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "summary": "This is a severe phishing attempt impersonating HDFC Bank to steal sensitive identity documents and full debit card details (including CVV) via an unofficial WhatsApp channel.",
+      "red_flags": [
+        {
+          "category": "Credential Theft",
+          "description": "The request for the back of a debit card is a direct attempt to steal the CVV for unauthorized transactions.",
+          "severity": "Critical",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "debit card front & back"
+        },
+        {
+          "category": "Identity Fraud",
+          "description": "Legitimate banks never request high-sensitivity KYC documents like PAN and Aadhaar via WhatsApp messages.",
+          "severity": "Critical",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "send photos of your PAN card, Aadhaar"
+        },
+        {
+          "category": "Impersonation",
+          "description": "The message uses a threat of service disablement to bypass standard secure banking procedures.",
+          "severity": "High",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "Your NetBanking service is disabled"
+        }
+      ],
+      "total_latency_ms": 59647.94,
+      "gemini_latency_ms": 58271.37,
+      "local_latency_ms": 1376.57
+    },
+    {
+      "id": "fresh_scam_14",
+      "category": "SIM Biometric Deactivation",
+      "true_label": "scam",
+      "v2_score": 85,
+      "semantic_score": 95,
+      "v3_score": 95,
+      "predicted_label": "scam",
+      "status": "TP",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "summary": "This is a high-risk phishing attempt using artificial urgency and service disruption threats to steal mobile numbers and OTP codes via a fraudulent domain.",
+      "red_flags": [
+        {
+          "category": "Credential Theft",
+          "description": "The message explicitly requests the disclosure of a One-Time Password (OTP) on an external website, which is a primary method for account takeover.",
+          "severity": "Critical",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "entering your mobile number and OTP"
+        },
+        {
+          "category": "Domain Spoofing",
+          "description": "The URL provided (jio-ekyc-telecom.info) is not an official Jio domain and uses keywords to mimic legitimacy.",
+          "severity": "Critical",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "http://jio-ekyc-telecom.info"
+        },
+        {
+          "category": "Urgency & Coercion",
+          "description": "The message uses a strict 6-hour ultimatum and the threat of service termination to bypass the user's critical thinking.",
+          "severity": "High",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "within 6 hours"
+        },
+        {
+          "category": "Credential Harvesting / OTP Theft",
+          "description": "Requests disclosure of 2FA/OTP code to caller, support representative, or unverified URL.",
+          "severity": "Critical",
+          "evidence_source": "Direct Text Analysis",
+          "matched_phrase": "OTP code disclosure request detected."
+        },
+        {
+          "category": "Artificial Urgency & Threat Tactics",
+          "description": "Uses artificial time pressure or ultimatum to force fast compliance.",
+          "severity": "High",
+          "evidence_source": "Direct Text Analysis",
+          "matched_phrase": "Urgency trigger: 'within 6 hours'"
+        }
+      ],
+      "total_latency_ms": 85376.68,
+      "gemini_latency_ms": 83994.45,
+      "local_latency_ms": 1382.23
+    },
+    {
+      "id": "fresh_scam_15",
+      "category": "Rental Token Deposit Fraud",
+      "true_label": "scam",
+      "v2_score": 5,
+      "semantic_score": "N/A",
+      "v3_score": 5,
+      "predicted_label": "legitimate",
+      "status": "FN",
+      "gemini_invoked": false,
+      "fallback_status": "Failed: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+      "summary": "No high-risk scam triggers or deceptive links detected.",
+      "red_flags": [],
+      "total_latency_ms": 85466.01,
+      "gemini_latency_ms": 0.0,
+      "local_latency_ms": 1428.62
+    },
+    {
+      "id": "fresh_legit_01",
+      "category": "Genuine Bank Notification",
+      "true_label": "legitimate",
+      "v2_score": 5,
+      "semantic_score": 5,
+      "v3_score": 5,
+      "predicted_label": "legitimate",
+      "status": "TN",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "summary": "This message is a standard automated transaction notification from HDFC Bank that includes specific purchase details and a legitimate security mechanism to block the card via a verified shortcode.",
+      "red_flags": [],
+      "total_latency_ms": 36669.64,
+      "gemini_latency_ms": 35188.59,
+      "local_latency_ms": 1481.05
+    },
+    {
+      "id": "fresh_legit_02",
+      "category": "Genuine Delivery OTP",
+      "true_label": "legitimate",
+      "v2_score": 5,
+      "semantic_score": 5,
+      "v3_score": 5,
+      "predicted_label": "legitimate",
+      "status": "TN",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "summary": "This is a standard, legitimate delivery notification from Swiggy. The delivery PIN is a security feature used to verify the correct recipient upon arrival.",
+      "red_flags": [],
+      "total_latency_ms": 21216.42,
+      "gemini_latency_ms": 19888.85,
+      "local_latency_ms": 1327.57
+    },
+    {
+      "id": "fresh_legit_03",
+      "category": "E-Commerce Receipt",
+      "true_label": "legitimate",
+      "v2_score": 5,
+      "semantic_score": "N/A",
+      "v3_score": 5,
+      "predicted_label": "legitimate",
+      "status": "TN",
+      "gemini_invoked": false,
+      "fallback_status": "Failed: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 18h7m39.600563154s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '65259s'}]}}",
+      "summary": "No high-risk scam triggers or deceptive links detected.",
+      "red_flags": [],
+      "total_latency_ms": 82996.88,
+      "gemini_latency_ms": 0.0,
+      "local_latency_ms": 1468.74
+    },
+    {
+      "id": "fresh_legit_04",
+      "category": "Genuine Security Warning",
+      "true_label": "legitimate",
+      "v2_score": 2,
+      "semantic_score": 5,
+      "v3_score": 5,
+      "predicted_label": "legitimate",
+      "status": "TN",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "summary": "This message is a standard informational security alert typical of Google's protective sign-in notifications. It contains no suspicious links, demands for credentials, or artificial urgency.",
+      "red_flags": [],
+      "total_latency_ms": 69235.62,
+      "gemini_latency_ms": 67926.31,
+      "local_latency_ms": 1309.31
+    },
+    {
+      "id": "fresh_legit_05",
+      "category": "Railway Booking Confirmation",
+      "true_label": "legitimate",
+      "v2_score": 5,
+      "semantic_score": "N/A",
+      "v3_score": 5,
+      "predicted_label": "legitimate",
+      "status": "TN",
+      "gemini_invoked": false,
+      "fallback_status": "Failed: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 18h4m59.876589649s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '65099s'}]}}",
+      "summary": "No high-risk scam triggers or deceptive links detected.",
+      "red_flags": [],
+      "total_latency_ms": 82505.62,
+      "gemini_latency_ms": 0.0,
+      "local_latency_ms": 1293.62
+    },
+    {
+      "id": "fresh_legit_06",
+      "category": "Courier Dispatch Notice",
+      "true_label": "legitimate",
+      "v2_score": 5,
+      "semantic_score": "N/A",
+      "v3_score": 5,
+      "predicted_label": "legitimate",
+      "status": "TN",
+      "gemini_invoked": false,
+      "fallback_status": "Failed: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 18h3m33.041053593s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '65013s'}]}}",
+      "summary": "No high-risk scam triggers or deceptive links detected.",
+      "red_flags": [],
+      "total_latency_ms": 82853.48,
+      "gemini_latency_ms": 0.0,
+      "local_latency_ms": 1441.22
+    },
+    {
+      "id": "fresh_legit_07",
+      "category": "Genuine 2FA Notification",
+      "true_label": "legitimate",
+      "v2_score": 5,
+      "semantic_score": "N/A",
+      "v3_score": 5,
+      "predicted_label": "legitimate",
+      "status": "TN",
+      "gemini_invoked": false,
+      "fallback_status": "Failed: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 18h2m6.327249701s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '64926s'}]}}",
+      "summary": "No high-risk scam triggers or deceptive links detected.",
+      "red_flags": [],
+      "total_latency_ms": 82704.9,
+      "gemini_latency_ms": 0.0,
+      "local_latency_ms": 1338.08
+    },
+    {
+      "id": "fresh_legit_08",
+      "category": "Utility Bill Receipt",
+      "true_label": "legitimate",
+      "v2_score": 5,
+      "semantic_score": "N/A",
+      "v3_score": 5,
+      "predicted_label": "legitimate",
+      "status": "TN",
+      "gemini_invoked": false,
+      "fallback_status": "Failed: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 18h39.701956384s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '64839s'}]}}",
+      "summary": "No high-risk scam triggers or deceptive links detected.",
+      "red_flags": [],
+      "total_latency_ms": 82647.04,
+      "gemini_latency_ms": 0.0,
+      "local_latency_ms": 1429.0
+    },
+    {
+      "id": "fresh_legit_09",
+      "category": "Academic Schedule Alert",
+      "true_label": "legitimate",
+      "v2_score": 5,
+      "semantic_score": "N/A",
+      "v3_score": 5,
+      "predicted_label": "legitimate",
+      "status": "TN",
+      "gemini_invoked": false,
+      "fallback_status": "Failed: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 17h59m13.117279802s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '64753s'}]}}",
+      "summary": "No high-risk scam triggers or deceptive links detected.",
+      "red_flags": [],
+      "total_latency_ms": 82529.49,
+      "gemini_latency_ms": 0.0,
+      "local_latency_ms": 1406.52
+    },
+    {
+      "id": "fresh_legit_10",
+      "category": "Fintech Bill Acknowledgement",
+      "true_label": "legitimate",
+      "v2_score": 5,
+      "semantic_score": "N/A",
+      "v3_score": 5,
+      "predicted_label": "legitimate",
+      "status": "TN",
+      "gemini_invoked": false,
+      "fallback_status": "Failed: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 17h57m46.648369127s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '64666s'}]}}",
+      "summary": "No high-risk scam triggers or deceptive links detected.",
+      "red_flags": [],
+      "total_latency_ms": 82471.23,
+      "gemini_latency_ms": 0.0,
+      "local_latency_ms": 1365.7
+    },
+    {
+      "id": "fresh_legit_11",
+      "category": "Doctor Appointment Reminder",
+      "true_label": "legitimate",
+      "v2_score": 5,
+      "semantic_score": "N/A",
+      "v3_score": 5,
+      "predicted_label": "legitimate",
+      "status": "TN",
+      "gemini_invoked": false,
+      "fallback_status": "Failed: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 17h56m19.656148021s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '64579s'}]}}",
+      "summary": "No high-risk scam triggers or deceptive links detected.",
+      "red_flags": [],
+      "total_latency_ms": 83025.06,
+      "gemini_latency_ms": 0.0,
+      "local_latency_ms": 1429.42
+    },
+    {
+      "id": "fresh_legit_12",
+      "category": "Airline Web Check-in",
+      "true_label": "legitimate",
+      "v2_score": 5,
+      "semantic_score": "N/A",
+      "v3_score": 5,
+      "predicted_label": "legitimate",
+      "status": "TN",
+      "gemini_invoked": false,
+      "fallback_status": "Failed: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 17h54m53.10272955s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '64493s'}]}}",
+      "summary": "No high-risk scam triggers or deceptive links detected.",
+      "red_flags": [],
+      "total_latency_ms": 82516.14,
+      "gemini_latency_ms": 0.0,
+      "local_latency_ms": 1382.45
+    },
+    {
+      "id": "fresh_legit_13",
+      "category": "Subscription Auto-Renewal",
+      "true_label": "legitimate",
+      "v2_score": 5,
+      "semantic_score": "N/A",
+      "v3_score": 5,
+      "predicted_label": "legitimate",
+      "status": "TN",
+      "gemini_invoked": false,
+      "fallback_status": "Failed: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 17h53m26.554275227s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '64406s'}]}}",
+      "summary": "No high-risk scam triggers or deceptive links detected.",
+      "red_flags": [],
+      "total_latency_ms": 82510.74,
+      "gemini_latency_ms": 0.0,
+      "local_latency_ms": 1426.72
+    },
+    {
+      "id": "fresh_legit_14",
+      "category": "Corporate Interview Invitation",
+      "true_label": "legitimate",
+      "v2_score": 5,
+      "semantic_score": "N/A",
+      "v3_score": 5,
+      "predicted_label": "legitimate",
+      "status": "TN",
+      "gemini_invoked": false,
+      "fallback_status": "Failed: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 17h52m38.179388038s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '64358s'}]}}",
+      "summary": "No high-risk scam triggers or deceptive links detected.",
+      "red_flags": [],
+      "total_latency_ms": 44425.9,
+      "gemini_latency_ms": 0.0,
+      "local_latency_ms": 1434.03
+    },
+    {
+      "id": "fresh_legit_15",
+      "category": "Mobility Ride Receipt",
+      "true_label": "legitimate",
+      "v2_score": 5,
+      "semantic_score": "N/A",
+      "v3_score": 5,
+      "predicted_label": "legitimate",
+      "status": "TN",
+      "gemini_invoked": false,
+      "fallback_status": "Failed: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 17h51m11.608033843s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '64271s'}]}}",
+      "summary": "No high-risk scam triggers or deceptive links detected.",
+      "red_flags": [],
+      "total_latency_ms": 82559.48,
+      "gemini_latency_ms": 0.0,
+      "local_latency_ms": 1451.52
+    }
+  ]
+}

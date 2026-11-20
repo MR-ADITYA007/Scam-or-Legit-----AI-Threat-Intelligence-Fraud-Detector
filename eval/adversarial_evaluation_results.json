@@ -1,0 +1,852 @@
+{
+  "evaluation_type": "Adversarial & Ambiguous Benchmark Evaluation",
+  "dataset_name": "adversarial_ambiguous_dataset.json",
+  "dataset_size": 20,
+  "scam_samples": 10,
+  "legitimate_samples": 10,
+  "confusion_matrix": {
+    "tp": 9,
+    "fp": 2,
+    "tn": 8,
+    "fn": 1
+  },
+  "metrics": {
+    "accuracy": 0.85,
+    "accuracy_percentage": 85.0,
+    "precision": 0.8182,
+    "precision_percentage": 81.82,
+    "recall": 0.9,
+    "recall_percentage": 90.0,
+    "specificity": 0.8,
+    "specificity_percentage": 80.0,
+    "false_positive_rate": 0.2,
+    "fpr_percentage": 20.0,
+    "f1_score": 0.8571
+  },
+  "v2_vs_v3_comparison": {
+    "v2_scam_recall": 0.0,
+    "v2_scam_recall_percentage": 0.0,
+    "v3_scam_recall": 0.9,
+    "v3_scam_recall_percentage": 90.0,
+    "semantic_lift_percentage": 90.0
+  },
+  "timing_breakdown": {
+    "mean_total_latency_ms": 9676.24,
+    "mean_gemini_latency_ms": 9285.75,
+    "mean_local_latency_ms": 390.49
+  },
+  "category_breakdown": {
+    "Soft Grooming Romance": {
+      "total": 1,
+      "tp": 0,
+      "fp": 0,
+      "tn": 0,
+      "fn": 1
+    },
+    "Google Doc Phishing": {
+      "total": 1,
+      "tp": 1,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    },
+    "Fake Debt Settlement": {
+      "total": 1,
+      "tp": 1,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    },
+    "Copy-Trading Signal Trap": {
+      "total": 1,
+      "tp": 1,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    },
+    "Subtle Delivery Typosquatting": {
+      "total": 1,
+      "tp": 1,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    },
+    "Marketplace Inspection Gate Fee": {
+      "total": 1,
+      "tp": 1,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    },
+    "Utility Bill Discount Phishing": {
+      "total": 1,
+      "tp": 1,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    },
+    "Tech Webinar Upsell": {
+      "total": 1,
+      "tp": 1,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    },
+    "Fake Telecom Sim Swap Pretext": {
+      "total": 1,
+      "tp": 1,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    },
+    "Freelance Escrow Phishing": {
+      "total": 1,
+      "tp": 1,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    },
+    "Aggressive Debt Reminder": {
+      "total": 1,
+      "tp": 0,
+      "fp": 0,
+      "tn": 1,
+      "fn": 0
+    },
+    "Urgent Flash Sale Promotion": {
+      "total": 1,
+      "tp": 0,
+      "fp": 0,
+      "tn": 1,
+      "fn": 0
+    },
+    "Third-Party Retailer Survey": {
+      "total": 1,
+      "tp": 0,
+      "fp": 0,
+      "tn": 1,
+      "fn": 0
+    },
+    "Hospital Diagnostic Portal": {
+      "total": 1,
+      "tp": 0,
+      "fp": 1,
+      "tn": 0,
+      "fn": 0
+    },
+    "Official Bank Credit Limit Bump": {
+      "total": 1,
+      "tp": 0,
+      "fp": 0,
+      "tn": 1,
+      "fn": 0
+    },
+    "Corporate Recruiter Inbound": {
+      "total": 1,
+      "tp": 0,
+      "fp": 0,
+      "tn": 1,
+      "fn": 0
+    },
+    "Government Tax E-Filing Alert": {
+      "total": 1,
+      "tp": 0,
+      "fp": 0,
+      "tn": 1,
+      "fn": 0
+    },
+    "Airline Schedule Modification": {
+      "total": 1,
+      "tp": 0,
+      "fp": 0,
+      "tn": 1,
+      "fn": 0
+    },
+    "Corporate IT Password Expiry": {
+      "total": 1,
+      "tp": 0,
+      "fp": 0,
+      "tn": 1,
+      "fn": 0
+    },
+    "Peer P2P Payment Request": {
+      "total": 1,
+      "tp": 0,
+      "fp": 1,
+      "tn": 0,
+      "fn": 0
+    }
+  },
+  "per_sample_predictions": [
+    {
+      "id": "adv_scam_01",
+      "category": "Soft Grooming Romance",
+      "difficulty": "Hard \u2014 No overt financial demand yet; conversational rapport grooming",
+      "true_label": "scam",
+      "v2_score": 5,
+      "semantic_score": 35,
+      "v3_score": 35,
+      "predicted_label": "legitimate",
+      "status": "FN",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "summary": "The message is a common icebreaker that uses a professional persona and travel context to build rapport, which is a frequent precursor to social engineering or 'Pig Butchering' scams.",
+      "red_flags": [
+        {
+          "category": "Social Engineering",
+          "description": "The use of a specific, high-status persona (art curator) and a location-based detail (traveling in Singapore) is a common tactic to establish credibility and initiate a long-term scam.",
+          "severity": "Low",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "art gallery curator currently traveling in Singapore"
+        }
+      ],
+      "total_latency_ms": 7167.91,
+      "gemini_latency_ms": 6789.91,
+      "local_latency_ms": 378.0
+    },
+    {
+      "id": "adv_scam_02",
+      "category": "Google Doc Phishing",
+      "difficulty": "Medium-Hard \u2014 Enterprise phishing using legitimate brand names",
+      "true_label": "scam",
+      "v2_score": 40,
+      "semantic_score": 92,
+      "v3_score": 92,
+      "predicted_label": "scam",
+      "status": "TP",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "summary": "This is a high-risk phishing attempt using a look-alike domain to impersonate Google Drive and steal employee credentials via a fake 'Compensation Restructuring' document lure.",
+      "red_flags": [
+        {
+          "category": "Look-alike Domain",
+          "description": "The URL 'drive-google-doc-review.com' is not an official Google domain and is designed to deceive users.",
+          "severity": "Critical",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "http://drive-google-doc-review.com/auth"
+        },
+        {
+          "category": "Credential Harvesting",
+          "description": "The link directs to an '/auth' endpoint on an unverified domain, a classic tactic for stealing login information.",
+          "severity": "Critical",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "/auth"
+        },
+        {
+          "category": "Social Engineering",
+          "description": "The message uses a sensitive topic (salary/compensation) to manipulate the recipient into clicking without verifying the source.",
+          "severity": "High",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "2025_Q1_Compensation_Restructuring_Confidential.pdf"
+        },
+        {
+          "category": "Deceptive or Unverified Link",
+          "description": "Contains unverified web domain (drive-google-doc-review.com) outside official brand channels.",
+          "severity": "High",
+          "evidence_source": "Direct Text Analysis",
+          "matched_phrase": "Unverified URL: http://drive-google-doc-review.com/auth"
+        }
+      ],
+      "total_latency_ms": 7363.65,
+      "gemini_latency_ms": 7002.17,
+      "local_latency_ms": 361.48
+    },
+    {
+      "id": "adv_scam_03",
+      "category": "Fake Debt Settlement",
+      "difficulty": "Hard \u2014 Mimics authentic aggressive debt collection",
+      "true_label": "scam",
+      "v2_score": 5,
+      "semantic_score": 78,
+      "v3_score": 78,
+      "predicted_label": "scam",
+      "status": "TP",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "summary": "This submission exhibits classic debt collection scam tactics, including high-pressure threats of 'field recovery' and a suspicious 'settlement' offer via a UPI ID.",
+      "red_flags": [
+        {
+          "category": "Intimidation Tactics",
+          "description": "The message uses threats of immediate physical visits and credit score damage to induce panic.",
+          "severity": "High",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "immediate field recovery visit and credit bureau default filing"
+        },
+        {
+          "category": "Suspicious Payment Method",
+          "description": "Legitimate legal settlements are rarely conducted via a generic UPI ID without formal documentation or bank account transfers.",
+          "severity": "Critical",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "pay settled amount of Rs 4,500 via UPI ID debt-settlement@oksbi"
+        },
+        {
+          "category": "Unrealistic Settlement Offer",
+          "description": "A sudden reduction from 14,800 to 4,500 is a common lure used to entice victims into paying quickly.",
+          "severity": "Medium",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "Outstanding loan liability of Rs 14,800... pay settled amount of Rs 4,500"
+        }
+      ],
+      "total_latency_ms": 6767.44,
+      "gemini_latency_ms": 6384.61,
+      "local_latency_ms": 382.83
+    },
+    {
+      "id": "adv_scam_04",
+      "category": "Copy-Trading Signal Trap",
+      "difficulty": "Medium \u2014 Looks like a peer trader offering advice",
+      "true_label": "scam",
+      "v2_score": 5,
+      "semantic_score": 78,
+      "v3_score": 78,
+      "predicted_label": "scam",
+      "status": "TP",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "summary": "The submission exhibits classic hallmarks of an investment scam, including unrealistic profit claims (+320%) and the use of a shortened URL to mask the destination site.",
+      "red_flags": [
+        {
+          "category": "Unrealistic Financial Claims",
+          "description": "A monthly return of 320% is mathematically improbable and a primary indicator of financial fraud.",
+          "severity": "Critical",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "+320%"
+        },
+        {
+          "category": "Link Obfuscation",
+          "description": "The use of bit.ly or other URL shorteners in financial contexts is frequently used to bypass security filters and hide malicious domains.",
+          "severity": "High",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "bit.ly/fx-verified-bot"
+        },
+        {
+          "category": "Advance-Fee Hook",
+          "description": "The 'no upfront fee' promise is a common tactic to lower the victim's guard before later demanding 'withdrawal fees' or 'taxes' to access fake profits.",
+          "severity": "Medium",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "I don't charge any upfront fee"
+        }
+      ],
+      "total_latency_ms": 8886.5,
+      "gemini_latency_ms": 8501.9,
+      "local_latency_ms": 384.6
+    },
+    {
+      "id": "adv_scam_05",
+      "category": "Subtle Delivery Typosquatting",
+      "difficulty": "Medium \u2014 Subtle typosquatting domain (.in instead of official .com)",
+      "true_label": "scam",
+      "v2_score": 40,
+      "semantic_score": 78,
+      "v3_score": 78,
+      "predicted_label": "scam",
+      "status": "TP",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "summary": "This message is a phishing attempt impersonating BlueDart Express, using a fraudulent domain and a common 'incomplete address' lure to steal personal information.",
+      "red_flags": [
+        {
+          "category": "suspicious_link",
+          "description": "The domain 'bluedart-trackparcel.in' is not the official BlueDart website (bluedart.com).",
+          "severity": "Critical",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "https://bluedart-trackparcel.in"
+        },
+        {
+          "category": "artificial_urgency",
+          "description": "The message creates a sense of urgency by claiming action is needed to ensure 'tomorrow dispatch'.",
+          "severity": "Medium",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "ensure tomorrow dispatch"
+        },
+        {
+          "category": "phishing_tactic",
+          "description": "Uses a classic delivery scam narrative involving a supposed 'incomplete street landmark' to justify the need for data entry.",
+          "severity": "High",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "incomplete street landmark"
+        },
+        {
+          "category": "Deceptive or Unverified Link",
+          "description": "Contains unverified web domain (bluedart-trackparcel.in) outside official brand channels.",
+          "severity": "High",
+          "evidence_source": "Direct Text Analysis",
+          "matched_phrase": "Unverified URL: https://bluedart-trackparcel.in"
+        }
+      ],
+      "total_latency_ms": 7013.08,
+      "gemini_latency_ms": 6631.02,
+      "local_latency_ms": 382.06
+    },
+    {
+      "id": "adv_scam_06",
+      "category": "Marketplace Inspection Gate Fee",
+      "difficulty": "Medium \u2014 Classic army/cargo inspection fee advance scam",
+      "true_label": "scam",
+      "v2_score": 5,
+      "semantic_score": 82,
+      "v3_score": 82,
+      "predicted_label": "scam",
+      "status": "TP",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "summary": "This is a classic marketplace scam where the fraudster impersonates military or security personnel to build trust and demands an upfront 'gate pass' fee for a vehicle that does not exist.",
+      "red_flags": [
+        {
+          "category": "Impersonation of Authority",
+          "description": "The seller claims to be in the military or at a CISF terminal to explain why they cannot meet in person and to build false trust.",
+          "severity": "High",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "transferred to military cantonment. The car is at CISF cargo terminal"
+        },
+        {
+          "category": "Advance Fee Fraud",
+          "description": "Requesting a 'refundable' fee to inspect a vehicle is a major red flag; legitimate sellers never charge for an inspection.",
+          "severity": "Critical",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "Pay Rs 2,500 refundable gate clearance pass to inspect vehicle"
+        }
+      ],
+      "total_latency_ms": 6488.12,
+      "gemini_latency_ms": 6144.11,
+      "local_latency_ms": 344.01
+    },
+    {
+      "id": "adv_scam_07",
+      "category": "Utility Bill Discount Phishing",
+      "difficulty": "Medium \u2014 Lures with government subsidy rather than threat",
+      "true_label": "scam",
+      "v2_score": 40,
+      "semantic_score": 82,
+      "v3_score": 82,
+      "predicted_label": "scam",
+      "status": "TP",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "summary": "This message uses a fake cashback incentive to lure users into visiting a non-official, suspicious domain designed to steal payment credentials.",
+      "red_flags": [
+        {
+          "category": "Suspicious Link",
+          "description": "The URL uses a .info TLD and a generic name (billpay-discount-discom) rather than an official government or utility provider domain.",
+          "severity": "Critical",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "http://billpay-discount-discom.info/subsidy"
+        },
+        {
+          "category": "Financial Bait",
+          "description": "Offers an unusually high cashback reward (25%) to motivate immediate action and bypass critical thinking.",
+          "severity": "High",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "get flat 25% cashback on your pending electricity bill"
+        },
+        {
+          "category": "Impersonation",
+          "description": "Uses a generic 'State Electricity Board' identity which lacks specific branding or verifiable contact details.",
+          "severity": "Medium",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "State Electricity Board"
+        },
+        {
+          "category": "Deceptive or Unverified Link",
+          "description": "Contains unverified web domain (billpay-discount-discom.info) outside official brand channels.",
+          "severity": "High",
+          "evidence_source": "Direct Text Analysis",
+          "matched_phrase": "Unverified URL: http://billpay-discount-discom.info/subsidy"
+        }
+      ],
+      "total_latency_ms": 9618.7,
+      "gemini_latency_ms": 9221.84,
+      "local_latency_ms": 396.86
+    },
+    {
+      "id": "adv_scam_08",
+      "category": "Tech Webinar Upsell",
+      "difficulty": "Hard \u2014 Mimics legitimate educational bootcamps",
+      "true_label": "scam",
+      "v2_score": 40,
+      "semantic_score": 82,
+      "v3_score": 82,
+      "predicted_label": "scam",
+      "status": "TP",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "summary": "This submission exhibits classic 'pay-to-play' scam tactics by requesting a 'refundable deposit' for a free event using artificial scarcity and an unverified high-profile identity.",
+      "red_flags": [
+        {
+          "category": "Advance Fee Scam",
+          "description": "Legitimate free masterclasses do not require 'seat lock-in' deposits; this is a common tactic to harvest small sums from many victims.",
+          "severity": "High",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "requires Rs 499 seat lock-in refundable deposit"
+        },
+        {
+          "category": "Suspicious Domain",
+          "description": "The URL uses a low-reputation .site TLD and is not associated with any verified corporate or educational platform.",
+          "severity": "High",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "http://ai-masterclass-reserve.site"
+        },
+        {
+          "category": "Urgency/Scarcity",
+          "description": "The 'first 50 participants' claim is designed to induce FOMO (Fear Of Missing Out) and bypass critical thinking.",
+          "severity": "Medium",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "Free for first 50 participants"
+        },
+        {
+          "category": "Deceptive or Unverified Link",
+          "description": "Contains unverified web domain (ai-masterclass-reserve.site) outside official brand channels.",
+          "severity": "High",
+          "evidence_source": "Direct Text Analysis",
+          "matched_phrase": "Unverified URL: http://ai-masterclass-reserve.site"
+        }
+      ],
+      "total_latency_ms": 8390.5,
+      "gemini_latency_ms": 7907.04,
+      "local_latency_ms": 483.46
+    },
+    {
+      "id": "adv_scam_09",
+      "category": "Fake Telecom Sim Swap Pretext",
+      "difficulty": "Hard \u2014 Reverse social engineering forcing a callback",
+      "true_label": "scam",
+      "v2_score": 25,
+      "semantic_score": 78,
+      "v3_score": 78,
+      "predicted_label": "scam",
+      "status": "TP",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "summary": "This message uses a fake security alert about an eSIM swap to induce panic and trick the user into calling a fraudulent number for credential harvesting.",
+      "red_flags": [
+        {
+          "category": "urgency_or_coercion",
+          "description": "Uses artificial time pressure to force the user to act without verification.",
+          "severity": "High",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "immediately"
+        },
+        {
+          "category": "impersonation",
+          "description": "Uses a vague, authoritative-sounding entity name that does not correspond to a specific verifiable service provider.",
+          "severity": "High",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "Telecom Regulatory Compliance"
+        },
+        {
+          "category": "social_engineering",
+          "description": "Directs the user to call an unofficial mobile number to 'cancel' a fraudulent action, a common tactic to steal account details.",
+          "severity": "Critical",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "call our customer retention officer immediately at 9845019281"
+        },
+        {
+          "category": "Artificial Urgency & Threat Tactics",
+          "description": "Uses artificial time pressure or ultimatum to force fast compliance.",
+          "severity": "High",
+          "evidence_source": "Direct Text Analysis",
+          "matched_phrase": "Urgency trigger: 'immediately'"
+        }
+      ],
+      "total_latency_ms": 7265.95,
+      "gemini_latency_ms": 6826.19,
+      "local_latency_ms": 439.76
+    },
+    {
+      "id": "adv_scam_10",
+      "category": "Freelance Escrow Phishing",
+      "difficulty": "Medium-Hard \u2014 Realistic freelancer milestone trap",
+      "true_label": "scam",
+      "v2_score": 40,
+      "semantic_score": 85,
+      "v3_score": 85,
+      "predicted_label": "scam",
+      "status": "TP",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "summary": "This is a phishing attempt impersonating Upwork to steal financial credentials or crypto wallet access using a look-alike domain.",
+      "red_flags": [
+        {
+          "category": "Suspicious Link",
+          "description": "The domain 'upwork-escrow-release.net' is not an official Upwork domain (upwork.com).",
+          "severity": "Critical",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "http://upwork-escrow-release.net"
+        },
+        {
+          "category": "Financial Solicitation",
+          "description": "Requesting to connect a crypto wallet or debit card via an external link to 'accept' a deposit is a major red flag for credential theft.",
+          "severity": "High",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "Connect your crypto wallet or debit card"
+        },
+        {
+          "category": "Deceptive or Unverified Link",
+          "description": "Contains unverified web domain (upwork-escrow-release.net) outside official brand channels.",
+          "severity": "High",
+          "evidence_source": "Direct Text Analysis",
+          "matched_phrase": "Unverified URL: http://upwork-escrow-release.net"
+        }
+      ],
+      "total_latency_ms": 15372.24,
+      "gemini_latency_ms": 14888.13,
+      "local_latency_ms": 484.11
+    },
+    {
+      "id": "adv_legit_01",
+      "category": "Aggressive Debt Reminder",
+      "difficulty": "Hard \u2014 Highly urgent and threatening tone, but completely genuine",
+      "true_label": "legitimate",
+      "v2_score": 25,
+      "semantic_score": 12,
+      "v3_score": 25,
+      "predicted_label": "legitimate",
+      "status": "TN",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "summary": "The message follows the standard format for a legitimate bank notification, directing the user to the official HDFC Bank domain and their local branch without requesting sensitive credentials.",
+      "red_flags": [
+        {
+          "category": "urgency_or_coercion",
+          "description": "The message uses urgency regarding daily penalties to encourage immediate payment.",
+          "severity": "Low",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "Overdue penalty applies daily. To clear dues immediately"
+        },
+        {
+          "category": "Artificial Urgency & Threat Tactics",
+          "description": "Uses artificial time pressure or ultimatum to force fast compliance.",
+          "severity": "High",
+          "evidence_source": "Direct Text Analysis",
+          "matched_phrase": "Urgency trigger: 'immediately'"
+        }
+      ],
+      "total_latency_ms": 7037.89,
+      "gemini_latency_ms": 6642.52,
+      "local_latency_ms": 395.37
+    },
+    {
+      "id": "adv_legit_02",
+      "category": "Urgent Flash Sale Promotion",
+      "difficulty": "Medium-Hard \u2014 High artificial urgency and countdown, but legitimate marketing",
+      "true_label": "legitimate",
+      "v2_score": 40,
+      "semantic_score": 30,
+      "v3_score": 40,
+      "predicted_label": "legitimate",
+      "status": "TN",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "summary": "The message employs high-pressure sales tactics including extreme discounts and a short expiration window. While the URL points to the official brand domain, these psychological triggers are common in phishing lures.",
+      "red_flags": [
+        {
+          "category": "Urgency",
+          "description": "Artificial time pressure used to discourage careful verification of the link.",
+          "severity": "Medium",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "Deal expires in exactly 2 hours!"
+        },
+        {
+          "category": "High Reward",
+          "description": "Extreme discount claims (80%) are frequently used to entice users into clicking suspicious links.",
+          "severity": "Low",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "Flat 60% to 80% OFF"
+        },
+        {
+          "category": "Deceptive or Unverified Link",
+          "description": "Contains unverified web domain (www.myntra.com) outside official brand channels.",
+          "severity": "High",
+          "evidence_source": "Direct Text Analysis",
+          "matched_phrase": "Unverified URL: https://www.myntra.com/sale"
+        }
+      ],
+      "total_latency_ms": 11256.43,
+      "gemini_latency_ms": 10891.28,
+      "local_latency_ms": 365.15
+    },
+    {
+      "id": "adv_legit_03",
+      "category": "Third-Party Retailer Survey",
+      "difficulty": "Medium \u2014 Offers financial reward for survey, but from official brand",
+      "true_label": "legitimate",
+      "v2_score": 40,
+      "semantic_score": 15,
+      "v3_score": 40,
+      "predicted_label": "legitimate",
+      "status": "TN",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "summary": "The submission appears to be a legitimate customer feedback request from Amazon India, as it utilizes the official 'amazon.co.in' domain and offers a standard, non-excessive incentive.",
+      "red_flags": [
+        {
+          "category": "Incentivized Link",
+          "description": "The message uses a reward (Rs 500 gift card) to encourage clicking a link, which is a common tactic for both legitimate marketing and phishing.",
+          "severity": "Low",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "stand a chance to win a Rs 500 Amazon Pay gift card"
+        },
+        {
+          "category": "Deceptive or Unverified Link",
+          "description": "Contains unverified web domain (amazon.co.in) outside official brand channels.",
+          "severity": "High",
+          "evidence_source": "Direct Text Analysis",
+          "matched_phrase": "Unverified URL: https://amazon.co.in/feedback/survey"
+        }
+      ],
+      "total_latency_ms": 18632.66,
+      "gemini_latency_ms": 18254.17,
+      "local_latency_ms": 378.49
+    },
+    {
+      "id": "adv_legit_04",
+      "category": "Hospital Diagnostic Portal",
+      "difficulty": "Medium \u2014 Direct medical link, standard genuine practice",
+      "true_label": "legitimate",
+      "v2_score": 65,
+      "semantic_score": 10,
+      "v3_score": 65,
+      "predicted_label": "scam",
+      "status": "FP",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "summary": "The message is a standard automated notification from a legitimate medical provider (Apollo Diagnostics) using their official domain to deliver lab results via secure OTP authentication.",
+      "red_flags": [
+        {
+          "category": "Credential Harvesting / OTP Theft",
+          "description": "Requests disclosure of 2FA/OTP code to caller, support representative, or unverified URL.",
+          "severity": "Critical",
+          "evidence_source": "Direct Text Analysis",
+          "matched_phrase": "OTP code disclosure request detected."
+        }
+      ],
+      "total_latency_ms": 14122.52,
+      "gemini_latency_ms": 13722.63,
+      "local_latency_ms": 399.89
+    },
+    {
+      "id": "adv_legit_05",
+      "category": "Official Bank Credit Limit Bump",
+      "difficulty": "Hard \u2014 Unsolicited financial upgrade, but authentic channel",
+      "true_label": "legitimate",
+      "v2_score": 5,
+      "semantic_score": 12,
+      "v3_score": 12,
+      "predicted_label": "legitimate",
+      "status": "TN",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "summary": "This message appears to be a legitimate credit limit enhancement offer from ICICI Bank, as it directs the user to the official 'iMobile Pay' app and uses a verified bank shortcode.",
+      "red_flags": [],
+      "total_latency_ms": 5937.07,
+      "gemini_latency_ms": 5540.36,
+      "local_latency_ms": 396.71
+    },
+    {
+      "id": "adv_legit_06",
+      "category": "Corporate Recruiter Inbound",
+      "difficulty": "Medium-Hard \u2014 Cold recruiter message with third-party link (Calendly)",
+      "true_label": "legitimate",
+      "v2_score": 5,
+      "semantic_score": 12,
+      "v3_score": 12,
+      "predicted_label": "legitimate",
+      "status": "TN",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "summary": "The message follows standard professional recruitment patterns, using a common scheduling tool (Calendly) without any high-pressure tactics or requests for payment.",
+      "red_flags": [
+        {
+          "category": "Unverified Identity",
+          "description": "The identity of the recruiter cannot be confirmed through the text alone; outreach via third-party scheduling links should be verified.",
+          "severity": "Low",
+          "evidence_source": "Semantic Extraction",
+          "matched_phrase": "I am a technical recruiter at Swiggy"
+        }
+      ],
+      "total_latency_ms": 6951.88,
+      "gemini_latency_ms": 6572.23,
+      "local_latency_ms": 379.65
+    },
+    {
+      "id": "adv_legit_07",
+      "category": "Government Tax E-Filing Alert",
+      "difficulty": "Medium \u2014 Official warning with compliance deadline",
+      "true_label": "legitimate",
+      "v2_score": 5,
+      "semantic_score": 5,
+      "v3_score": 5,
+      "predicted_label": "legitimate",
+      "status": "TN",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "summary": "The message is a standard, legitimate administrative notification from the Income Tax Department of India regarding the mandatory e-verification of a filed tax return via the official government portal.",
+      "red_flags": [],
+      "total_latency_ms": 7675.18,
+      "gemini_latency_ms": 7325.45,
+      "local_latency_ms": 349.73
+    },
+    {
+      "id": "adv_legit_08",
+      "category": "Airline Schedule Modification",
+      "difficulty": "Easy-Medium \u2014 Genuine operational disruption notice",
+      "true_label": "legitimate",
+      "v2_score": 5,
+      "semantic_score": 5,
+      "v3_score": 5,
+      "predicted_label": "legitimate",
+      "status": "TN",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "summary": "The message is a standard flight rescheduling alert that directs the user to the official Air India domain without using high-pressure tactics or suspicious links.",
+      "red_flags": [],
+      "total_latency_ms": 14333.41,
+      "gemini_latency_ms": 13944.32,
+      "local_latency_ms": 389.09
+    },
+    {
+      "id": "adv_legit_09",
+      "category": "Corporate IT Password Expiry",
+      "difficulty": "Hard \u2014 Credential change request, but points to internal intranet",
+      "true_label": "legitimate",
+      "v2_score": 5,
+      "semantic_score": 12,
+      "v3_score": 12,
+      "predicted_label": "legitimate",
+      "status": "TN",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "summary": "The submission appears to be a legitimate automated corporate notification regarding standard password expiration policies, utilizing an internal domain and providing a valid helpdesk alternative.",
+      "red_flags": [],
+      "total_latency_ms": 10637.64,
+      "gemini_latency_ms": 10266.25,
+      "local_latency_ms": 371.39
+    },
+    {
+      "id": "adv_legit_10",
+      "category": "Peer P2P Payment Request",
+      "difficulty": "Hard \u2014 Payment request, but includes standard genuine safety protective warning",
+      "true_label": "legitimate",
+      "v2_score": 65,
+      "semantic_score": 10,
+      "v3_score": 65,
+      "predicted_label": "scam",
+      "status": "FP",
+      "gemini_invoked": true,
+      "fallback_status": "None",
+      "summary": "The message is a standard peer-to-peer payment request notification that includes a legitimate security warning to protect the user from common UPI 'Reverse PIN' scams.",
+      "red_flags": [
+        {
+          "category": "Untraceable / Peer-to-Peer Payment Demand",
+          "description": "Instructs to enter UPI PIN or scan QR code to receive/claim incoming money (Reverse PIN Trap).",
+          "severity": "Critical",
+          "evidence_source": "Direct Text Analysis",
+          "matched_phrase": "UPI PIN reverse money transfer pattern."
+        }
+      ],
+      "total_latency_ms": 12605.97,
+      "gemini_latency_ms": 12258.84,
+      "local_latency_ms": 347.13
+    }
+  ]
+}

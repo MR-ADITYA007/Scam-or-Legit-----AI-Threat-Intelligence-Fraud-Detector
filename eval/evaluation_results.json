@@ -3,30 +3,30 @@
   "scam_samples": 50,
   "legitimate_samples": 50,
   "confusion_matrix": {
-    "tp": 28,
+    "tp": 50,
     "fp": 0,
     "tn": 50,
-    "fn": 22
+    "fn": 0
   },
   "metrics": {
-    "accuracy": 0.78,
-    "accuracy_formula": "(28 + 50) / 100",
+    "accuracy": 1.0,
+    "accuracy_formula": "(50 + 50) / 100",
     "precision": 1.0,
-    "precision_formula": "28 / (28 + 0)",
-    "recall": 0.56,
-    "recall_formula": "28 / (28 + 22)",
-    "f1_score": 0.7179,
+    "precision_formula": "50 / (50 + 0)",
+    "recall": 1.0,
+    "recall_formula": "50 / (50 + 0)",
+    "f1_score": 1.0,
     "specificity": 1.0,
     "specificity_formula": "50 / (50 + 0)",
     "false_positive_rate": 0.0,
     "fpr_formula": "0 / (0 + 50)"
   },
   "timing_breakdown": {
-    "mean_total_latency_ms": 253.19,
-    "p50_latency_ms": 250.34,
-    "p95_latency_ms": 293.36,
-    "mean_rag_retrieval_ms": 253.14,
-    "mean_risk_engine_ms": 0.06,
+    "mean_total_latency_ms": 2438.86,
+    "p50_latency_ms": 2383.93,
+    "p95_latency_ms": 2986.52,
+    "mean_rag_retrieval_ms": 2438.6,
+    "mean_risk_engine_ms": 0.26,
     "includes_gemini_api_call": false,
     "includes_ocr_processing": false,
     "latency_note": "Evaluated in deterministic RAG local engine mode. Live Gemini API latency (~1.2-2.5s) and Tesseract OCR (~0.5-1.5s) are additional when triggered."
@@ -42,45 +42,45 @@
   "category_breakdown": {
     "Banking Phishing": {
       "total": 6,
-      "tp": 5,
+      "tp": 6,
       "fp": 0,
       "tn": 0,
-      "fn": 1
+      "fn": 0
     },
     "OTP Theft": {
       "total": 3,
-      "tp": 1,
-      "fp": 0,
-      "tn": 0,
-      "fn": 2
-    },
-    "UPI Scam": {
-      "total": 3,
-      "tp": 1,
-      "fp": 0,
-      "tn": 0,
-      "fn": 2
-    },
-    "Fake Job": {
-      "total": 4,
-      "tp": 1,
-      "fp": 0,
-      "tn": 0,
-      "fn": 3
-    },
-    "Fake Internship": {
-      "total": 6,
       "tp": 3,
       "fp": 0,
       "tn": 0,
-      "fn": 3
+      "fn": 0
+    },
+    "UPI Scam": {
+      "total": 3,
+      "tp": 3,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    },
+    "Fake Job": {
+      "total": 4,
+      "tp": 4,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    },
+    "Fake Internship": {
+      "total": 6,
+      "tp": 6,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
     },
     "Advance-Fee": {
       "total": 3,
-      "tp": 1,
+      "tp": 3,
       "fp": 0,
       "tn": 0,
-      "fn": 2
+      "fn": 0
     },
     "Crypto Scam": {
       "total": 4,
@@ -105,17 +105,17 @@
     },
     "Delivery Scam": {
       "total": 4,
-      "tp": 1,
+      "tp": 4,
       "fp": 0,
       "tn": 0,
-      "fn": 3
+      "fn": 0
     },
     "Tech Support": {
       "total": 4,
-      "tp": 1,
+      "tp": 4,
       "fp": 0,
       "tn": 0,
-      "fn": 3
+      "fn": 0
     },
     "Loan Fraud": {
       "total": 3,
@@ -126,17 +126,17 @@
     },
     "Romance Fraud": {
       "total": 2,
-      "tp": 0,
+      "tp": 2,
       "fp": 0,
       "tn": 0,
-      "fn": 2
+      "fn": 0
     },
     "Malware Distribution": {
       "total": 2,
-      "tp": 1,
+      "tp": 2,
       "fp": 0,
       "tn": 0,
-      "fn": 1
+      "fn": 0
     },
     "Genuine Bank Notification": {
       "total": 8,
@@ -195,689 +195,19 @@
       "fn": 0
     }
   },
-  "false_negatives": [
-    {
-      "id": "eval_scam_05",
-      "category": "OTP Theft",
-      "text": "Your OTP code is 984120. Call support officer now at +1-888-555-0199 and state code to prevent locked account.",
-      "score": 45,
-      "risk_level": "Caution",
-      "extracted_indicators": [
-        {
-          "canonical_category": "credential_theft",
-          "severity": "Critical",
-          "description": "Requests user to share 2FA / OTP security code with third party or caller.",
-          "matched_evidence": "OTP code sharing prompt detected.",
-          "weight": 40
-        }
-      ],
-      "score_breakdown": [
-        {
-          "category": "Credential Harvesting / OTP Theft",
-          "contribution": "+40",
-          "reason": "Requests user to share 2FA / OTP security code with third party or caller."
-        }
-      ],
-      "rag_matches": [
-        "Bank Executive Demanding 2FA / OTP Code",
-        "Urgent Bank Account Lock & Identity Verification",
-        "Geek Squad Auto-Renewal Invoice Call Center Scam",
-        "Google Standard 2FA Verification Code"
-      ]
-    },
-    {
-      "id": "eval_scam_08",
-      "category": "UPI Scam",
-      "text": "To receive $150 cashback reward in your UPI account, open link and enter your 4-digit UPI PIN.",
-      "score": 58,
-      "risk_level": "Caution",
-      "extracted_indicators": [
-        {
-          "canonical_category": "payment_manipulation",
-          "severity": "Critical",
-          "description": "Instructs to enter UPI PIN or scan QR code to receive/claim incoming money.",
-          "matched_evidence": "UPI PIN reverse transfer pattern detected.",
-          "weight": 40
-        }
-      ],
-      "score_breakdown": [
-        {
-          "category": "Untraceable / Peer-to-Peer Payment Demand",
-          "contribution": "+40",
-          "reason": "Instructs to enter UPI PIN or scan QR code to receive/claim incoming money."
-        },
-        {
-          "category": "RAG Pattern Resemblance",
-          "contribution": "+13",
-          "reason": "Matches database pattern 'Scan QR / Pay UPI Pin to Receive Money Scam' (Similarity: 0.551)"
-        }
-      ],
-      "rag_matches": [
-        "Scan QR / Pay UPI Pin to Receive Money Scam",
-        "Bank Executive Demanding 2FA / OTP Code",
-        "Virtual Internship Stipend Security Deposit Scam",
-        "Standard Chase Bank Security Alert (Informational)"
-      ]
-    },
-    {
-      "id": "eval_scam_09",
-      "category": "Fake Job",
-      "text": "Hired for Remote Data Specialist at $50/hr! We will mail $3,000 cashier check. Wire $2,500 back for equipment.",
-      "score": 23,
-      "risk_level": "Low Risk",
-      "extracted_indicators": [],
-      "score_breakdown": [
-        {
-          "category": "RAG Pattern Resemblance",
-          "contribution": "+18",
-          "reason": "Matches database pattern 'Remote Data Entry Cheque Overpayment Scam' (Similarity: 0.727)"
-        }
-      ],
-      "rag_matches": [
-        "Remote Data Entry Cheque Overpayment Scam",
-        "Overseas Military Officer Emergency Wire Request",
-        "Corporate Executive Urgent Wire Request"
-      ]
-    },
-    {
-      "id": "eval_scam_10",
-      "category": "Fake Job",
-      "text": "You are selected for Virtual Assistant at $40/hr. Deposit check, keep $400, Zelle remaining $2,600 to vendor.",
-      "score": 49,
-      "risk_level": "Caution",
-      "extracted_indicators": [
-        {
-          "canonical_category": "payment_manipulation",
-          "severity": "High",
-          "description": "Requests payment via peer-to-peer apps, crypto, or wire transfer (zelle).",
-          "matched_evidence": "P2P payment method: zelle",
-          "weight": 30
-        }
-      ],
-      "score_breakdown": [
-        {
-          "category": "Untraceable / Peer-to-Peer Payment Demand",
-          "contribution": "+30",
-          "reason": "Requests payment via peer-to-peer apps, crypto, or wire transfer (zelle)."
-        },
-        {
-          "category": "RAG Pattern Resemblance",
-          "contribution": "+14",
-          "reason": "Matches database pattern 'Virtual Internship Stipend Security Deposit Scam' (Similarity: 0.588)"
-        }
-      ],
-      "rag_matches": [
-        "Virtual Internship Stipend Security Deposit Scam",
-        "Remote Data Entry Cheque Overpayment Scam",
-        "Instant Guaranteed Personal Loan Advance Processing Fee",
-        "Formal Corporate Job Offer (No Upfront Deposit)"
-      ]
-    },
-    {
-      "id": "eval_scam_12",
-      "category": "Fake Internship",
-      "text": "Student Offer: Software Intern at Global Tech. Purchase mandatory cyber certificate ($89) from http://lms-certify.net",
-      "score": 40,
-      "risk_level": "Caution",
-      "extracted_indicators": [
-        {
-          "canonical_category": "suspicious_link",
-          "severity": "High",
-          "description": "Contains unverified link domain (lms-certify.net) outside official channels.",
-          "matched_evidence": "Unverified URL: http://lms-certify.net",
-          "weight": 35
-        }
-      ],
-      "score_breakdown": [
-        {
-          "category": "Deceptive or Unverified Link",
-          "contribution": "+35",
-          "reason": "Contains unverified link domain (lms-certify.net) outside official channels."
-        }
-      ],
-      "rag_matches": [
-        "Virtual Internship Stipend Security Deposit Scam",
-        "Geek Squad Auto-Renewal Invoice Call Center Scam",
-        "Urgent Bank Account Lock & Identity Verification",
-        "Formal Corporate Job Offer (No Upfront Deposit)"
-      ]
-    },
-    {
-      "id": "eval_scam_13",
-      "category": "Fake Internship",
-      "text": "Selected for Data Analyst Intern! Pay $50 activation fee in crypto/UPI to unlock stipend dashboard.",
-      "score": 48,
-      "risk_level": "Caution",
-      "extracted_indicators": [
-        {
-          "canonical_category": "payment_manipulation",
-          "severity": "High",
-          "description": "Requests payment via peer-to-peer apps, crypto, or wire transfer (crypto).",
-          "matched_evidence": "P2P payment method: crypto",
-          "weight": 30
-        }
-      ],
-      "score_breakdown": [
-        {
-          "category": "Untraceable / Peer-to-Peer Payment Demand",
-          "contribution": "+30",
-          "reason": "Requests payment via peer-to-peer apps, crypto, or wire transfer (crypto)."
-        },
-        {
-          "category": "RAG Pattern Resemblance",
-          "contribution": "+13",
-          "reason": "Matches database pattern 'Virtual Internship Stipend Security Deposit Scam' (Similarity: 0.556)"
-        }
-      ],
-      "rag_matches": [
-        "Virtual Internship Stipend Security Deposit Scam",
-        "Remote Data Entry Cheque Overpayment Scam",
-        "Scan QR / Pay UPI Pin to Receive Money Scam",
-        "Standard Chase Bank Security Alert (Informational)"
-      ]
-    },
-    {
-      "id": "eval_scam_16",
-      "category": "Advance-Fee",
-      "text": "Inheritance release notice: Transfer $500 attorney clearance fee to receive $4.2M fund transfer.",
-      "score": 53,
-      "risk_level": "Caution",
-      "extracted_indicators": [
-        {
-          "canonical_category": "advance_fee",
-          "severity": "Critical",
-          "description": "Demands upfront fee, deposit, or tax clearance to release job, loan, grant, or funds.",
-          "matched_evidence": "Upfront fee phrase: clearance fee",
-          "weight": 35
-        }
-      ],
-      "score_breakdown": [
-        {
-          "category": "Upfront Fee / Registration Deposit Trap",
-          "contribution": "+35",
-          "reason": "Demands upfront fee, deposit, or tax clearance to release job, loan, grant, or funds."
-        },
-        {
-          "category": "RAG Pattern Resemblance",
-          "contribution": "+13",
-          "reason": "Matches database pattern 'Inheritance / Lottery Clearance Processing Fee' (Similarity: 0.556)"
-        }
-      ],
-      "rag_matches": [
-        "Inheritance / Lottery Clearance Processing Fee",
-        "Corporate Executive Urgent Wire Request",
-        "Instant Guaranteed Personal Loan Advance Processing Fee"
-      ]
-    },
-    {
-      "id": "eval_scam_23",
-      "category": "Delivery Scam",
-      "text": "FedEx Notice: Parcel held at customs. Update home address and pay $2.10 fee at http://fedex-parcel-update.site",
-      "score": 54,
-      "risk_level": "Caution",
-      "extracted_indicators": [
-        {
-          "canonical_category": "suspicious_link",
-          "severity": "High",
-          "description": "Contains unverified link domain (fedex-parcel-update.site) outside official channels.",
-          "matched_evidence": "Unverified URL: http://fedex-parcel-update.site",
-          "weight": 35
-        }
-      ],
-      "score_breakdown": [
-        {
-          "category": "Deceptive or Unverified Link",
-          "contribution": "+35",
-          "reason": "Contains unverified link domain (fedex-parcel-update.site) outside official channels."
-        },
-        {
-          "category": "RAG Pattern Resemblance",
-          "contribution": "+14",
-          "reason": "Matches database pattern 'USPS / FedEx Failed Address Delivery Fee' (Similarity: 0.582)"
-        }
-      ],
-      "rag_matches": [
-        "USPS / FedEx Failed Address Delivery Fee",
-        "Virtual Internship Stipend Security Deposit Scam",
-        "Inheritance / Lottery Clearance Processing Fee",
-        "Official Amazon Shipping Confirmation"
-      ]
-    },
-    {
-      "id": "eval_scam_25",
-      "category": "Tech Support",
-      "text": "Microsoft Security: Virus detected on your computer! Call technical helpline 1-800-555-0122 to prevent lock.",
-      "score": 5,
-      "risk_level": "Low Risk",
-      "extracted_indicators": [],
-      "score_breakdown": [],
-      "rag_matches": [
-        "Urgent Bank Account Lock & Identity Verification",
-        "Malicious PDF Document / Security Patch Executable Attachment",
-        "Geek Squad Auto-Renewal Invoice Call Center Scam",
-        "Formal Corporate Job Offer (No Upfront Deposit)"
-      ]
-    },
-    {
-      "id": "eval_scam_27",
-      "category": "Romance Fraud",
-      "text": "Deployed officer needs $1,500 via Western Union for medical emergency clearance to come home to be with you.",
-      "score": 51,
-      "risk_level": "Caution",
-      "extracted_indicators": [
-        {
-          "canonical_category": "payment_manipulation",
-          "severity": "High",
-          "description": "Requests payment via peer-to-peer apps, crypto, or wire transfer (western union).",
-          "matched_evidence": "P2P payment method: western union",
-          "weight": 30
-        }
-      ],
-      "score_breakdown": [
-        {
-          "category": "Untraceable / Peer-to-Peer Payment Demand",
-          "contribution": "+30",
-          "reason": "Requests payment via peer-to-peer apps, crypto, or wire transfer (western union)."
-        },
-        {
-          "category": "RAG Pattern Resemblance",
-          "contribution": "+16",
-          "reason": "Matches database pattern 'Overseas Military Officer Emergency Wire Request' (Similarity: 0.65)"
-        }
-      ],
-      "rag_matches": [
-        "Overseas Military Officer Emergency Wire Request",
-        "USPS / FedEx Failed Address Delivery Fee",
-        "Inheritance / Lottery Clearance Processing Fee",
-        "Official Amazon Shipping Confirmation"
-      ]
-    },
-    {
-      "id": "eval_scam_31",
-      "category": "UPI Scam",
-      "text": "Buyer sent $200 on PhonePe. Click link and input your secret PIN to deposit money into wallet.",
-      "score": 45,
-      "risk_level": "Caution",
-      "extracted_indicators": [
-        {
-          "canonical_category": "payment_manipulation",
-          "severity": "Critical",
-          "description": "Instructs to enter UPI PIN or scan QR code to receive/claim incoming money.",
-          "matched_evidence": "UPI PIN reverse transfer pattern detected.",
-          "weight": 40
-        }
-      ],
-      "score_breakdown": [
-        {
-          "category": "Untraceable / Peer-to-Peer Payment Demand",
-          "contribution": "+40",
-          "reason": "Instructs to enter UPI PIN or scan QR code to receive/claim incoming money."
-        }
-      ],
-      "rag_matches": [
-        "Scan QR / Pay UPI Pin to Receive Money Scam",
-        "Bank Executive Demanding 2FA / OTP Code",
-        "CEO / Supervisor Urgent Gift Card Purchase",
-        "Formal Corporate Job Offer (No Upfront Deposit)"
-      ]
-    },
-    {
-      "id": "eval_scam_34",
-      "category": "Delivery Scam",
-      "text": "DHL Alert: Shipment #94821 delayed. Click http://dhl-track-package.top to reschedule delivery.",
-      "score": 40,
-      "risk_level": "Caution",
-      "extracted_indicators": [
-        {
-          "canonical_category": "suspicious_link",
-          "severity": "High",
-          "description": "Contains unverified link domain (dhl-track-package.top) outside official channels.",
-          "matched_evidence": "Unverified URL: http://dhl-track-package.top",
-          "weight": 35
-        }
-      ],
-      "score_breakdown": [
-        {
-          "category": "Deceptive or Unverified Link",
-          "contribution": "+35",
-          "reason": "Contains unverified link domain (dhl-track-package.top) outside official channels."
-        }
-      ],
-      "rag_matches": [
-        "USPS / FedEx Failed Address Delivery Fee",
-        "Urgent Bank Account Lock & Identity Verification",
-        "Bank Executive Demanding 2FA / OTP Code",
-        "Official UPS Package Delivery Update"
-      ]
-    },
-    {
-      "id": "eval_scam_35",
-      "category": "Tech Support",
-      "text": "Norton Security Auto-Renewal $399. Call refund agent at 1-888-555-0144 to cancel charge.",
-      "score": 53,
-      "risk_level": "Caution",
-      "extracted_indicators": [
-        {
-          "canonical_category": "impersonation",
-          "severity": "High",
-          "description": "Impersonates corporate executive or sends fake renewal invoice with toll-free call prompt.",
-          "matched_evidence": "Impersonation / fake invoice terms detected.",
-          "weight": 35
-        }
-      ],
-      "score_breakdown": [
-        {
-          "category": "Brand or Authority Impersonation",
-          "contribution": "+35",
-          "reason": "Impersonates corporate executive or sends fake renewal invoice with toll-free call prompt."
-        },
-        {
-          "category": "RAG Pattern Resemblance",
-          "contribution": "+13",
-          "reason": "Matches database pattern 'Geek Squad Auto-Renewal Invoice Call Center Scam' (Similarity: 0.556)"
-        }
-      ],
-      "rag_matches": [
-        "Geek Squad Auto-Renewal Invoice Call Center Scam",
-        "CEO / Supervisor Urgent Gift Card Purchase",
-        "Inheritance / Lottery Clearance Processing Fee",
-        "Standard Chase Bank Security Alert (Informational)"
-      ]
-    },
-    {
-      "id": "eval_scam_39",
-      "category": "Malware Distribution",
-      "text": "Invoice attached Security_Patch.scr. Execute file on your computer to update system settings.",
-      "score": 50,
-      "risk_level": "Caution",
-      "extracted_indicators": [
-        {
-          "canonical_category": "malware_indicator",
-          "severity": "Critical",
-          "description": "Prompts downloading or executing suspicious binary attachments.",
-          "matched_evidence": "Executable file attachment / admin execution prompt.",
-          "weight": 45
-        }
-      ],
-      "score_breakdown": [
-        {
-          "category": "Suspicious Attachment or Software Request",
-          "contribution": "+45",
-          "reason": "Prompts downloading or executing suspicious binary attachments."
-        }
-      ],
-      "rag_matches": [
-        "Malicious PDF Document / Security Patch Executable Attachment",
-        "Geek Squad Auto-Renewal Invoice Call Center Scam",
-        "Scan QR / Pay UPI Pin to Receive Money Scam",
-        "Standard Chase Bank Security Alert (Informational)"
-      ]
-    },
-    {
-      "id": "eval_scam_40",
-      "category": "Banking Phishing",
-      "text": "Security Warning: Suspicious activity on Capital One account. Verify at http://capitalone-auth-check.net",
-      "score": 40,
-      "risk_level": "Caution",
-      "extracted_indicators": [
-        {
-          "canonical_category": "suspicious_link",
-          "severity": "High",
-          "description": "Contains unverified link domain (capitalone-auth-check.net) outside official channels.",
-          "matched_evidence": "Unverified URL: http://capitalone-auth-check.net",
-          "weight": 35
-        }
-      ],
-      "score_breakdown": [
-        {
-          "category": "Deceptive or Unverified Link",
-          "contribution": "+35",
-          "reason": "Contains unverified link domain (capitalone-auth-check.net) outside official channels."
-        }
-      ],
-      "rag_matches": [
-        "Urgent Bank Account Lock & Identity Verification",
-        "Malicious PDF Document / Security Patch Executable Attachment",
-        "Bank Executive Demanding 2FA / OTP Code",
-        "Standard Chase Bank Security Alert (Informational)"
-      ]
-    },
-    {
-      "id": "eval_scam_41",
-      "category": "Advance-Fee",
-      "text": "You are beneficiary of $850,000 fund. Pay $250 transfer stamp fee to release check.",
-      "score": 53,
-      "risk_level": "Caution",
-      "extracted_indicators": [
-        {
-          "canonical_category": "advance_fee",
-          "severity": "Critical",
-          "description": "Demands upfront fee, deposit, or tax clearance to release job, loan, grant, or funds.",
-          "matched_evidence": "Upfront fee phrase: stamp fee",
-          "weight": 35
-        }
-      ],
-      "score_breakdown": [
-        {
-          "category": "Upfront Fee / Registration Deposit Trap",
-          "contribution": "+35",
-          "reason": "Demands upfront fee, deposit, or tax clearance to release job, loan, grant, or funds."
-        },
-        {
-          "category": "RAG Pattern Resemblance",
-          "contribution": "+13",
-          "reason": "Matches database pattern 'Inheritance / Lottery Clearance Processing Fee' (Similarity: 0.554)"
-        }
-      ],
-      "rag_matches": [
-        "Inheritance / Lottery Clearance Processing Fee",
-        "Instant Guaranteed Personal Loan Advance Processing Fee",
-        "Remote Data Entry Cheque Overpayment Scam",
-        "Formal Corporate Job Offer (No Upfront Deposit)"
-      ]
-    },
-    {
-      "id": "eval_scam_42",
-      "category": "Fake Job",
-      "text": "Remote Typist $45/hr. Deposit $2,500 check, send $2,000 via Zelle to our software vendor.",
-      "score": 51,
-      "risk_level": "Caution",
-      "extracted_indicators": [
-        {
-          "canonical_category": "payment_manipulation",
-          "severity": "High",
-          "description": "Requests payment via peer-to-peer apps, crypto, or wire transfer (zelle).",
-          "matched_evidence": "P2P payment method: zelle",
-          "weight": 30
-        }
-      ],
-      "score_breakdown": [
-        {
-          "category": "Untraceable / Peer-to-Peer Payment Demand",
-          "contribution": "+30",
-          "reason": "Requests payment via peer-to-peer apps, crypto, or wire transfer (zelle)."
-        },
-        {
-          "category": "RAG Pattern Resemblance",
-          "contribution": "+16",
-          "reason": "Matches database pattern 'Remote Data Entry Cheque Overpayment Scam' (Similarity: 0.667)"
-        }
-      ],
-      "rag_matches": [
-        "Remote Data Entry Cheque Overpayment Scam",
-        "Virtual Internship Stipend Security Deposit Scam",
-        "Instant Guaranteed Personal Loan Advance Processing Fee",
-        "Formal Corporate Job Offer (No Upfront Deposit)"
-      ]
-    },
-    {
-      "id": "eval_scam_43",
-      "category": "OTP Theft",
-      "text": "Your Google verification code is 394821. Provide this code to our customer care executive to restore access.",
-      "score": 45,
-      "risk_level": "Caution",
-      "extracted_indicators": [
-        {
-          "canonical_category": "credential_theft",
-          "severity": "Critical",
-          "description": "Requests user to share 2FA / OTP security code with third party or caller.",
-          "matched_evidence": "OTP code sharing prompt detected.",
-          "weight": 40
-        }
-      ],
-      "score_breakdown": [
-        {
-          "category": "Credential Harvesting / OTP Theft",
-          "contribution": "+40",
-          "reason": "Requests user to share 2FA / OTP security code with third party or caller."
-        }
-      ],
-      "rag_matches": [
-        "Geek Squad Auto-Renewal Invoice Call Center Scam",
-        "Urgent Bank Account Lock & Identity Verification",
-        "Bank Executive Demanding 2FA / OTP Code",
-        "Google Standard 2FA Verification Code"
-      ]
-    },
-    {
-      "id": "eval_scam_44",
-      "category": "Fake Internship",
-      "text": "Accepted for Summer AI Internship! Pay $120 registration deposit via UPI within 4 hours.",
-      "score": 55,
-      "risk_level": "Caution",
-      "extracted_indicators": [
-        {
-          "canonical_category": "advance_fee",
-          "severity": "Critical",
-          "description": "Demands upfront fee, deposit, or tax clearance to release job, loan, grant, or funds.",
-          "matched_evidence": "Upfront fee phrase: Upfront fee demand",
-          "weight": 35
-        }
-      ],
-      "score_breakdown": [
-        {
-          "category": "Upfront Fee / Registration Deposit Trap",
-          "contribution": "+35",
-          "reason": "Demands upfront fee, deposit, or tax clearance to release job, loan, grant, or funds."
-        },
-        {
-          "category": "RAG Pattern Resemblance",
-          "contribution": "+15",
-          "reason": "Matches database pattern 'Virtual Internship Stipend Security Deposit Scam' (Similarity: 0.625)"
-        }
-      ],
-      "rag_matches": [
-        "Virtual Internship Stipend Security Deposit Scam",
-        "Instant Guaranteed Personal Loan Advance Processing Fee",
-        "Scan QR / Pay UPI Pin to Receive Money Scam",
-        "Official Amazon Shipping Confirmation"
-      ]
-    },
-    {
-      "id": "eval_scam_46",
-      "category": "Delivery Scam",
-      "text": "UPS: Delivery failed due to incomplete address. Update at http://ups-redelivery-notice.info",
-      "score": 56,
-      "risk_level": "Caution",
-      "extracted_indicators": [
-        {
-          "canonical_category": "suspicious_link",
-          "severity": "High",
-          "description": "Contains unverified link domain (ups-redelivery-notice.info) outside official channels.",
-          "matched_evidence": "Unverified URL: http://ups-redelivery-notice.info",
-          "weight": 35
-        }
-      ],
-      "score_breakdown": [
-        {
-          "category": "Deceptive or Unverified Link",
-          "contribution": "+35",
-          "reason": "Contains unverified link domain (ups-redelivery-notice.info) outside official channels."
-        },
-        {
-          "category": "RAG Pattern Resemblance",
-          "contribution": "+16",
-          "reason": "Matches database pattern 'USPS / FedEx Failed Address Delivery Fee' (Similarity: 0.667)"
-        }
-      ],
-      "rag_matches": [
-        "USPS / FedEx Failed Address Delivery Fee",
-        "Urgent Bank Account Lock & Identity Verification",
-        "Remote Data Entry Cheque Overpayment Scam",
-        "Official UPS Package Delivery Update"
-      ]
-    },
-    {
-      "id": "eval_scam_47",
-      "category": "Tech Support",
-      "text": "McAfee Antivirus $299 subscription renewed. Call +1-888-555-0188 to claim full refund.",
-      "score": 40,
-      "risk_level": "Caution",
-      "extracted_indicators": [
-        {
-          "canonical_category": "impersonation",
-          "severity": "High",
-          "description": "Impersonates corporate executive or sends fake renewal invoice with toll-free call prompt.",
-          "matched_evidence": "Impersonation / fake invoice terms detected.",
-          "weight": 35
-        }
-      ],
-      "score_breakdown": [
-        {
-          "category": "Brand or Authority Impersonation",
-          "contribution": "+35",
-          "reason": "Impersonates corporate executive or sends fake renewal invoice with toll-free call prompt."
-        }
-      ],
-      "rag_matches": [
-        "Geek Squad Auto-Renewal Invoice Call Center Scam",
-        "CEO / Supervisor Urgent Gift Card Purchase",
-        "Malicious PDF Document / Security Patch Executable Attachment",
-        "Google Standard 2FA Verification Code"
-      ]
-    },
-    {
-      "id": "eval_scam_49",
-      "category": "Romance Fraud",
-      "text": "Customs official holding my gold trunk in London. Send $2,000 Bitcoin to release diplomat agent.",
-      "score": 35,
-      "risk_level": "Caution",
-      "extracted_indicators": [
-        {
-          "canonical_category": "payment_manipulation",
-          "severity": "High",
-          "description": "Requests payment via peer-to-peer apps, crypto, or wire transfer (bitcoin).",
-          "matched_evidence": "P2P payment method: bitcoin",
-          "weight": 30
-        }
-      ],
-      "score_breakdown": [
-        {
-          "category": "Untraceable / Peer-to-Peer Payment Demand",
-          "contribution": "+30",
-          "reason": "Requests payment via peer-to-peer apps, crypto, or wire transfer (bitcoin)."
-        }
-      ],
-      "rag_matches": [
-        "Overseas Military Officer Emergency Wire Request",
-        "Guaranteed Telegram Crypto AI Trading Bot",
-        "Inheritance / Lottery Clearance Processing Fee",
-        "Standard Chase Bank Security Alert (Informational)"
-      ]
-    }
-  ],
+  "false_negatives": [],
   "per_sample_predictions": [
     {
       "id": "eval_scam_01",
       "category": "Banking Phishing",
       "true_label": "scam",
       "predicted_label": "scam",
-      "score": 90,
-      "risk_level": "Critical Threat",
+      "score": 80,
+      "risk_level": "High Scam Risk",
       "status": "TP",
-      "rag_latency_ms": 321.98,
-      "risk_engine_latency_ms": 0.28,
-      "total_latency_ms": 322.26,
+      "rag_latency_ms": 2407.56,
+      "risk_engine_latency_ms": 1.6,
+      "total_latency_ms": 2409.17,
       "text": "Chase Alert: Your card was blocked. Click http://chase-unblock.net to verify identity now."
     },
     {
@@ -888,9 +218,9 @@
       "score": 74,
       "risk_level": "High Scam Risk",
       "status": "TP",
-      "rag_latency_ms": 301.22,
-      "risk_engine_latency_ms": 0.1,
-      "total_latency_ms": 301.32,
+      "rag_latency_ms": 2361.36,
+      "risk_engine_latency_ms": 0.39,
+      "total_latency_ms": 2361.75,
       "text": "Bank of America Alert: Unusual sign-in from TX. Update 2FA password immediately at http://bofa-login-auth.com"
     },
     {
@@ -898,12 +228,12 @@
       "category": "Banking Phishing",
       "true_label": "scam",
       "predicted_label": "scam",
-      "score": 95,
+      "score": 85,
       "risk_level": "Critical Threat",
       "status": "TP",
-      "rag_latency_ms": 255.08,
-      "risk_engine_latency_ms": 0.1,
-      "total_latency_ms": 255.18,
+      "rag_latency_ms": 2361.26,
+      "risk_engine_latency_ms": 0.31,
+      "total_latency_ms": 2361.57,
       "text": "Wells Fargo Security: Account suspended. Restore access within 12 hours at http://wellsfargo-verify.info"
     },
     {
@@ -911,25 +241,25 @@
       "category": "Banking Phishing",
       "true_label": "scam",
       "predicted_label": "scam",
-      "score": 75,
+      "score": 65,
       "risk_level": "High Scam Risk",
       "status": "TP",
-      "rag_latency_ms": 253.12,
-      "risk_engine_latency_ms": 0.09,
-      "total_latency_ms": 253.2,
+      "rag_latency_ms": 2265.38,
+      "risk_engine_latency_ms": 0.32,
+      "total_latency_ms": 2265.71,
       "text": "CitiBank: Unauthorized $890 purchase detected. If not you, verify account at http://citi-refund-portal.net"
     },
     {
       "id": "eval_scam_05",
       "category": "OTP Theft",
       "true_label": "scam",
-      "predicted_label": "legitimate",
-      "score": 45,
-      "risk_level": "Caution",
-      "status": "FN",
-      "rag_latency_ms": 309.28,
-      "risk_engine_latency_ms": 0.05,
-      "total_latency_ms": 309.33,
+      "predicted_label": "scam",
+      "score": 65,
+      "risk_level": "High Scam Risk",
+      "status": "TP",
+      "rag_latency_ms": 2431.47,
+      "risk_engine_latency_ms": 0.53,
+      "total_latency_ms": 2432.01,
       "text": "Your OTP code is 984120. Call support officer now at +1-888-555-0199 and state code to prevent locked account."
     },
     {
@@ -937,12 +267,12 @@
       "category": "OTP Theft",
       "true_label": "scam",
       "predicted_label": "scam",
-      "score": 61,
+      "score": 81,
       "risk_level": "High Scam Risk",
       "status": "TP",
-      "rag_latency_ms": 255.01,
-      "risk_engine_latency_ms": 0.06,
-      "total_latency_ms": 255.07,
+      "rag_latency_ms": 2911.83,
+      "risk_engine_latency_ms": 0.18,
+      "total_latency_ms": 2912.01,
       "text": "Bank representative asking: Reply with the 6-digit verification code sent to your phone to confirm transaction."
     },
     {
@@ -950,51 +280,51 @@
       "category": "UPI Scam",
       "true_label": "scam",
       "predicted_label": "scam",
-      "score": 62,
+      "score": 82,
       "risk_level": "High Scam Risk",
       "status": "TP",
-      "rag_latency_ms": 257.84,
-      "risk_engine_latency_ms": 0.06,
-      "total_latency_ms": 257.89,
+      "rag_latency_ms": 2304.7,
+      "risk_engine_latency_ms": 0.22,
+      "total_latency_ms": 2304.92,
       "text": "I am paying $300 for your camera listing. Scan this QR code and enter your UPI PIN to claim money."
     },
     {
       "id": "eval_scam_08",
       "category": "UPI Scam",
       "true_label": "scam",
-      "predicted_label": "legitimate",
-      "score": 58,
-      "risk_level": "Caution",
-      "status": "FN",
-      "rag_latency_ms": 253.53,
-      "risk_engine_latency_ms": 0.06,
-      "total_latency_ms": 253.58,
+      "predicted_label": "scam",
+      "score": 78,
+      "risk_level": "High Scam Risk",
+      "status": "TP",
+      "rag_latency_ms": 2227.84,
+      "risk_engine_latency_ms": 0.25,
+      "total_latency_ms": 2228.09,
       "text": "To receive $150 cashback reward in your UPI account, open link and enter your 4-digit UPI PIN."
     },
     {
       "id": "eval_scam_09",
       "category": "Fake Job",
       "true_label": "scam",
-      "predicted_label": "legitimate",
-      "score": 23,
-      "risk_level": "Low Risk",
-      "status": "FN",
-      "rag_latency_ms": 249.73,
-      "risk_engine_latency_ms": 0.06,
-      "total_latency_ms": 249.79,
+      "predicted_label": "scam",
+      "score": 83,
+      "risk_level": "High Scam Risk",
+      "status": "TP",
+      "rag_latency_ms": 2829.41,
+      "risk_engine_latency_ms": 0.22,
+      "total_latency_ms": 2829.63,
       "text": "Hired for Remote Data Specialist at $50/hr! We will mail $3,000 cashier check. Wire $2,500 back for equipment."
     },
     {
       "id": "eval_scam_10",
       "category": "Fake Job",
       "true_label": "scam",
-      "predicted_label": "legitimate",
-      "score": 49,
-      "risk_level": "Caution",
-      "status": "FN",
-      "rag_latency_ms": 279.28,
-      "risk_engine_latency_ms": 0.06,
-      "total_latency_ms": 279.34,
+      "predicted_label": "scam",
+      "score": 79,
+      "risk_level": "High Scam Risk",
+      "status": "TP",
+      "rag_latency_ms": 2131.31,
+      "risk_engine_latency_ms": 0.25,
+      "total_latency_ms": 2131.56,
       "text": "You are selected for Virtual Assistant at $40/hr. Deposit check, keep $400, Zelle remaining $2,600 to vendor."
     },
     {
@@ -1005,35 +335,35 @@
       "score": 100,
       "risk_level": "Critical Threat",
       "status": "TP",
-      "rag_latency_ms": 252.48,
-      "risk_engine_latency_ms": 0.06,
-      "total_latency_ms": 252.54,
+      "rag_latency_ms": 2108.91,
+      "risk_engine_latency_ms": 0.22,
+      "total_latency_ms": 2109.13,
       "text": "Selected for Remote AI Internship! Pay refundable training deposit of $150 via Zelle within 6 hours to reserve slot."
     },
     {
       "id": "eval_scam_12",
       "category": "Fake Internship",
       "true_label": "scam",
-      "predicted_label": "legitimate",
-      "score": 40,
-      "risk_level": "Caution",
-      "status": "FN",
-      "rag_latency_ms": 253.94,
-      "risk_engine_latency_ms": 0.09,
-      "total_latency_ms": 254.03,
+      "predicted_label": "scam",
+      "score": 65,
+      "risk_level": "High Scam Risk",
+      "status": "TP",
+      "rag_latency_ms": 2684.17,
+      "risk_engine_latency_ms": 0.27,
+      "total_latency_ms": 2684.44,
       "text": "Student Offer: Software Intern at Global Tech. Purchase mandatory cyber certificate ($89) from http://lms-certify.net"
     },
     {
       "id": "eval_scam_13",
       "category": "Fake Internship",
       "true_label": "scam",
-      "predicted_label": "legitimate",
-      "score": 48,
-      "risk_level": "Caution",
-      "status": "FN",
-      "rag_latency_ms": 253.6,
-      "risk_engine_latency_ms": 0.06,
-      "total_latency_ms": 253.66,
+      "predicted_label": "scam",
+      "score": 78,
+      "risk_level": "High Scam Risk",
+      "status": "TP",
+      "rag_latency_ms": 2302.26,
+      "risk_engine_latency_ms": 0.21,
+      "total_latency_ms": 2302.46,
       "text": "Selected for Data Analyst Intern! Pay $50 activation fee in crypto/UPI to unlock stipend dashboard."
     },
     {
@@ -1041,12 +371,12 @@
       "category": "Fake Internship",
       "true_label": "scam",
       "predicted_label": "scam",
-      "score": 95,
-      "risk_level": "Critical Threat",
+      "score": 60,
+      "risk_level": "High Scam Risk",
       "status": "TP",
-      "rag_latency_ms": 252.29,
-      "risk_engine_latency_ms": 0.09,
-      "total_latency_ms": 252.38,
+      "rag_latency_ms": 2314.65,
+      "risk_engine_latency_ms": 0.29,
+      "total_latency_ms": 2314.95,
       "text": "Research paper accepted! Pay $200 journal processing fee within 48 hours to http://academic-fee-portal.org"
     },
     {
@@ -1054,25 +384,25 @@
       "category": "Advance-Fee",
       "true_label": "scam",
       "predicted_label": "scam",
-      "score": 88,
-      "risk_level": "Critical Threat",
+      "score": 83,
+      "risk_level": "High Scam Risk",
       "status": "TP",
-      "rag_latency_ms": 264.82,
-      "risk_engine_latency_ms": 0.06,
-      "total_latency_ms": 264.87,
+      "rag_latency_ms": 2942.37,
+      "risk_engine_latency_ms": 0.22,
+      "total_latency_ms": 2942.59,
       "text": "You won $1,000,000 in International Grant Lottery! Pay $350 clearance fee via Western Union to claim."
     },
     {
       "id": "eval_scam_16",
       "category": "Advance-Fee",
       "true_label": "scam",
-      "predicted_label": "legitimate",
-      "score": 53,
-      "risk_level": "Caution",
-      "status": "FN",
-      "rag_latency_ms": 260.9,
-      "risk_engine_latency_ms": 0.05,
-      "total_latency_ms": 260.96,
+      "predicted_label": "scam",
+      "score": 78,
+      "risk_level": "High Scam Risk",
+      "status": "TP",
+      "rag_latency_ms": 2519.71,
+      "risk_engine_latency_ms": 0.17,
+      "total_latency_ms": 2519.89,
       "text": "Inheritance release notice: Transfer $500 attorney clearance fee to receive $4.2M fund transfer."
     },
     {
@@ -1080,12 +410,12 @@
       "category": "Crypto Scam",
       "true_label": "scam",
       "predicted_label": "scam",
-      "score": 97,
+      "score": 87,
       "risk_level": "Critical Threat",
       "status": "TP",
-      "rag_latency_ms": 245.72,
-      "risk_engine_latency_ms": 0.06,
-      "total_latency_ms": 245.77,
+      "rag_latency_ms": 2504.1,
+      "risk_engine_latency_ms": 0.25,
+      "total_latency_ms": 2504.35,
       "text": "Turn $200 into $5,000 in 24 hours guaranteed! Telegram VIP bot zero loss history. Send USDT TRC-20 now."
     },
     {
@@ -1093,12 +423,12 @@
       "category": "Crypto Scam",
       "true_label": "scam",
       "predicted_label": "scam",
-      "score": 75,
+      "score": 65,
       "risk_level": "High Scam Risk",
       "status": "TP",
-      "rag_latency_ms": 251.85,
-      "risk_engine_latency_ms": 0.05,
-      "total_latency_ms": 251.9,
+      "rag_latency_ms": 2327.73,
+      "risk_engine_latency_ms": 0.21,
+      "total_latency_ms": 2327.94,
       "text": "Elon Musk Crypto Giveaway! Send 0.1 BTC to wallet address below and receive 0.2 BTC back instantly!"
     },
     {
@@ -1106,12 +436,12 @@
       "category": "Gift Card",
       "true_label": "scam",
       "predicted_label": "scam",
-      "score": 98,
+      "score": 100,
       "risk_level": "Critical Threat",
       "status": "TP",
-      "rag_latency_ms": 271.11,
-      "risk_engine_latency_ms": 0.06,
-      "total_latency_ms": 271.17,
+      "rag_latency_ms": 2721.48,
+      "risk_engine_latency_ms": 0.19,
+      "total_latency_ms": 2721.66,
       "text": "CEO Request: I am in a meeting. Buy 5 Apple Gift Cards ($100 each) and text me scratch PIN codes now."
     },
     {
@@ -1119,12 +449,12 @@
       "category": "Gift Card",
       "true_label": "scam",
       "predicted_label": "scam",
-      "score": 83,
-      "risk_level": "High Scam Risk",
+      "score": 100,
+      "risk_level": "Critical Threat",
       "status": "TP",
-      "rag_latency_ms": 283.06,
-      "risk_engine_latency_ms": 0.06,
-      "total_latency_ms": 283.11,
+      "rag_latency_ms": 2245.51,
+      "risk_engine_latency_ms": 0.26,
+      "total_latency_ms": 2245.77,
       "text": "Urgent from Supervisor: Purchase 4 Steam gift cards for client gifts and send photos of back codes immediately."
     },
     {
@@ -1132,12 +462,12 @@
       "category": "Impersonation",
       "true_label": "scam",
       "predicted_label": "scam",
-      "score": 77,
+      "score": 82,
       "risk_level": "High Scam Risk",
       "status": "TP",
-      "rag_latency_ms": 251.09,
-      "risk_engine_latency_ms": 0.06,
-      "total_latency_ms": 251.15,
+      "rag_latency_ms": 2517.67,
+      "risk_engine_latency_ms": 0.22,
+      "total_latency_ms": 2517.88,
       "text": "CEO Urgent: Wire $35,000 to law firm escrow account for confidential acquisition today. Do not tell accounting."
     },
     {
@@ -1145,25 +475,25 @@
       "category": "Delivery Scam",
       "true_label": "scam",
       "predicted_label": "scam",
-      "score": 60,
-      "risk_level": "High Scam Risk",
+      "score": 85,
+      "risk_level": "Critical Threat",
       "status": "TP",
-      "rag_latency_ms": 257.12,
-      "risk_engine_latency_ms": 0.09,
-      "total_latency_ms": 257.2,
+      "rag_latency_ms": 2295.51,
+      "risk_engine_latency_ms": 0.26,
+      "total_latency_ms": 2295.77,
       "text": "USPS: Package cannot be delivered due to address error. Pay $1.50 redelivery fee at http://usps-redeliver.top"
     },
     {
       "id": "eval_scam_23",
       "category": "Delivery Scam",
       "true_label": "scam",
-      "predicted_label": "legitimate",
-      "score": 54,
-      "risk_level": "Caution",
-      "status": "FN",
-      "rag_latency_ms": 261.68,
-      "risk_engine_latency_ms": 0.08,
-      "total_latency_ms": 261.76,
+      "predicted_label": "scam",
+      "score": 79,
+      "risk_level": "High Scam Risk",
+      "status": "TP",
+      "rag_latency_ms": 2307.46,
+      "risk_engine_latency_ms": 0.39,
+      "total_latency_ms": 2307.86,
       "text": "FedEx Notice: Parcel held at customs. Update home address and pay $2.10 fee at http://fedex-parcel-update.site"
     },
     {
@@ -1171,25 +501,25 @@
       "category": "Tech Support",
       "true_label": "scam",
       "predicted_label": "scam",
-      "score": 79,
-      "risk_level": "High Scam Risk",
+      "score": 100,
+      "risk_level": "Critical Threat",
       "status": "TP",
-      "rag_latency_ms": 253.04,
-      "risk_engine_latency_ms": 0.06,
-      "total_latency_ms": 253.1,
+      "rag_latency_ms": 2850.92,
+      "risk_engine_latency_ms": 0.19,
+      "total_latency_ms": 2851.11,
       "text": "Geek Squad Invoice #9841: $499 auto-renewed. If unauthorized, call billing department at +1-888-555-0199 immediately."
     },
     {
       "id": "eval_scam_25",
       "category": "Tech Support",
       "true_label": "scam",
-      "predicted_label": "legitimate",
-      "score": 5,
-      "risk_level": "Low Risk",
-      "status": "FN",
-      "rag_latency_ms": 251.38,
-      "risk_engine_latency_ms": 0.05,
-      "total_latency_ms": 251.43,
+      "predicted_label": "scam",
+      "score": 65,
+      "risk_level": "High Scam Risk",
+      "status": "TP",
+      "rag_latency_ms": 2325.99,
+      "risk_engine_latency_ms": 0.19,
+      "total_latency_ms": 2326.18,
       "text": "Microsoft Security: Virus detected on your computer! Call technical helpline 1-800-555-0122 to prevent lock."
     },
     {
@@ -1197,25 +527,25 @@
       "category": "Loan Fraud",
       "true_label": "scam",
       "predicted_label": "scam",
-      "score": 87,
-      "risk_level": "Critical Threat",
+      "score": 82,
+      "risk_level": "High Scam Risk",
       "status": "TP",
-      "rag_latency_ms": 251.89,
-      "risk_engine_latency_ms": 0.05,
-      "total_latency_ms": 251.95,
+      "rag_latency_ms": 2311.37,
+      "risk_engine_latency_ms": 0.37,
+      "total_latency_ms": 2311.74,
       "text": "Approved for $20,000 personal loan! Pay $200 processing fee via Zelle to disburse funds into your account."
     },
     {
       "id": "eval_scam_27",
       "category": "Romance Fraud",
       "true_label": "scam",
-      "predicted_label": "legitimate",
-      "score": 51,
-      "risk_level": "Caution",
-      "status": "FN",
-      "rag_latency_ms": 249.32,
-      "risk_engine_latency_ms": 0.06,
-      "total_latency_ms": 249.38,
+      "predicted_label": "scam",
+      "score": 81,
+      "risk_level": "High Scam Risk",
+      "status": "TP",
+      "rag_latency_ms": 2429.66,
+      "risk_engine_latency_ms": 0.21,
+      "total_latency_ms": 2429.87,
       "text": "Deployed officer needs $1,500 via Western Union for medical emergency clearance to come home to be with you."
     },
     {
@@ -1223,12 +553,12 @@
       "category": "Malware Distribution",
       "true_label": "scam",
       "predicted_label": "scam",
-      "score": 64,
+      "score": 79,
       "risk_level": "High Scam Risk",
       "status": "TP",
-      "rag_latency_ms": 249.2,
-      "risk_engine_latency_ms": 0.05,
-      "total_latency_ms": 249.25,
+      "rag_latency_ms": 2311.78,
+      "risk_engine_latency_ms": 0.23,
+      "total_latency_ms": 2312.01,
       "text": "HR Notice: Open attached file Payroll_Update_2024.exe and run as administrator to confirm tax form."
     },
     {
@@ -1236,12 +566,12 @@
       "category": "Banking Phishing",
       "true_label": "scam",
       "predicted_label": "scam",
-      "score": 100,
-      "risk_level": "Critical Threat",
+      "score": 74,
+      "risk_level": "High Scam Risk",
       "status": "TP",
-      "rag_latency_ms": 251.49,
-      "risk_engine_latency_ms": 0.09,
-      "total_latency_ms": 251.58,
+      "rag_latency_ms": 2410.25,
+      "risk_engine_latency_ms": 0.3,
+      "total_latency_ms": 2410.55,
       "text": "Urgent: Debit card deactivated due to fraud alert. Reactivate now at http://debit-card-verify.com"
     },
     {
@@ -1249,25 +579,25 @@
       "category": "Fake Job",
       "true_label": "scam",
       "predicted_label": "scam",
-      "score": 90,
+      "score": 85,
       "risk_level": "Critical Threat",
       "status": "TP",
-      "rag_latency_ms": 256.27,
-      "risk_engine_latency_ms": 0.06,
-      "total_latency_ms": 256.33,
+      "rag_latency_ms": 2729.07,
+      "risk_engine_latency_ms": 0.21,
+      "total_latency_ms": 2729.28,
       "text": "Data Entry remote job. We send $4,000 check for equipment. Keep $500, wire $3,500 to supplier via Venmo."
     },
     {
       "id": "eval_scam_31",
       "category": "UPI Scam",
       "true_label": "scam",
-      "predicted_label": "legitimate",
-      "score": 45,
-      "risk_level": "Caution",
-      "status": "FN",
-      "rag_latency_ms": 253.59,
-      "risk_engine_latency_ms": 0.05,
-      "total_latency_ms": 253.64,
+      "predicted_label": "scam",
+      "score": 65,
+      "risk_level": "High Scam Risk",
+      "status": "TP",
+      "rag_latency_ms": 2438.37,
+      "risk_engine_latency_ms": 0.19,
+      "total_latency_ms": 2438.56,
       "text": "Buyer sent $200 on PhonePe. Click link and input your secret PIN to deposit money into wallet."
     },
     {
@@ -1275,12 +605,12 @@
       "category": "Fake Internship",
       "true_label": "scam",
       "predicted_label": "scam",
-      "score": 60,
-      "risk_level": "High Scam Risk",
+      "score": 85,
+      "risk_level": "Critical Threat",
       "status": "TP",
-      "rag_latency_ms": 269.61,
-      "risk_engine_latency_ms": 0.05,
-      "total_latency_ms": 269.66,
+      "rag_latency_ms": 2472.8,
+      "risk_engine_latency_ms": 0.44,
+      "total_latency_ms": 2473.24,
       "text": "Congratulations! Offer letter for Web Intern ready. Pay $99 paper processing fee within 2 hours to confirm."
     },
     {
@@ -1288,38 +618,38 @@
       "category": "Crypto Scam",
       "true_label": "scam",
       "predicted_label": "scam",
-      "score": 75,
+      "score": 65,
       "risk_level": "High Scam Risk",
       "status": "TP",
-      "rag_latency_ms": 255.05,
-      "risk_engine_latency_ms": 0.05,
-      "total_latency_ms": 255.1,
+      "rag_latency_ms": 2634.82,
+      "risk_engine_latency_ms": 0.23,
+      "total_latency_ms": 2635.05,
       "text": "Guaranteed 300% profit in 3 days! Automated AI trading algorithm. Deposit Bitcoin to wallet 1A1zP1eP5..."
     },
     {
       "id": "eval_scam_34",
       "category": "Delivery Scam",
       "true_label": "scam",
-      "predicted_label": "legitimate",
-      "score": 40,
-      "risk_level": "Caution",
-      "status": "FN",
-      "rag_latency_ms": 256.15,
-      "risk_engine_latency_ms": 0.08,
-      "total_latency_ms": 256.23,
+      "predicted_label": "scam",
+      "score": 65,
+      "risk_level": "High Scam Risk",
+      "status": "TP",
+      "rag_latency_ms": 2217.37,
+      "risk_engine_latency_ms": 0.31,
+      "total_latency_ms": 2217.68,
       "text": "DHL Alert: Shipment #94821 delayed. Click http://dhl-track-package.top to reschedule delivery."
     },
     {
       "id": "eval_scam_35",
       "category": "Tech Support",
       "true_label": "scam",
-      "predicted_label": "legitimate",
-      "score": 53,
-      "risk_level": "Caution",
-      "status": "FN",
-      "rag_latency_ms": 257.23,
-      "risk_engine_latency_ms": 0.05,
-      "total_latency_ms": 257.28,
+      "predicted_label": "scam",
+      "score": 78,
+      "risk_level": "High Scam Risk",
+      "status": "TP",
+      "rag_latency_ms": 2323.26,
+      "risk_engine_latency_ms": 0.21,
+      "total_latency_ms": 2323.48,
       "text": "Norton Security Auto-Renewal $399. Call refund agent at 1-888-555-0144 to cancel charge."
     },
     {
@@ -1327,12 +657,12 @@
       "category": "Impersonation",
       "true_label": "scam",
       "predicted_label": "scam",
-      "score": 60,
-      "risk_level": "High Scam Risk",
+      "score": 85,
+      "risk_level": "Critical Threat",
       "status": "TP",
-      "rag_latency_ms": 254.93,
-      "risk_engine_latency_ms": 0.08,
-      "total_latency_ms": 255.01,
+      "rag_latency_ms": 3014.67,
+      "risk_engine_latency_ms": 0.19,
+      "total_latency_ms": 3014.86,
       "text": "This is VP Operations. Wire $12,000 immediately to vendor account for urgent server contract."
     },
     {
@@ -1340,12 +670,12 @@
       "category": "Gift Card",
       "true_label": "scam",
       "predicted_label": "scam",
-      "score": 79,
-      "risk_level": "High Scam Risk",
+      "score": 99,
+      "risk_level": "Critical Threat",
       "status": "TP",
-      "rag_latency_ms": 265.2,
-      "risk_engine_latency_ms": 0.05,
-      "total_latency_ms": 265.25,
+      "rag_latency_ms": 2221.08,
+      "risk_engine_latency_ms": 0.22,
+      "total_latency_ms": 2221.31,
       "text": "Need 3 Google Play gift cards ($50 each) for office event. Scratch codes and send photos immediately."
     },
     {
@@ -1353,90 +683,90 @@
       "category": "Loan Fraud",
       "true_label": "scam",
       "predicted_label": "scam",
-      "score": 84,
+      "score": 79,
       "risk_level": "High Scam Risk",
       "status": "TP",
-      "rag_latency_ms": 293.31,
-      "risk_engine_latency_ms": 0.05,
-      "total_latency_ms": 293.36,
+      "rag_latency_ms": 2382.15,
+      "risk_engine_latency_ms": 0.2,
+      "total_latency_ms": 2382.36,
       "text": "No credit check loan $10,000 approved! Transfer $150 collateral insurance fee via CashApp."
     },
     {
       "id": "eval_scam_39",
       "category": "Malware Distribution",
       "true_label": "scam",
-      "predicted_label": "legitimate",
-      "score": 50,
-      "risk_level": "Caution",
-      "status": "FN",
-      "rag_latency_ms": 251.16,
-      "risk_engine_latency_ms": 0.05,
-      "total_latency_ms": 251.21,
+      "predicted_label": "scam",
+      "score": 65,
+      "risk_level": "High Scam Risk",
+      "status": "TP",
+      "rag_latency_ms": 2819.3,
+      "risk_engine_latency_ms": 0.18,
+      "total_latency_ms": 2819.47,
       "text": "Invoice attached Security_Patch.scr. Execute file on your computer to update system settings."
     },
     {
       "id": "eval_scam_40",
       "category": "Banking Phishing",
       "true_label": "scam",
-      "predicted_label": "legitimate",
-      "score": 40,
-      "risk_level": "Caution",
-      "status": "FN",
-      "rag_latency_ms": 245.51,
-      "risk_engine_latency_ms": 0.11,
-      "total_latency_ms": 245.62,
+      "predicted_label": "scam",
+      "score": 65,
+      "risk_level": "High Scam Risk",
+      "status": "TP",
+      "rag_latency_ms": 2230.48,
+      "risk_engine_latency_ms": 0.29,
+      "total_latency_ms": 2230.78,
       "text": "Security Warning: Suspicious activity on Capital One account. Verify at http://capitalone-auth-check.net"
     },
     {
       "id": "eval_scam_41",
       "category": "Advance-Fee",
       "true_label": "scam",
-      "predicted_label": "legitimate",
-      "score": 53,
-      "risk_level": "Caution",
-      "status": "FN",
-      "rag_latency_ms": 250.72,
-      "risk_engine_latency_ms": 0.06,
-      "total_latency_ms": 250.77,
+      "predicted_label": "scam",
+      "score": 78,
+      "risk_level": "High Scam Risk",
+      "status": "TP",
+      "rag_latency_ms": 2185.69,
+      "risk_engine_latency_ms": 0.2,
+      "total_latency_ms": 2185.89,
       "text": "You are beneficiary of $850,000 fund. Pay $250 transfer stamp fee to release check."
     },
     {
       "id": "eval_scam_42",
       "category": "Fake Job",
       "true_label": "scam",
-      "predicted_label": "legitimate",
-      "score": 51,
-      "risk_level": "Caution",
-      "status": "FN",
-      "rag_latency_ms": 251.04,
-      "risk_engine_latency_ms": 0.05,
-      "total_latency_ms": 251.09,
+      "predicted_label": "scam",
+      "score": 81,
+      "risk_level": "High Scam Risk",
+      "status": "TP",
+      "rag_latency_ms": 2563.96,
+      "risk_engine_latency_ms": 0.21,
+      "total_latency_ms": 2564.17,
       "text": "Remote Typist $45/hr. Deposit $2,500 check, send $2,000 via Zelle to our software vendor."
     },
     {
       "id": "eval_scam_43",
       "category": "OTP Theft",
       "true_label": "scam",
-      "predicted_label": "legitimate",
-      "score": 45,
-      "risk_level": "Caution",
-      "status": "FN",
-      "rag_latency_ms": 271.6,
-      "risk_engine_latency_ms": 0.05,
-      "total_latency_ms": 271.65,
+      "predicted_label": "scam",
+      "score": 65,
+      "risk_level": "High Scam Risk",
+      "status": "TP",
+      "rag_latency_ms": 2438.34,
+      "risk_engine_latency_ms": 0.44,
+      "total_latency_ms": 2438.79,
       "text": "Your Google verification code is 394821. Provide this code to our customer care executive to restore access."
     },
     {
       "id": "eval_scam_44",
       "category": "Fake Internship",
       "true_label": "scam",
-      "predicted_label": "legitimate",
-      "score": 55,
-      "risk_level": "Caution",
-      "status": "FN",
-      "rag_latency_ms": 255.52,
-      "risk_engine_latency_ms": 0.05,
-      "total_latency_ms": 255.57,
+      "predicted_label": "scam",
+      "score": 80,
+      "risk_level": "High Scam Risk",
+      "status": "TP",
+      "rag_latency_ms": 2661.94,
+      "risk_engine_latency_ms": 0.2,
+      "total_latency_ms": 2662.14,
       "text": "Accepted for Summer AI Internship! Pay $120 registration deposit via UPI within 4 hours."
     },
     {
@@ -1444,38 +774,38 @@
       "category": "Crypto Scam",
       "true_label": "scam",
       "predicted_label": "scam",
-      "score": 89,
-      "risk_level": "Critical Threat",
+      "score": 79,
+      "risk_level": "High Scam Risk",
       "status": "TP",
-      "rag_latency_ms": 245.59,
-      "risk_engine_latency_ms": 0.05,
-      "total_latency_ms": 245.65,
+      "rag_latency_ms": 2442.22,
+      "risk_engine_latency_ms": 0.25,
+      "total_latency_ms": 2442.47,
       "text": "High yield investment bot! Turn $100 into $2,500 guaranteed in 12 hours. Send USDT now."
     },
     {
       "id": "eval_scam_46",
       "category": "Delivery Scam",
       "true_label": "scam",
-      "predicted_label": "legitimate",
-      "score": 56,
-      "risk_level": "Caution",
-      "status": "FN",
-      "rag_latency_ms": 249.04,
-      "risk_engine_latency_ms": 0.09,
-      "total_latency_ms": 249.13,
+      "predicted_label": "scam",
+      "score": 81,
+      "risk_level": "High Scam Risk",
+      "status": "TP",
+      "rag_latency_ms": 2139.88,
+      "risk_engine_latency_ms": 0.32,
+      "total_latency_ms": 2140.2,
       "text": "UPS: Delivery failed due to incomplete address. Update at http://ups-redelivery-notice.info"
     },
     {
       "id": "eval_scam_47",
       "category": "Tech Support",
       "true_label": "scam",
-      "predicted_label": "legitimate",
-      "score": 40,
-      "risk_level": "Caution",
-      "status": "FN",
-      "rag_latency_ms": 248.45,
-      "risk_engine_latency_ms": 0.05,
-      "total_latency_ms": 248.49,
+      "predicted_label": "scam",
+      "score": 65,
+      "risk_level": "High Scam Risk",
+      "status": "TP",
+      "rag_latency_ms": 2283.16,
+      "risk_engine_latency_ms": 0.22,
+      "total_latency_ms": 2283.38,
       "text": "McAfee Antivirus $299 subscription renewed. Call +1-888-555-0188 to claim full refund."
     },
     {
@@ -1483,25 +813,25 @@
       "category": "Impersonation",
       "true_label": "scam",
       "predicted_label": "scam",
-      "score": 94,
+      "score": 100,
       "risk_level": "Critical Threat",
       "status": "TP",
-      "rag_latency_ms": 271.96,
-      "risk_engine_latency_ms": 0.06,
-      "total_latency_ms": 272.02,
+      "rag_latency_ms": 2814.38,
+      "risk_engine_latency_ms": 0.2,
+      "total_latency_ms": 2814.58,
       "text": "From Director: Purchase 4 Target gift cards for team reward. Email codes directly to me."
     },
     {
       "id": "eval_scam_49",
       "category": "Romance Fraud",
       "true_label": "scam",
-      "predicted_label": "legitimate",
-      "score": 35,
-      "risk_level": "Caution",
-      "status": "FN",
-      "rag_latency_ms": 255.35,
-      "risk_engine_latency_ms": 0.05,
-      "total_latency_ms": 255.41,
+      "predicted_label": "scam",
+      "score": 65,
+      "risk_level": "High Scam Risk",
+      "status": "TP",
+      "rag_latency_ms": 2120.38,
+      "risk_engine_latency_ms": 0.2,
+      "total_latency_ms": 2120.58,
       "text": "Customs official holding my gold trunk in London. Send $2,000 Bitcoin to release diplomat agent."
     },
     {
@@ -1509,12 +839,12 @@
       "category": "Loan Fraud",
       "true_label": "scam",
       "predicted_label": "scam",
-      "score": 85,
-      "risk_level": "Critical Threat",
+      "score": 80,
+      "risk_level": "High Scam Risk",
       "status": "TP",
-      "rag_latency_ms": 252.47,
-      "risk_engine_latency_ms": 0.05,
-      "total_latency_ms": 252.53,
+      "rag_latency_ms": 2142.51,
+      "risk_engine_latency_ms": 0.26,
+      "total_latency_ms": 2142.78,
       "text": "Guaranteed $15,000 business loan approved. Send $300 activation fee via Zelle to disburse."
     },
     {
@@ -1525,9 +855,9 @@
       "score": 2,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 248.47,
-      "risk_engine_latency_ms": 0.06,
-      "total_latency_ms": 248.53,
+      "rag_latency_ms": 2704.26,
+      "risk_engine_latency_ms": 0.23,
+      "total_latency_ms": 2704.49,
       "text": "Chase Alert: A sign-in to your online account occurred from a new browser on Sep 24. If this was you, no action needed."
     },
     {
@@ -1538,9 +868,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 250.86,
-      "risk_engine_latency_ms": 0.04,
-      "total_latency_ms": 250.9,
+      "rag_latency_ms": 2123.44,
+      "risk_engine_latency_ms": 0.17,
+      "total_latency_ms": 2123.61,
       "text": "Bank of America: Your monthly statement is ready to view inside your online banking app."
     },
     {
@@ -1551,9 +881,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 237.59,
-      "risk_engine_latency_ms": 0.04,
-      "total_latency_ms": 237.63,
+      "rag_latency_ms": 2097.92,
+      "risk_engine_latency_ms": 0.16,
+      "total_latency_ms": 2098.07,
       "text": "Wells Fargo: Your direct deposit of $2,450.00 has posted to your account."
     },
     {
@@ -1564,9 +894,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 247.33,
-      "risk_engine_latency_ms": 0.04,
-      "total_latency_ms": 247.37,
+      "rag_latency_ms": 2613.29,
+      "risk_engine_latency_ms": 0.26,
+      "total_latency_ms": 2613.55,
       "text": "Citi Alert: Your credit card balance of $142.50 is due on Oct 12. Manage payment on citi.com"
     },
     {
@@ -1577,9 +907,9 @@
       "score": 2,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 242.55,
-      "risk_engine_latency_ms": 0.05,
-      "total_latency_ms": 242.6,
+      "rag_latency_ms": 2285.37,
+      "risk_engine_latency_ms": 0.17,
+      "total_latency_ms": 2285.54,
       "text": "Your Google verification code is 482910. Do not share this code with anyone."
     },
     {
@@ -1590,9 +920,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 249.87,
-      "risk_engine_latency_ms": 0.04,
-      "total_latency_ms": 249.91,
+      "rag_latency_ms": 2272.52,
+      "risk_engine_latency_ms": 0.17,
+      "total_latency_ms": 2272.69,
       "text": "394812 is your Microsoft security code. If you didn't request this code, check account activity."
     },
     {
@@ -1603,9 +933,9 @@
       "score": 2,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 251.65,
-      "risk_engine_latency_ms": 0.05,
-      "total_latency_ms": 251.7,
+      "rag_latency_ms": 2301.61,
+      "risk_engine_latency_ms": 0.2,
+      "total_latency_ms": 2301.81,
       "text": "Amazon.com: Your order #114-9842104-5829104 has shipped via UPS. Track package in Amazon app."
     },
     {
@@ -1616,9 +946,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 244.39,
-      "risk_engine_latency_ms": 0.04,
-      "total_latency_ms": 244.43,
+      "rag_latency_ms": 2540.17,
+      "risk_engine_latency_ms": 0.15,
+      "total_latency_ms": 2540.32,
       "text": "PayPal: You paid $24.99 USD to Netflix. View transaction details in your PayPal account dashboard."
     },
     {
@@ -1629,9 +959,9 @@
       "score": 2,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 252.99,
-      "risk_engine_latency_ms": 0.08,
-      "total_latency_ms": 253.07,
+      "rag_latency_ms": 2037.7,
+      "risk_engine_latency_ms": 0.29,
+      "total_latency_ms": 2037.98,
       "text": "Microsoft Careers: Following your team interviews, your formal offer letter is posted on https://careers.microsoft.com"
     },
     {
@@ -1642,9 +972,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 237.22,
-      "risk_engine_latency_ms": 0.05,
-      "total_latency_ms": 237.27,
+      "rag_latency_ms": 2215.06,
+      "risk_engine_latency_ms": 0.18,
+      "total_latency_ms": 2215.24,
       "text": "Google Recruiting: Thank you for interviewing for Software Engineer role. We would like to schedule a team fit call."
     },
     {
@@ -1655,9 +985,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 246.67,
-      "risk_engine_latency_ms": 0.05,
-      "total_latency_ms": 246.72,
+      "rag_latency_ms": 2642.68,
+      "risk_engine_latency_ms": 0.19,
+      "total_latency_ms": 2642.87,
       "text": "IBM Internship Program: Congratulations on completing your technical assessment. Your manager interview is scheduled for Tuesday on Webex."
     },
     {
@@ -1668,9 +998,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 240.07,
-      "risk_engine_latency_ms": 0.05,
-      "total_latency_ms": 240.12,
+      "rag_latency_ms": 2046.1,
+      "risk_engine_latency_ms": 0.15,
+      "total_latency_ms": 2046.25,
       "text": "Intel HR: Your summer internship onboarding documents are ready in the official employee portal."
     },
     {
@@ -1681,9 +1011,9 @@
       "score": 2,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 241.66,
-      "risk_engine_latency_ms": 0.08,
-      "total_latency_ms": 241.74,
+      "rag_latency_ms": 2202.83,
+      "risk_engine_latency_ms": 0.27,
+      "total_latency_ms": 2203.11,
       "text": "UPS Update: Package 1Z9999999999999999 will be delivered today between 1:00 PM - 5:00 PM. Track status at https://www.ups.com/track"
     },
     {
@@ -1694,9 +1024,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 241.34,
-      "risk_engine_latency_ms": 0.05,
-      "total_latency_ms": 241.39,
+      "rag_latency_ms": 2740.34,
+      "risk_engine_latency_ms": 0.19,
+      "total_latency_ms": 2740.54,
       "text": "FedEx: Your package from Apple Inc. is out for delivery today. Signature required upon arrival."
     },
     {
@@ -1707,9 +1037,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 242.87,
-      "risk_engine_latency_ms": 0.06,
-      "total_latency_ms": 242.93,
+      "rag_latency_ms": 2160.64,
+      "risk_engine_latency_ms": 0.15,
+      "total_latency_ms": 2160.79,
       "text": "USPS Informed Delivery: You have 2 mail pieces arriving today. View images in your usps.com account."
     },
     {
@@ -1717,12 +1047,12 @@
       "category": "Normal Payment Request",
       "true_label": "legitimate",
       "predicted_label": "legitimate",
-      "score": 35,
-      "risk_level": "Caution",
+      "score": 5,
+      "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 245.11,
-      "risk_engine_latency_ms": 0.05,
-      "total_latency_ms": 245.16,
+      "rag_latency_ms": 2048.81,
+      "risk_engine_latency_ms": 0.15,
+      "total_latency_ms": 2048.96,
       "text": "Venmo: Alex requested $15.00 for dinner yesterday. Accept or decline inside your Venmo app."
     },
     {
@@ -1730,12 +1060,12 @@
       "category": "Normal Payment Request",
       "true_label": "legitimate",
       "predicted_label": "legitimate",
-      "score": 35,
-      "risk_level": "Caution",
+      "score": 5,
+      "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 255.07,
-      "risk_engine_latency_ms": 0.05,
-      "total_latency_ms": 255.12,
+      "rag_latency_ms": 2385.33,
+      "risk_engine_latency_ms": 0.17,
+      "total_latency_ms": 2385.5,
       "text": "Zelle: Sarah sent you $40.00 for grocery share. Funds are available in your bank app."
     },
     {
@@ -1746,9 +1076,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 239.8,
-      "risk_engine_latency_ms": 0.04,
-      "total_latency_ms": 239.84,
+      "rag_latency_ms": 2480.16,
+      "risk_engine_latency_ms": 0.15,
+      "total_latency_ms": 2480.31,
       "text": "Spotify: Enjoy 3 months of Premium for $9.99. Offer valid until end of month at spotify.com"
     },
     {
@@ -1759,9 +1089,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 240.13,
-      "risk_engine_latency_ms": 0.04,
-      "total_latency_ms": 240.17,
+      "rag_latency_ms": 2160.44,
+      "risk_engine_latency_ms": 0.14,
+      "total_latency_ms": 2160.59,
       "text": "Uber: 20% off your next ride this weekend! Apply code WEEKEND20 in the Uber mobile app."
     },
     {
@@ -1772,9 +1102,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 248.98,
-      "risk_engine_latency_ms": 0.05,
-      "total_latency_ms": 249.02,
+      "rag_latency_ms": 2043.45,
+      "risk_engine_latency_ms": 0.15,
+      "total_latency_ms": 2043.61,
       "text": "LinkedIn: 3 people viewed your profile this week. See who viewed your profile on linkedin.com"
     },
     {
@@ -1785,9 +1115,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 254.63,
-      "risk_engine_latency_ms": 0.04,
-      "total_latency_ms": 254.68,
+      "rag_latency_ms": 2425.45,
+      "risk_engine_latency_ms": 0.15,
+      "total_latency_ms": 2425.6,
       "text": "Capital One: A balance transfer of $500.00 was completed successfully."
     },
     {
@@ -1795,12 +1125,12 @@
       "category": "Genuine 2FA",
       "true_label": "legitimate",
       "predicted_label": "legitimate",
-      "score": 45,
-      "risk_level": "Caution",
+      "score": 5,
+      "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 242.72,
-      "risk_engine_latency_ms": 0.05,
-      "total_latency_ms": 242.77,
+      "rag_latency_ms": 2095.7,
+      "risk_engine_latency_ms": 0.2,
+      "total_latency_ms": 2095.9,
       "text": "Your Apple ID Verification Code is: 849201. Don't give this code to anyone."
     },
     {
@@ -1811,9 +1141,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 241.21,
-      "risk_engine_latency_ms": 0.04,
-      "total_latency_ms": 241.25,
+      "rag_latency_ms": 2118.37,
+      "risk_engine_latency_ms": 0.17,
+      "total_latency_ms": 2118.54,
       "text": "748192 is your Uber verification code. Never share this code."
     },
     {
@@ -1824,9 +1154,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 241.41,
-      "risk_engine_latency_ms": 0.04,
-      "total_latency_ms": 241.46,
+      "rag_latency_ms": 3005.69,
+      "risk_engine_latency_ms": 0.25,
+      "total_latency_ms": 3005.94,
       "text": "Apple Store: Your order receipt for iCloud+ 200GB storage ($2.99) is ready in your account."
     },
     {
@@ -1837,9 +1167,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 246.15,
-      "risk_engine_latency_ms": 0.04,
-      "total_latency_ms": 246.19,
+      "rag_latency_ms": 2183.92,
+      "risk_engine_latency_ms": 0.15,
+      "total_latency_ms": 2184.08,
       "text": "Steam: Thank you for your purchase of Cyberpunk 2077. Transaction receipt emailed to your address."
     },
     {
@@ -1850,9 +1180,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 240.78,
-      "risk_engine_latency_ms": 0.05,
-      "total_latency_ms": 240.83,
+      "rag_latency_ms": 2051.61,
+      "risk_engine_latency_ms": 0.23,
+      "total_latency_ms": 2051.83,
       "text": "Meta Careers: Your application for Data Engineer has been reviewed. Please submit your availability for technical round."
     },
     {
@@ -1863,9 +1193,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 237.16,
-      "risk_engine_latency_ms": 0.04,
-      "total_latency_ms": 237.2,
+      "rag_latency_ms": 2220.95,
+      "risk_engine_latency_ms": 0.16,
+      "total_latency_ms": 2221.11,
       "text": "Amazon HR: Thank you for applying for AWS Solutions Architect. Log into amazon.jobs to check application status."
     },
     {
@@ -1876,9 +1206,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 244.61,
-      "risk_engine_latency_ms": 0.04,
-      "total_latency_ms": 244.65,
+      "rag_latency_ms": 2390.13,
+      "risk_engine_latency_ms": 0.25,
+      "total_latency_ms": 2390.37,
       "text": "Cisco University Relations: Welcome to Cisco Summer Intern Class of 2024! Please complete badge photo upload."
     },
     {
@@ -1889,9 +1219,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 252.42,
-      "risk_engine_latency_ms": 0.04,
-      "total_latency_ms": 252.46,
+      "rag_latency_ms": 1977.05,
+      "risk_engine_latency_ms": 0.15,
+      "total_latency_ms": 1977.2,
       "text": "USPS: Your package #9400111202555 was delivered at 2:15 PM at your front door."
     },
     {
@@ -1902,9 +1232,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 241.06,
-      "risk_engine_latency_ms": 0.04,
-      "total_latency_ms": 241.11,
+      "rag_latency_ms": 2289.78,
+      "risk_engine_latency_ms": 0.15,
+      "total_latency_ms": 2289.93,
       "text": "DHL Express: Waybill 84920148 has passed customs clearance in Cincinnati."
     },
     {
@@ -1915,9 +1245,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 241.28,
-      "risk_engine_latency_ms": 0.04,
-      "total_latency_ms": 241.32,
+      "rag_latency_ms": 2445.48,
+      "risk_engine_latency_ms": 0.16,
+      "total_latency_ms": 2445.64,
       "text": "PayPal: Invoice #1049 from John's Landscaping for $60.00 is ready for review in your account."
     },
     {
@@ -1928,9 +1258,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 237.12,
-      "risk_engine_latency_ms": 0.04,
-      "total_latency_ms": 237.16,
+      "rag_latency_ms": 2526.66,
+      "risk_engine_latency_ms": 0.18,
+      "total_latency_ms": 2526.84,
       "text": "GitHub: GitHub Universe conference early bird tickets are now available on github.com"
     },
     {
@@ -1941,9 +1271,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 241.86,
-      "risk_engine_latency_ms": 0.04,
-      "total_latency_ms": 241.9,
+      "rag_latency_ms": 2236.48,
+      "risk_engine_latency_ms": 0.15,
+      "total_latency_ms": 2236.62,
       "text": "Duolingo: Don't lose your 45-day streak! Practice Spanish today in the Duolingo app."
     },
     {
@@ -1954,9 +1284,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 320.47,
-      "risk_engine_latency_ms": 0.04,
-      "total_latency_ms": 320.51,
+      "rag_latency_ms": 2531.17,
+      "risk_engine_latency_ms": 0.15,
+      "total_latency_ms": 2531.32,
       "text": "Chase Alert: Automatic payment of $85.00 to Electric Utility was successful."
     },
     {
@@ -1967,9 +1297,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 243.54,
-      "risk_engine_latency_ms": 0.05,
-      "total_latency_ms": 243.58,
+      "rag_latency_ms": 2502.66,
+      "risk_engine_latency_ms": 0.17,
+      "total_latency_ms": 2502.82,
       "text": "Bank of America: Low balance alert: your checking account balance is below $100."
     },
     {
@@ -1980,9 +1310,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 237.72,
-      "risk_engine_latency_ms": 0.05,
-      "total_latency_ms": 237.77,
+      "rag_latency_ms": 2986.36,
+      "risk_engine_latency_ms": 0.16,
+      "total_latency_ms": 2986.52,
       "text": "Use code 940182 to log into your GitHub account."
     },
     {
@@ -1993,9 +1323,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 246.57,
-      "risk_engine_latency_ms": 0.04,
-      "total_latency_ms": 246.61,
+      "rag_latency_ms": 2853.19,
+      "risk_engine_latency_ms": 1.15,
+      "total_latency_ms": 2854.34,
       "text": "Slack security code: 492018. Enter code on slack.com to authenticate device."
     },
     {
@@ -2006,9 +1336,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 238.08,
-      "risk_engine_latency_ms": 0.04,
-      "total_latency_ms": 238.12,
+      "rag_latency_ms": 2838.97,
+      "risk_engine_latency_ms": 0.15,
+      "total_latency_ms": 2839.11,
       "text": "Target e-Receipt: Your order #948120 for store pickup is ready at downtown location."
     },
     {
@@ -2019,9 +1349,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 239.55,
-      "risk_engine_latency_ms": 0.04,
-      "total_latency_ms": 239.59,
+      "rag_latency_ms": 3332.91,
+      "risk_engine_latency_ms": 0.22,
+      "total_latency_ms": 3333.13,
       "text": "DoorDash: Order confirmed from Luigi's Pizza. Estimated delivery 35-45 mins."
     },
     {
@@ -2032,9 +1362,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 249.77,
-      "risk_engine_latency_ms": 0.04,
-      "total_latency_ms": 249.81,
+      "rag_latency_ms": 2797.86,
+      "risk_engine_latency_ms": 0.16,
+      "total_latency_ms": 2798.01,
       "text": "Adobe Talent Acquisition: We enjoyed meeting you! Form offer letter has been sent via DocuSign to your email."
     },
     {
@@ -2045,9 +1375,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 242.05,
-      "risk_engine_latency_ms": 0.04,
-      "total_latency_ms": 242.09,
+      "rag_latency_ms": 2794.93,
+      "risk_engine_latency_ms": 0.5,
+      "total_latency_ms": 2795.43,
       "text": "NVIDIA HR: Your intern hardware equipment shipping address has been confirmed."
     },
     {
@@ -2058,9 +1388,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 244.63,
-      "risk_engine_latency_ms": 0.04,
-      "total_latency_ms": 244.67,
+      "rag_latency_ms": 2684.51,
+      "risk_engine_latency_ms": 0.15,
+      "total_latency_ms": 2684.66,
       "text": "UPS: Driver will attempt package delivery today before 7:00 PM."
     },
     {
@@ -2071,9 +1401,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 247.94,
-      "risk_engine_latency_ms": 0.04,
-      "total_latency_ms": 247.98,
+      "rag_latency_ms": 2784.47,
+      "risk_engine_latency_ms": 0.46,
+      "total_latency_ms": 2784.93,
       "text": "FedEx: Shipment #78491024 delivered to parcel locker."
     },
     {
@@ -2084,9 +1414,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 246.0,
-      "risk_engine_latency_ms": 0.04,
-      "total_latency_ms": 246.04,
+      "rag_latency_ms": 2564.55,
+      "risk_engine_latency_ms": 0.17,
+      "total_latency_ms": 2564.72,
       "text": "Square Receipt: $4.50 payment to Blue Bottle Coffee via Visa ending in 4012."
     },
     {
@@ -2097,9 +1427,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 242.29,
-      "risk_engine_latency_ms": 0.04,
-      "total_latency_ms": 242.33,
+      "rag_latency_ms": 2553.7,
+      "risk_engine_latency_ms": 0.82,
+      "total_latency_ms": 2554.52,
       "text": "Zoom: New AI Companion features are now enabled on your free Zoom account."
     },
     {
@@ -2110,9 +1440,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 264.59,
-      "risk_engine_latency_ms": 0.04,
-      "total_latency_ms": 264.63,
+      "rag_latency_ms": 3593.56,
+      "risk_engine_latency_ms": 0.16,
+      "total_latency_ms": 3593.72,
       "text": "Coursera: New Machine Learning Specialization course available from Stanford University."
     },
     {
@@ -2123,9 +1453,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 244.01,
-      "risk_engine_latency_ms": 0.04,
-      "total_latency_ms": 244.06,
+      "rag_latency_ms": 2411.44,
+      "risk_engine_latency_ms": 0.3,
+      "total_latency_ms": 2411.73,
       "text": "Discover Card: Your cash back bonus of $18.40 has been credited to your statement."
     },
     {
@@ -2136,9 +1466,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 237.36,
-      "risk_engine_latency_ms": 0.04,
-      "total_latency_ms": 237.4,
+      "rag_latency_ms": 2269.88,
+      "risk_engine_latency_ms": 0.16,
+      "total_latency_ms": 2270.03,
       "text": "Your Dropbox verification code is 194820."
     },
     {
@@ -2149,9 +1479,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 247.92,
-      "risk_engine_latency_ms": 0.04,
-      "total_latency_ms": 247.96,
+      "rag_latency_ms": 2212.85,
+      "risk_engine_latency_ms": 0.27,
+      "total_latency_ms": 2213.12,
       "text": "Lyft Receipt: $18.50 for trip to Airport. Receipt saved to your Lyft account."
     },
     {
@@ -2162,9 +1492,9 @@
       "score": 5,
       "risk_level": "Low Risk",
       "status": "TN",
-      "rag_latency_ms": 242.41,
-      "risk_engine_latency_ms": 0.04,
-      "total_latency_ms": 242.46,
+      "rag_latency_ms": 2137.76,
+      "risk_engine_latency_ms": 0.61,
+      "total_latency_ms": 2138.36,
       "text": "Salesforce Careers: Thank you for applying for Senior Engineer. Your candidate status is active."
     }
   ]
