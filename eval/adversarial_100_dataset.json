@@ -1,0 +1,702 @@
+[
+  {
+    "id": "adv_scam_01",
+    "category": "Soft Grooming Romance",
+    "label": "scam",
+    "text": "Hi Aditya, it was great connecting on LinkedIn earlier. I am an art gallery curator currently traveling in Singapore. I really admired your profile and would love to exchange thoughts on creative design.",
+    "difficulty": "Hard \u2014 Zero-urgency romance/rapport grooming with no links"
+  },
+  {
+    "id": "adv_scam_02",
+    "category": "Google Doc Phishing",
+    "label": "scam",
+    "text": "Google Drive: Internal Team Shared Document: '2025_Q1_Compensation_Restructuring_Confidential.pdf'. Please click here to review and acknowledge permissions: http://drive-google-doc-review.com/auth",
+    "difficulty": "Medium-Hard \u2014 Enterprise phishing using Google lookalike brand"
+  },
+  {
+    "id": "adv_scam_03",
+    "category": "Fake Debt Settlement",
+    "label": "scam",
+    "text": "Legal Notice: Outstanding loan liability of Rs 14,800 is overdue. To prevent immediate field recovery visit and credit bureau default filing, pay settled amount of Rs 4,500 via UPI ID debt-settlement@oksbi today.",
+    "difficulty": "Hard \u2014 Mimics authentic aggressive debt collection"
+  },
+  {
+    "id": "adv_scam_04",
+    "category": "Copy-Trading Signal Trap",
+    "label": "scam",
+    "text": "Hey mate, sharing my automated forex trading bot results for this month (+320%). I don't charge any upfront fee, you only share 10% of weekly profits. Check the live MT5 verified account link here: bit.ly/fx-verified-bot",
+    "difficulty": "Medium \u2014 Looks like peer trader offering advice with shortened link"
+  },
+  {
+    "id": "adv_scam_05",
+    "category": "Subtle Delivery Typosquatting",
+    "label": "scam",
+    "text": "BlueDart Express: Consignment #9812739 arrived at regional hub with incomplete street landmark. Verify delivery pin and address at https://bluedart-trackparcel.in to ensure tomorrow dispatch.",
+    "difficulty": "Medium \u2014 Subtle typosquatting domain (.in instead of official .com)"
+  },
+  {
+    "id": "adv_scam_06",
+    "category": "Marketplace Inspection Gate Fee",
+    "label": "scam",
+    "text": "I am selling my 2021 Hyundai i20 on OLX for Rs 4.2 Lakhs as I am transferred to military cantonment. The car is at CISF cargo terminal. Pay Rs 2,500 refundable gate clearance pass to inspect vehicle.",
+    "difficulty": "Medium \u2014 Classic army/cargo inspection fee advance scam"
+  },
+  {
+    "id": "adv_scam_07",
+    "category": "Utility Bill Discount Phishing",
+    "label": "scam",
+    "text": "State Electricity Board: Under green energy subsidy scheme, get flat 25% cashback on your pending electricity bill. Pay through official partner portal: http://billpay-discount-discom.info/subsidy",
+    "difficulty": "Medium \u2014 Lures with government subsidy rather than threat"
+  },
+  {
+    "id": "adv_scam_08",
+    "category": "Tech Webinar Upsell",
+    "label": "scam",
+    "text": "Exclusive Generative AI Architecture Masterclass by Ex-Google Director. Free for first 50 participants, but requires Rs 499 seat lock-in refundable deposit. Reserve your VIP slot at http://ai-masterclass-reserve.site",
+    "difficulty": "Hard \u2014 Mimics legitimate educational bootcamps"
+  },
+  {
+    "id": "adv_scam_09",
+    "category": "Fake Telecom SIM Swap Pretext",
+    "label": "scam",
+    "text": "Airtel Support: We noticed continuous 5G network degradation on your e-SIM profile. Dial *121*55# or send SIMREQ to 121 within 2 hours to prevent automatic network deactivation.",
+    "difficulty": "Medium-Hard \u2014 Pretexting for unauthorized SIM swap"
+  },
+  {
+    "id": "adv_scam_10",
+    "category": "Freelance Escrow Phishing",
+    "label": "scam",
+    "text": "Upwork Notification: Client has deposited $1,450 into Milestone 1 escrow for 'Frontend Dashboard UI'. View contract terms and authenticate payout release: https://upwork-escrow-release.net/contract/9921",
+    "difficulty": "Medium-Hard \u2014 Upwork impersonation with spoofed domain"
+  },
+  {
+    "id": "adv_scam_11",
+    "category": "Executive Impersonation Gift Card",
+    "label": "scam",
+    "text": "Aditya, I am currently tied up in an urgent board meeting and cannot take calls. I need you to purchase 4 Apple gift cards ($100 each) for an overseas client presentation. Send me the scratched codes via email right away.",
+    "difficulty": "Hard \u2014 Internal executive pretext without links"
+  },
+  {
+    "id": "adv_scam_12",
+    "category": "Traffic E-Challan Phishing",
+    "label": "scam",
+    "text": "Traffic Police E-Challan: Vehicle DL-3C-AZ-4192 recorded over-speeding violation on Ring Road. Fine: Rs 2,000. Pay within 24 hours to avoid court summons: https://echallan-parivahan-pay.org/v/99120",
+    "difficulty": "Medium-Hard \u2014 Mimics Parivahan portal with .org domain"
+  },
+  {
+    "id": "adv_scam_13",
+    "category": "Quishing Parking QR Pretext",
+    "label": "scam",
+    "text": "Smart Parking Notice: Your parking meter session expired at 14:15. Scan the QR code sticker on meter or navigate to https://quickpark-settle.cc?m=402 to avoid Rs 500 municipal clamping fine.",
+    "difficulty": "Medium \u2014 Quishing parking meter trap"
+  },
+  {
+    "id": "adv_scam_14",
+    "category": "Telegram VIP Crypto Pump",
+    "label": "scam",
+    "text": "Whale Insider Alert: Next 25x gem is launching today at 18:00 UTC on Uniswap! Private seed sale open to 50 lucky members only. Whitelist your wallet address: https://whale-seed-allocation.io",
+    "difficulty": "Medium \u2014 Cryptocurrency pump-and-dump trap"
+  },
+  {
+    "id": "adv_scam_15",
+    "category": "Cloudflare DDoS Verification Fakeout",
+    "label": "scam",
+    "text": "Cloudflare Security Check: Unusual automated traffic detected from your IP (122.161.42.18). Verify you are human by downloading and running our secure SSL certificate: https://cloudflare-verify-node.com/cert.exe",
+    "difficulty": "Hard \u2014 Malware dropper disguised as Cloudflare human verification"
+  },
+  {
+    "id": "adv_scam_16",
+    "category": "Apartment Rental Advance Deposit",
+    "label": "scam",
+    "text": "Regarding the 2BHK flat in Indiranagar on Housing.com: I am an ONGC engineer currently stationed at offshore rig. 12 people want to view it tomorrow. Transfer Rs 5,000 refundable viewing deposit to lock your slot.",
+    "difficulty": "Medium \u2014 Classic offshore landlord advance fee fraud"
+  },
+  {
+    "id": "adv_scam_17",
+    "category": "Job Task YouTube Liking",
+    "label": "scam",
+    "text": "Part-time Work Opportunity: Global digital agency is hiring YouTube reviewers. Simply like 3 videos and earn Rs 150 per task. Earn Rs 3,000 to Rs 8,000 daily from home. Join Telegram coordinator: @HR_Sarah_Global",
+    "difficulty": "Medium \u2014 Prevalent Indian part-time task/telegram investment scam"
+  },
+  {
+    "id": "adv_scam_18",
+    "category": "Court Subpoena PDF Phish",
+    "label": "scam",
+    "text": "High Court E-Notice: You have been cited as a material witness in civil arbitration case Ref-2025/CA/8119. Download official summons and appearance schedule from court repository: http://e-courts-notices-gov.net/doc?id=8119",
+    "difficulty": "Hard \u2014 Impersonates official judicial e-courts with .gov.net lookalike"
+  },
+  {
+    "id": "adv_scam_19",
+    "category": "Overpayment Refund Invoice",
+    "label": "scam",
+    "text": "Geek Squad Annual Protection Renewal: We have successfully debited $399.99 from your checking account. If this was an accidental or duplicate charge, please call our toll-free dispute desk at +1-888-492-0192 to reverse immediately.",
+    "difficulty": "Medium-Hard \u2014 Classic refund / phone-based call-back extortion"
+  },
+  {
+    "id": "adv_scam_20",
+    "category": "Crypto Airdrop Permit Trap",
+    "label": "scam",
+    "text": "Arbitrum Foundation: Season 3 Governance Airdrop is live! Eligible addresses can claim 1,250 ARB tokens. Claim portal closes in 6 hours: https://arbitrum-foundation-claim.xyz (Connect MetaMask to sign gasless permit)",
+    "difficulty": "Medium \u2014 Malicious ERC-20 permit signature phishing"
+  },
+  {
+    "id": "adv_scam_21",
+    "category": "Soft Grooming Financial Pivot",
+    "label": "scam",
+    "text": "Good morning! My uncle is a senior market analyst at UBS in Zurich. He shared some fascinating quantitative gold arbitrage models with me yesterday. I've been making 4% daily returns, I can show you how it works if you're curious.",
+    "difficulty": "Hard \u2014 Polite conversational pivot to crypto/gold arbitrage without links"
+  },
+  {
+    "id": "adv_scam_22",
+    "category": "Amazon Order Imposter",
+    "label": "scam",
+    "text": "Amazon Pay: Your order for Apple MacBook Pro 16'' ($2,499.00) has been placed with 1-click buy. Delivery address: Miami, FL. If you did not make this purchase, report cancellation to our fraud team: http://amazon-dispute-resolution.online",
+    "difficulty": "Medium-Hard \u2014 High-dollar unauthorized order panic"
+  },
+  {
+    "id": "adv_scam_23",
+    "category": "Charity Disaster Relief Trap",
+    "label": "scam",
+    "text": "Emergency Disaster Relief: Support victims of the recent landslides in Himachal Pradesh. Government approved 100% tax rebate under 80G. Donate instantly via QR code or UPI: disaster-relief-fund@okaxis.",
+    "difficulty": "Hard \u2014 Exploits natural catastrophe empathy using legitimate-looking UPI"
+  },
+  {
+    "id": "adv_scam_24",
+    "category": "Fake Bank Reward Point Expiry",
+    "label": "scam",
+    "text": "SBI Card Alert: Your 12,450 accrued reward points valued at Rs 3,112 will expire at midnight tonight. Redeem points for direct cash credit to your savings account: https://sbi-reward-points-cashback.com",
+    "difficulty": "Medium \u2014 Credit card reward expiration hook with lookalike domain"
+  },
+  {
+    "id": "adv_scam_25",
+    "category": "Instagram Copyright Infringement",
+    "label": "scam",
+    "text": "Meta Copyright Team: A post on your profile infringes on digital trademark DMCA #94821. Your account will be permanently disabled in 24 hours. Submit objection form if you believe this is an error: https://meta-copyright-appeal.info/form",
+    "difficulty": "Medium \u2014 Social media creator panic tactic"
+  },
+  {
+    "id": "adv_scam_26",
+    "category": "Fake Speed Post Customs Fee",
+    "label": "scam",
+    "text": "India Post EMS: International parcel IN-92819-US detained at Mumbai foreign post office for unpaid customs duty of Rs 48.00. Clear clearance fee within 12 hours at https://indiapost-customs-clearance.top to resume transit.",
+    "difficulty": "Medium \u2014 Low-value (Rs 48) threshold to bypass psychological guardrails"
+  },
+  {
+    "id": "adv_scam_27",
+    "category": "Netflix Subscription Suspension",
+    "label": "scam",
+    "text": "Netflix: We were unable to process your monthly membership payment. Your streaming service is scheduled for termination on 25-Nov-2026. Update payment card to retain watchlist: http://netflix-billing-update-account.link",
+    "difficulty": "Medium \u2014 Subscription termination lure"
+  },
+  {
+    "id": "adv_scam_28",
+    "category": "Peer SMS Verification Code Intercept",
+    "label": "scam",
+    "text": "Hey bro, I accidentally entered your mobile number instead of mine while logging into my old WhatsApp account. Google just sent an SMS code to your phone. Can you quickly copy and text it back to me?",
+    "difficulty": "Hard \u2014 Direct 2FA verification interception pretending to be a friend"
+  },
+  {
+    "id": "adv_scam_29",
+    "category": "Fake Government Scholarship",
+    "label": "scam",
+    "text": "National Scholarship Portal: Your application for PM Vidya Merit Grant (Rs 25,000) has been shortlisted. To verify bank DBT link and release disbursement, submit registration processing fee of Rs 350 at https://scholarships-gov-portal.site",
+    "difficulty": "Medium-Hard \u2014 Student financial aid advance fee"
+  },
+  {
+    "id": "adv_scam_30",
+    "category": "Fake Doctor Urgent Prescription",
+    "label": "scam",
+    "text": "Urgent Care Clinic: Dr. Sharma updated your father's cardiac prescription. Dosage adjustment required immediately before evening dose. View revised digital prescription: http://clinic-prescription-viewer.cc/rx/941",
+    "difficulty": "Hard \u2014 Exploits family medical emergency panic"
+  },
+  {
+    "id": "adv_scam_31",
+    "category": "Fake Flight Compensation Voucher",
+    "label": "scam",
+    "text": "IndiGo Customer Care: Under DGCA regulations, you are entitled to Rs 4,000 flight delay compensation voucher for your recent journey. Claim direct bank transfer via our refund gateway: https://goindigo-refund-voucher.net",
+    "difficulty": "Medium \u2014 Exploits consumer airline delay frustration"
+  },
+  {
+    "id": "adv_scam_32",
+    "category": "Polite Vendor Bank Change",
+    "label": "scam",
+    "text": "Dear Accounts Payable, please note our banking coordinates have been updated due to our recent corporate restructuring with Citibank. Kindly route all future invoice payments to the attached revised IBAN details.",
+    "difficulty": "Hard \u2014 Business Email Compromise (BEC) vendor diversion without links"
+  },
+  {
+    "id": "adv_scam_33",
+    "category": "Fake WhatsApp Cloud Backup Quota",
+    "label": "scam",
+    "text": "WhatsApp Cloud Alert: Your chat history backup of 8.4 GB has exceeded allocated free server storage. Inactive backup data will be purged on Sunday. Upgrade 50GB storage for Rs 99/year: http://wa-backup-cloud-storage.com",
+    "difficulty": "Medium \u2014 Cloud storage exhaustion hook"
+  },
+  {
+    "id": "adv_scam_34",
+    "category": "Tax Refund Phishing Portal",
+    "label": "scam",
+    "text": "Income Tax Department: An excess deduction of Rs 8,420 has been approved for AY 2026-27. To confirm your bank account IFSC and receive instant IMPS credit, visit: https://incometax-efiling-refund-gov.in.co/portal",
+    "difficulty": "Medium-Hard \u2014 Highly authentic lookalike government e-filing domain"
+  },
+  {
+    "id": "adv_scam_35",
+    "category": "Steam Game Beta Key Phish",
+    "label": "scam",
+    "text": "Valve Steam Community: You have received a closed beta testing invitation for Grand Theft Auto VI Online. Claim exclusive developer pass and link your Steam ID: https://steamcommunity-beta-access.pw/login",
+    "difficulty": "Medium \u2014 Gaming community credential phishing"
+  },
+  {
+    "id": "adv_scam_36",
+    "category": "Pet Adoption Transportation Advance",
+    "label": "scam",
+    "text": "Purebred Golden Retriever puppy (Leo) is ready for free adoption as I am shifting abroad. You only have to pay the pet air-conditioned climate crate delivery charges of Rs 3,200 directly to the pet transport agency.",
+    "difficulty": "Medium \u2014 Classic pet adoption delivery fee scam"
+  },
+  {
+    "id": "adv_scam_37",
+    "category": "Fake EPFO PF Claim Approval",
+    "label": "scam",
+    "text": "EPFO India: Your Provident Fund advance withdrawal claim of Rs 64,000 is on hold due to missing Aadhaar biometric authentication. Complete UAN biometric e-KYC: http://epfo-uan-onlineportal.xyz/kyc",
+    "difficulty": "Medium-Hard \u2014 Indian retirement PF withdrawal panic"
+  },
+  {
+    "id": "adv_scam_38",
+    "category": "Subtle Zoom Meeting Update Phish",
+    "label": "scam",
+    "text": "Zoom Video Communications: Your meeting client version 5.14 contains critical zero-day security vulnerabilities. Update client software immediately to join scheduled audio conference: https://zoom-meeting-security-patch.com/download",
+    "difficulty": "Medium-Hard \u2014 Enterprise video conferencing malware lure"
+  },
+  {
+    "id": "adv_scam_39",
+    "category": "Fake FASTag Blacklist Alert",
+    "label": "scam",
+    "text": "NHAI FASTag Notice: Your toll tag VRN MH-02-CD-8911 has a low KYC balance and has been blacklisted at all national toll plazas. Reactivate within 6 hours at https://fastag-nhai-recharge.in to avoid double toll cash penalty.",
+    "difficulty": "Medium \u2014 Highway toll plaza blacklist panic"
+  },
+  {
+    "id": "adv_scam_40",
+    "category": "Fake LinkedIn Profile View Trap",
+    "label": "scam",
+    "text": "LinkedIn Premium: 3 Executive Managing Directors and 1 Venture Partner viewed your profile this week. See who is searching for you and unlock recruiter direct messaging: http://linkedin-network-analytics.site/profile",
+    "difficulty": "Medium \u2014 Professional vanity phishing"
+  },
+  {
+    "id": "adv_scam_41",
+    "category": "College Campus Placement Test",
+    "label": "scam",
+    "text": "TCS Campus Hiring 2026: You have been shortlisted for Phase 2 Cognitive Coding Assessment. To generate your proctored exam key, pay Rs 250 evaluation server maintenance fee: https://tcs-ion-exam-portal.online/test",
+    "difficulty": "Hard \u2014 College student recruitment fee extortion"
+  },
+  {
+    "id": "adv_scam_42",
+    "category": "Fake Apple iCloud Storage Full",
+    "label": "scam",
+    "text": "Apple Support: Your iCloud storage is 99% full. Photos and WhatsApp backups have stopped syncing across devices. Claim 50GB promotional storage for $0.99 at https://icloud-apple-storage-tier.com",
+    "difficulty": "Medium \u2014 Low fee iCloud subscription phish"
+  },
+  {
+    "id": "adv_scam_43",
+    "category": "Fake Microsoft 365 Password Expiry",
+    "label": "scam",
+    "text": "Microsoft 365 Security: Your enterprise single sign-on (SSO) password expires in 4 hours. Keep existing password and extend validity by authenticating here: https://login-microsoftonline-keepalive.net",
+    "difficulty": "Medium-Hard \u2014 Corporate enterprise credential harvester"
+  },
+  {
+    "id": "adv_scam_44",
+    "category": "Fake Courier Delivery Postponement Fee",
+    "label": "scam",
+    "text": "DHL Express: Recipient was absent during delivery attempt #1. Reschedule delivery date and specify drop-off instructions for small re-dispatch fee of Rs 15: http://dhl-express-reschedule-india.info",
+    "difficulty": "Medium \u2014 Micro-transaction (Rs 15) credential harvesting"
+  },
+  {
+    "id": "adv_scam_45",
+    "category": "Fake YouTube Channel Monetization Warning",
+    "label": "scam",
+    "text": "YouTube Creator Studio: Your channel has received 1 community guidelines strike for deceptive practices. Monetization will be disabled in 48 hours unless you appeal: https://youtube-creator-studio-appeal.tech",
+    "difficulty": "Medium-Hard \u2014 Creator monetization strike panic"
+  },
+  {
+    "id": "adv_scam_46",
+    "category": "Cryptocurrency Seed Phrase Backup Request",
+    "label": "scam",
+    "text": "Trust Wallet Security: Due to recent Ethereum hardfork network updates, non-migrated multi-coin wallets will be frozen. Sync your 12-word seed recovery phrase with the decentralized gateway: https://trustwallet-decentralized-sync.org",
+    "difficulty": "Medium \u2014 Direct wallet drainer seed phrase prompt"
+  },
+  {
+    "id": "adv_scam_47",
+    "category": "Fake Municipal Water Bill Disconnection",
+    "label": "scam",
+    "text": "Municipal Water Supply Board: Disconnection order issued for consumer ID #77291 due to unpaid arrears of Rs 1,420. Line cut will take place at 17:00 today. Settle immediately via gateway: https://water-bill-municipal-pay.online",
+    "difficulty": "Medium \u2014 Utility shutdown threat"
+  },
+  {
+    "id": "adv_scam_48",
+    "category": "Fake Insurance Policy Claim Dividend",
+    "label": "scam",
+    "text": "LIC Policy Dividend: An unclaimed bonus of Rs 38,500 has accrued against your lapsed policy #883921. Contact senior claims ombudsman officer Mr. Verma at +91-9871234912 to release payment.",
+    "difficulty": "Hard \u2014 Lapsed insurance policy unclaimed dividend lure"
+  },
+  {
+    "id": "adv_scam_49",
+    "category": "Polite Job Interview Zoom Pretext",
+    "label": "scam",
+    "text": "Hello, thank you for your application for Senior Software Engineer. The hiring committee would love to speak tomorrow. Please review the attached interview briefing notes and coding problem statement: https://careers-google-briefing.cc/doc?id=492",
+    "difficulty": "Hard \u2014 Polite recruitment email with spoofed Google careers link"
+  },
+  {
+    "id": "adv_scam_50",
+    "category": "Soft Grooming Crypto Mining Pool",
+    "label": "scam",
+    "text": "It has been so inspiring chatting with you over these past few weeks! I showed my uncle your background in computer science, and he said you could easily set up a passive liquidity node on our platform. Let me know if you want the guide.",
+    "difficulty": "Hard \u2014 Trust-established pig butchering pivot without overt links"
+  },
+  {
+    "id": "adv_legit_01",
+    "category": "Aggressive Debt Reminder",
+    "label": "legitimate",
+    "text": "HDFC Bank Collections: Final reminder for credit card account ending 8912. Minimum payment of Rs 4,200 is 14 days overdue. Pay immediately on official netbanking or visit nearest branch to avoid credit score impact.",
+    "difficulty": "Hard \u2014 Aggressive tone and urgency on legitimate collection notice"
+  },
+  {
+    "id": "adv_legit_02",
+    "category": "Urgent Flash Sale Promo",
+    "label": "legitimate",
+    "text": "Amazon India: Lightning Deal ending in 45 minutes! Sony WH-1000XM5 headphones at flat 40% discount. Grab yours before stock runs out: https://www.amazon.in/dp/B09XS7JWHH",
+    "difficulty": "Hard \u2014 Extreme urgency and countdown clock on genuine sale"
+  },
+  {
+    "id": "adv_legit_03",
+    "category": "Third-Party Retailer Tracking",
+    "label": "legitimate",
+    "text": "Delhivery: Your package from Nykaa (AWB: 14892019482) is out for delivery today with courier executive Rajesh Kumar (OTP: 4182). Track delivery vehicle live at https://www.delhivery.com/track/package/14892019482",
+    "difficulty": "Medium-Hard \u2014 Contains tracking link and OTP reference"
+  },
+  {
+    "id": "adv_legit_04",
+    "category": "Hospital Diagnostic Portal",
+    "label": "legitimate",
+    "text": "Apollo Hospitals: Your comprehensive diagnostic panel results (Ref: AP-99214) are now ready. Access your encrypted PDF report within 48 hours at https://results.apollohospitals.com/p/99214",
+    "difficulty": "Hard \u2014 Medical document link with 48h expiration trigger"
+  },
+  {
+    "id": "adv_legit_05",
+    "category": "Official Bank Credit Card Alert",
+    "label": "legitimate",
+    "text": "ICICI Bank: Alert! An online transaction of INR 34,999.00 on your Credit Card XX4019 was attempted at CROMA on 20-Nov-2026. If this was not done by you, please call 18001080 immediately or SMS BLOCK 4019 to 5676766.",
+    "difficulty": "Medium-Hard \u2014 Urgent fraud alert requesting SMS BLOCK or call"
+  },
+  {
+    "id": "adv_legit_06",
+    "category": "Corporate Recruiter Outreach",
+    "label": "legitimate",
+    "text": "Hi Aditya, I am a Lead Tech Recruiter at Microsoft India. We came across your GitHub repositories and were impressed by your distributed systems work. Would you be open to an exploratory 20-min chat next Tuesday? Please review the role at https://careers.microsoft.com/us/en/job/174921",
+    "difficulty": "Medium \u2014 Cold recruitment outreach with career link"
+  },
+  {
+    "id": "adv_legit_07",
+    "category": "Government Tax E-Filing Alert",
+    "label": "legitimate",
+    "text": "Income Tax Department: Your ITR for AY 2026-27 (Ack No: 9928172910) has been processed u/s 143(1). Refund of Rs. 14,210 determined. Track processing status at official portal https://www.incometax.gov.in",
+    "difficulty": "Medium-Hard \u2014 Government tax refund notice"
+  },
+  {
+    "id": "adv_legit_08",
+    "category": "Airline Schedule Modification",
+    "label": "legitimate",
+    "text": "Air India Alert: Flight AI-804 from Delhi to Bengaluru on 24-Nov is rescheduled to depart at 19:45 (delayed by 2h 15m). Check revised boarding gate and meal voucher eligibility at https://www.airindia.com/manage-booking",
+    "difficulty": "Medium \u2014 Flight delay alert with link"
+  },
+  {
+    "id": "adv_legit_09",
+    "category": "Corporate IT Password Expiry",
+    "label": "legitimate",
+    "text": "Enterprise IT Service Desk: Your Active Directory network credentials will expire in 3 days in accordance with corporate security policy. Change your password on company intranet: https://identity.corp.company.internal",
+    "difficulty": "Hard \u2014 Urgent IT password expiration trigger"
+  },
+  {
+    "id": "adv_legit_10",
+    "category": "Peer P2P Payment Request",
+    "label": "legitimate",
+    "text": "Hey man, total for dinner and drinks last night was $84. Split between the 4 of us is $21 each. Whenever you get a chance, send it over: https://venmo.com/u/Jake-Miller-94",
+    "difficulty": "Hard \u2014 Payment request link with dollar split"
+  },
+  {
+    "id": "adv_legit_11",
+    "category": "Official Google 2FA Security Code",
+    "label": "legitimate",
+    "text": "G-748921 is your Google verification code. Never share this code with anyone. Google employees will never call to ask for your verification code.",
+    "difficulty": "Medium \u2014 Standard 2FA verification message"
+  },
+  {
+    "id": "adv_legit_12",
+    "category": "State Electricity Official Bill",
+    "label": "legitimate",
+    "text": "BESCOM Alert: Electricity bill of Rs 2,140 for Account 88291024 is due on 28-Nov-2026. Avoid disconnection fee by paying on official website https://bescom.karnataka.gov.in or BESCOM Mithra App.",
+    "difficulty": "Medium-Hard \u2014 Mentions disconnection and due date"
+  },
+  {
+    "id": "adv_legit_13",
+    "category": "Insurance Policy Renewal Grace Period",
+    "label": "legitimate",
+    "text": "HDFC ERGO Health Insurance: Policy #2819-2041-99 expires on 30-Nov-2026. Grace period ends in 10 days. Renew with existing cumulative no-claim bonus intact at https://www.hdfcergo.com/renew",
+    "difficulty": "Hard \u2014 Urgency of expiration and grace period"
+  },
+  {
+    "id": "adv_legit_14",
+    "category": "University Exam Hall Ticket Release",
+    "label": "legitimate",
+    "text": "Anna University Examinations: Hall Ticket for End Semester Dec-2026 exams has been generated. Candidates must download and print admit card before 01-Dec at https://coe1.annauniv.edu/home",
+    "difficulty": "Medium \u2014 Academic examination deadline"
+  },
+  {
+    "id": "adv_legit_15",
+    "category": "AWS Cloud Budget Threshold Alert",
+    "label": "legitimate",
+    "text": "Amazon Web Services: AWS Account 8192-4910-1120 has exceeded 85% of your monthly forecasted budget limit ($450.00). Manage billing alerts on AWS Management Console: https://console.aws.amazon.com/billing",
+    "difficulty": "Medium-Hard \u2014 Cloud infrastructure expense threshold warning"
+  },
+  {
+    "id": "adv_legit_16",
+    "category": "Municipal Property Tax Reminder",
+    "label": "legitimate",
+    "text": "BBMP Revenue Department: Property Tax for PID #092-W0194-28 for FY 2026-27 is pending. Settle before 30-Nov to avoid 2% monthly statutory interest penalty: https://bbmptax.karnataka.gov.in",
+    "difficulty": "Medium-Hard \u2014 Statutory penalty warning on municipal tax"
+  },
+  {
+    "id": "adv_legit_17",
+    "category": "Telecom 90% Data Pack Exhaustion",
+    "label": "legitimate",
+    "text": "Jio Alert: You have exhausted 90% of your high-speed daily data quota (1.80 GB / 2.00 GB). To continue enjoying 5G data at high speed, recharge with a 4G/5G data booster pack on MyJio App or https://www.jio.com",
+    "difficulty": "Medium \u2014 Quota threshold warning with recharge link"
+  },
+  {
+    "id": "adv_legit_18",
+    "category": "Spotify Subscription Auto-Debit Notice",
+    "label": "legitimate",
+    "text": "Spotify India: E-mandate notice. Your Spotify Premium Family plan (INR 179.00) will be automatically debited from your card XX2910 on 26-Nov-2026. Manage subscriptions at https://www.spotify.com/account",
+    "difficulty": "Medium \u2014 Recurring payment debit notification"
+  },
+  {
+    "id": "adv_legit_19",
+    "category": "Bank Statement Password Instructions",
+    "label": "legitimate",
+    "text": "Kotak Mahindra Bank: Your e-Statement for account ending in 7102 for Oct-2026 is attached. Note: The PDF is password protected. Password is your 8-character Date of Birth (DDMMYYYY) followed by last 4 digits of CRN.",
+    "difficulty": "Medium-Hard \u2014 Password instructions on encrypted bank file"
+  },
+  {
+    "id": "adv_legit_20",
+    "category": "Uber Ride Electronic Receipt",
+    "label": "legitimate",
+    "text": "Uber Technologies: Here is your receipt for your ride on Thursday evening (Total: Rs 342.50). Driver: Suresh K. Pick-up: Koramangala, Drop-off: Indiranagar. View fare breakdown and tax invoice at https://riders.uber.com/trips",
+    "difficulty": "Medium \u2014 Transportation fare receipt with link"
+  },
+  {
+    "id": "adv_legit_21",
+    "category": "Doctor Lab Report Consultation Alert",
+    "label": "legitimate",
+    "text": "Max Healthcare: Dr. Rajiv Mehta has reviewed your blood biochemistry panels. A follow-up tele-consultation has been scheduled for tomorrow at 11:30 AM. Join video room: https://telehealth.maxhealthcare.in/room/49102",
+    "difficulty": "Hard \u2014 Medical video room link with scheduled appointment"
+  },
+  {
+    "id": "adv_legit_22",
+    "category": "GitLab CI Pipeline Failure Alert",
+    "label": "legitimate",
+    "text": "GitLab Notification: Pipeline #912891 failed on branch 'main' for commit e4a7f21 ('fix auth token race condition'). View failed job logs and artifact trace at https://gitlab.com/devops/threat-intel/-/pipelines/912891",
+    "difficulty": "Medium \u2014 Developer DevOps notification"
+  },
+  {
+    "id": "adv_legit_23",
+    "category": "Apartment Maintenance Invoice Due",
+    "label": "legitimate",
+    "text": "Prestige Lakeside Habitat HOA: Monthly society maintenance charges of Rs 6,850 for Unit 402-Tower 6 are due on 25-Nov. Pay via MyGate app or society bank portal to avoid late surcharge: https://mygate.com/pay",
+    "difficulty": "Medium-Hard \u2014 Late fee surcharge warning on society dues"
+  },
+  {
+    "id": "adv_legit_24",
+    "category": "LinkedIn Security New Device Login",
+    "label": "legitimate",
+    "text": "LinkedIn Security Alert: Your account was recently signed in from Chrome on Windows (IP: 106.51.72.19, Bengaluru). If this was you, no action needed. If not, secure your account at https://www.linkedin.com/help/security",
+    "difficulty": "Medium-Hard \u2014 New device alert with security remediation link"
+  },
+  {
+    "id": "adv_legit_25",
+    "category": "Mutual Fund Monthly SIP Debit",
+    "label": "legitimate",
+    "text": "Zerodha Coin: Your monthly SIP of Rs 5,000 in Parag Parikh Flexi Cap Fund (Direct-Growth) will be triggered tomorrow. Ensure sufficient balance in your linked IndusInd account ending 3819.",
+    "difficulty": "Medium \u2014 Financial investment debit warning"
+  },
+  {
+    "id": "adv_legit_26",
+    "category": "Vehicle Periodic Service Due Alert",
+    "label": "legitimate",
+    "text": "Maruti Suzuki Service: Your Swift (KA-03-MK-7120) 30,000 km periodic service is due this month. Book your doorstep pick-and-drop slot at Bimal Auto on https://www.marutisuzuki.com/service-booking",
+    "difficulty": "Medium \u2014 Vehicle service booking alert"
+  },
+  {
+    "id": "adv_legit_27",
+    "category": "Passport Seva Kendra Appointment",
+    "label": "legitimate",
+    "text": "Passport Seva: Appointment confirmed for Application Ref: BLR-P1928410 on 27-Nov-2026 at 10:15 AM, PSK Lalbagh. Please carry original educational and address documents: https://www.passportindia.gov.in",
+    "difficulty": "Medium \u2014 Government passport appointment schedule"
+  },
+  {
+    "id": "adv_legit_28",
+    "category": "Splitwise Settle Up Reminder",
+    "label": "legitimate",
+    "text": "Splitwise: Priya Patel recorded an expense 'Goa Villa Rental - 3 Nights' ($600.00). Your share is $150.00. Settle up or view group balance at https://secure.splitwise.com/#/groups/918204",
+    "difficulty": "Hard \u2014 Group shared expense calculation with link"
+  },
+  {
+    "id": "adv_legit_29",
+    "category": "Coursera Certificate Completion",
+    "label": "legitimate",
+    "text": "Coursera: Congratulations! You have successfully completed 'Deep Learning Specialization' by DeepLearning.AI. View your verified digital certificate and add it to LinkedIn: https://www.coursera.org/verify/professional-cert/99X8K21",
+    "difficulty": "Medium \u2014 Academic course completion certificate"
+  },
+  {
+    "id": "adv_legit_30",
+    "category": "IRCTC Train Ticket E-Reservation",
+    "label": "legitimate",
+    "text": "IRCTC E-Ticketing: PNR 4829104821, Train 12626 Kerala Express, Date: 26-Nov, Sleeper Class, Coach S3, Berth 42 (Confirmed). View electronic reservation slip at https://www.irctc.co.in",
+    "difficulty": "Medium \u2014 Indian railways confirmed ticket SMS"
+  },
+  {
+    "id": "adv_legit_31",
+    "category": "GitHub Copilot Enterprise Invoice",
+    "label": "legitimate",
+    "text": "GitHub Billing: Monthly payment of $19.00 for GitHub Copilot Individual has been processed via PayPal. View billing receipt and tax documentation on https://github.com/settings/billing",
+    "difficulty": "Medium \u2014 Monthly software subscription invoice"
+  },
+  {
+    "id": "adv_legit_32",
+    "category": "Lal PathLabs Diagnostic Blood Test",
+    "label": "legitimate",
+    "text": "Dr Lal PathLabs: Lab order #DL88219 for HbA1c and Lipid Profile has been completed. Download barcode verified lab report at https://www.lalpathlabs.com/patient-portal/report?id=DL88219",
+    "difficulty": "Hard \u2014 Diagnostic blood test report link"
+  },
+  {
+    "id": "adv_legit_33",
+    "category": "Urgent Security Vulnerability Patch",
+    "label": "legitimate",
+    "text": "Canonical Ubuntu Security: USN-6819-1: Linux kernel vulnerability CVE-2026-3819 identified. Run 'sudo apt update && sudo apt upgrade' immediately on all production servers. Advisory: https://ubuntu.com/security/notices/USN-6819-1",
+    "difficulty": "Hard \u2014 High-urgency server patch advisory with links"
+  },
+  {
+    "id": "adv_legit_34",
+    "category": "Zomato Gold Delivery Update",
+    "label": "legitimate",
+    "text": "Zomato: Order #48192 from Meghana Foods has been picked up by delivery partner Arvind (OTP: 8812). Food is arriving in approximately 18 minutes. Track rider live: https://link.zomato.com/track/48192",
+    "difficulty": "Medium \u2014 Food delivery real-time tracking link"
+  },
+  {
+    "id": "adv_legit_35",
+    "category": "IndusInd Bank Cheque Bounce Alert",
+    "label": "legitimate",
+    "text": "IndusInd Bank: Cheque #004128 for Rs. 45,000 presented on account 1002941 was returned unpaid due to insufficient funds. Statutory representation fee of Rs 350 debited. Contact branch manager immediately.",
+    "difficulty": "Hard \u2014 Banking cheque return penalty with urgent branch contact"
+  },
+  {
+    "id": "adv_legit_36",
+    "category": "Zoom Pro Scheduled Webinar Reminder",
+    "label": "legitimate",
+    "text": "Zoom Webinar: 'Quarterly Global Engineering All-Hands' begins in 15 minutes. Panelists and attendees can enter the waiting room at https://us02web.zoom.us/j/84910294120?pwd=meetingpasscode",
+    "difficulty": "Medium \u2014 Urgent scheduled enterprise meeting room link"
+  },
+  {
+    "id": "adv_legit_37",
+    "category": "Apple Store Genius Bar Reservation",
+    "label": "legitimate",
+    "text": "Apple Genius Bar: Your hardware diagnosis appointment for MacBook Air (M2) is booked for tomorrow at 3:45 PM at Apple Saket, New Delhi. Manage or reschedule at https://www.apple.com/retail/geniusbar",
+    "difficulty": "Medium \u2014 Hardware repair reservation link"
+  },
+  {
+    "id": "adv_legit_38",
+    "category": "EPFO Official Annual Passbook Update",
+    "label": "legitimate",
+    "text": "EPFO Member Alert: Annual interest of Rs 14,820 for FY 2025-26 has been credited to PF Member ID KNBLR002819000. View updated passbook balance at official portal: https://passbook.epfindia.gov.in",
+    "difficulty": "Medium-Hard \u2014 Genuine EPFO passbook credit notification"
+  },
+  {
+    "id": "adv_legit_39",
+    "category": "BookMyShow Movie Ticket M-Ticket",
+    "label": "legitimate",
+    "text": "BookMyShow: Booking ID #W8912K for 'Inception (IMAX 70mm)', 2 tickets, PVR Forum Mall, Bengaluru. Show starts at 21:15 tonight. Show this SMS m-ticket at auditorium entrance for direct entry.",
+    "difficulty": "Medium \u2014 Entertainment ticket confirmation"
+  },
+  {
+    "id": "adv_legit_40",
+    "category": "Google Workspace Storage Quota 80%",
+    "label": "legitimate",
+    "text": "Google Workspace: Organization storage has reached 82% of total allocated pool (24.6 TB / 30.0 TB). Domain administrators can audit drive usage on Google Admin Console: https://admin.google.com/ac/storage",
+    "difficulty": "Medium-Hard \u2014 Enterprise cloud storage quota alert"
+  },
+  {
+    "id": "adv_legit_41",
+    "category": "BlueDart Official Delivery Address Confirmation",
+    "label": "legitimate",
+    "text": "BlueDart: Shipment 8192049182 from Apple India is scheduled for delivery today. Delivery agent: Manoj (Ph: 9812498120). Verify address details or reschedule at official site: https://www.bluedart.com",
+    "difficulty": "Medium-Hard \u2014 Genuine BlueDart courier notification with phone number"
+  },
+  {
+    "id": "adv_legit_42",
+    "category": "MakeMyTrip Hotel Booking Confirmation",
+    "label": "legitimate",
+    "text": "MakeMyTrip: Booking Confirmed for Taj Fort Aguada Resort & Spa, Goa (Check-in: 28-Nov, 2 Nights, Booking ID: NH819204). Check-in vouchers and hotel contact details available at https://www.makemytrip.com/trips",
+    "difficulty": "Medium \u2014 Travel hotel booking confirmation"
+  },
+  {
+    "id": "adv_legit_43",
+    "category": "GitHub Personal Access Token Expiry",
+    "label": "legitimate",
+    "text": "GitHub: Your personal access token 'Production_Deployment_Key' expires in 7 days. Regenerate token to prevent CI/CD automation disruption: https://github.com/settings/tokens",
+    "difficulty": "Hard \u2014 Developer authentication token expiration warning"
+  },
+  {
+    "id": "adv_legit_44",
+    "category": "Urban Company AC Service Slot",
+    "label": "legitimate",
+    "text": "Urban Company: Professional technician Vinay Kumar has been assigned for Split AC Deep Cleaning tomorrow at 10:00 AM. Share 4-digit start OTP (8912) upon arrival. Track partner on https://www.urbancompany.com",
+    "difficulty": "Medium \u2014 Home service dispatch OTP alert"
+  },
+  {
+    "id": "adv_legit_45",
+    "category": "DigiLocker Driving License Verification",
+    "label": "legitimate",
+    "text": "DigiLocker: Your Driving License #DL-042018009124 has been successfully pulled from MoRTH National Register. Access verified digital document at https://www.digilocker.gov.in",
+    "difficulty": "Medium \u2014 Official Indian digital locker verification"
+  },
+  {
+    "id": "adv_legit_46",
+    "category": "Airtel Broadband Fiber Bill Due",
+    "label": "legitimate",
+    "text": "Airtel Xstream Fiber: Bill for Account 08041928192 is Rs. 943.00, due on 27-Nov-2026. Avoid late fee of Rs 100 by paying on Airtel Thanks App or https://www.airtel.in/broadband-bill-pay",
+    "difficulty": "Medium-Hard \u2014 Late fee warning on home broadband"
+  },
+  {
+    "id": "adv_legit_47",
+    "category": "Slack Workspace Invitation",
+    "label": "legitimate",
+    "text": "Aditya, Sarah Jenkins has invited you to join the 'OpenThreat-AI-Research' workspace on Slack. Join your team to collaborate on threat intelligence models: https://openthreat-ai.slack.com/signup",
+    "difficulty": "Medium \u2014 Enterprise Slack invitation link"
+  },
+  {
+    "id": "adv_legit_48",
+    "category": "Official Income Tax TDS Credit Form 26AS",
+    "label": "legitimate",
+    "text": "Income Tax Department: Quarterly TDS credit of Rs 32,400 deducted by your employer has been updated in your Form 26AS. Verify tax credit on TRACES portal: https://www.tdscpc.gov.in",
+    "difficulty": "Medium \u2014 Official tax deduction statement"
+  },
+  {
+    "id": "adv_legit_49",
+    "category": "Nykaa Order Shipped Tracking",
+    "label": "legitimate",
+    "text": "Nykaa: Great news! Your order #NYK-891024 has been dispatched via Bluedart (Tracking: 491029410). Expected delivery by Saturday. View order status: https://www.nykaa.com/orders",
+    "difficulty": "Medium \u2014 E-commerce dispatch notification"
+  },
+  {
+    "id": "adv_legit_50",
+    "category": "SBI Mutual Fund Account Statement",
+    "label": "legitimate",
+    "text": "SBI Mutual Fund: Consolidated Account Statement (CAS) for Folio #9102941 for quarter ending Sep-2026 is generated. Download account statement at https://www.sbimf.com/en-us/investor-corner",
+    "difficulty": "Medium \u2014 Financial mutual fund account statement"
+  }
+]
